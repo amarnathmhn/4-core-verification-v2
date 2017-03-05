@@ -1,0 +1,31 @@
+cache_multi_config1 DUT
+	cache_wrapper_0 	P1_DL
+		cache_block cb
+		cache_controller cc
+	cache_wrapper_I_0 	P1_IL
+		cache_block cb
+		cache_controller cc
+	cache_wrapper_1 	P2_DL
+		cache_block cb
+		cache_controller cc
+	cache_wrapper_I_1 	P2_IL
+		cache_block cb
+		cache_controller cc
+	cache_wrapper_2 	P3_DL
+		cache_block cb
+		cache_controller cc
+	cache_wrapper_I_2 	P3_IL
+		cache_block cb
+		cache_controller cc
+	cache_wrapper_3 	P4_DL
+		cache_block cb
+		cache_controller cc
+	cache_wrapper_I_3 	P4_IL
+		cache_block cb
+		cache_controller cc
+
+	Initialized to Zero/INVALID/Default state 
+		Cache_var
+		Cache_proc_contr
+		
+
