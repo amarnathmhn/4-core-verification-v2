@@ -1,5 +1,7 @@
 //Constant values defintion as per prob statement - Number of bits basis
 `define SET_SIZE 		14
+// BUG : `define ASSOCIATIVITY 	1 
+// FIX :
 `define ASSOCIATIVITY 		2 
 `define NUM_BYTES 		2
 `define BYTE_SIZE 		3
@@ -14,7 +16,7 @@
 
 // calculation for LRU structure
 `define NUM_OF_SETS 		(1<<(`SET_SIZE))
-`define LRU_SIZE 		((1<>`ASSOCIATIVITY)-1)
+`define LRU_SIZE 		((1<<`ASSOCIATIVITY)-1)
 
 // cache structure parameter calculation
 `define CACHE_DATA_SIZE		(`DATA_SIZE)

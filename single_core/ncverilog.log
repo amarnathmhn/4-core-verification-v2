@@ -1,0 +1,250 @@
+ncverilog: 10.20-s073: (c) Copyright 1995-2011 Cadence Design Systems, Inc.
+TOOL:	ncverilog	10.20-s073: Started on Nov 14, 2015 at 18:54:09 CST
+ncverilog
+	-sv
+	-access
+	+rwc
+	-incdir
+	/homes/grad/amarnathmhn/Desktop/HAS3.0/Design
+	-incdir
+	/homes/grad/amarnathmhn/Desktop/HAS3.0/Arbiter_design_files
+	TestBenchIn.sv
+file: TestBenchIn.sv
+	module worklib.cache_block_1:v
+		errors: 0, warnings: 0
+	module worklib.cache_controller_1:v
+		errors: 0, warnings: 0
+	module worklib.cache_wrapper_1:v
+		errors: 0, warnings: 0
+	module worklib.fifo:v
+		errors: 0, warnings: 0
+	module worklib.arbiter:v
+		errors: 0, warnings: 0
+	interface worklib.globalInterface:sv
+		errors: 0, warnings: 0
+   topReadMiss_inst.randomize() with 
+                            |
+ncvlog: *W,FUNTSK (TestBenchIn.sv,106|28): function called as a task without void'().
+   topReadHit_inst.randomize() with {Address == 32'hdeadbeef &&
+                           |
+ncvlog: *W,FUNTSK (TestBenchIn.sv,121|27): function called as a task without void'().
+   topWriteMiss_inst.randomize() with
+                             |
+ncvlog: *W,FUNTSK (TestBenchIn.sv,131|29): function called as a task without void'().
+   topWriteHit_inst.randomize() with
+                            |
+ncvlog: *W,FUNTSK (TestBenchIn.sv,141|28): function called as a task without void'().
+   topWriteHit_inst.randomize() with
+                            |
+ncvlog: *W,FUNTSK (TestBenchIn.sv,151|28): function called as a task without void'().
+   topWriteMiss_inst.randomize() with
+                             |
+ncvlog: *W,FUNTSK (TestBenchIn.sv,164|29): function called as a task without void'().
+  topReadMissReplaceModified_inst.randomize() with
+                                          |
+ncvlog: *W,FUNTSK (TestBenchIn.sv,175|42): function called as a task without void'().
+	module worklib.top_C1:sv
+		errors: 0, warnings: 7
+    determine_LRU_var_exp(sintf.Blk_access_proc,expected_lru_var);
+                        |
+ncvlog: *W,FUNTSK (TestCases.sv,522|24): function called as a task without void'().
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 1
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+                        MESI_state = sintf.Cache_proc_contr[{Address[`INDEX_MSB:`INDEX_LSB],2'b00}][`CACHE_MESI_MSB:`CACHE_MESI_LSB];
+                                                                                                                  |
+ncelab: *W,ENUMERR (./TestCases.sv,761|114): This assignment is a violation of SystemVerilog strong typing rules for enumeration datatypes.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.\$unit_0x60362cfa :compilation_unit <0x08fab794>
+			streams:  12, words: 23481
+		worklib.\$unit_0x60362cfa :compilation_unit <0x12446f3f>
+			streams:  83, words: 153786
+		worklib.\$unit_0x60362cfa :compilation_unit <0x2a42232c>
+			streams:   6, words: 14261
+		worklib.\$unit_0x60362cfa :compilation_unit <0x3972dd94>
+			streams:   8, words:  8722
+		worklib.\$unit_0x60362cfa :compilation_unit <0x3ff98f81>
+			streams:   0, words:     0
+		worklib.\$unit_0x60362cfa :compilation_unit <0x4baf9a10>
+			streams:   6, words: 14448
+		worklib.\$unit_0x60362cfa :compilation_unit <0x4c8a53b0>
+			streams:   6, words:  9452
+		worklib.\$unit_0x60362cfa :compilation_unit <0x4d5408a5>
+			streams:   6, words:  5507
+		worklib.\$unit_0x60362cfa :compilation_unit <0x555025b4>
+			streams:   6, words:  9585
+		worklib.\$unit_0x60362cfa :compilation_unit <0x5da66d58>
+			streams:   6, words:  8240
+		worklib.\$unit_0x60362cfa :compilation_unit <0x656d966d>
+			streams:   6, words:  6513
+		worklib.\$unit_0x60362cfa :compilation_unit <0x72808d67>
+			streams:   6, words:  9181
+		worklib.\$unit_0x60362cfa :compilation_unit <0x74c765fb>
+			streams:  15, words: 26386
+		worklib.\$unit_0x60362cfa :compilation_unit <0x7875e4e0>
+			streams:   6, words:  6612
+		worklib.arbiter:v <0x39af5be3>
+			streams:  28, words: 11640
+		worklib.cache_block_1:v <0x235e6e10>
+			streams:  46, words: 40772
+		worklib.cache_controller_1:v <0x0898fef5>
+			streams:  11, words:  6825
+		worklib.fifo:v <0x5a90d133>
+			streams:  13, words:  7164
+		worklib.globalInterface:sv <0x22d444dc>
+			streams:  12, words:  6849
+		worklib.top_C1:sv <0x32e6fcbc>
+			streams:  15, words: 12522
+	Loading native compiled code:     .................... Done
+	Building instance specific data structures.
+	Design hierarchy summary:
+		                     Instances  Unique
+		Modules:                     6       6
+		Interfaces:                  1       1
+		Registers:                 239     266
+		Scalar wires:              114       -
+		Expanded wires:            128       4
+		Vectored wires:             11       -
+		Always blocks:              38      38
+		Initial blocks:              5       5
+		Clocking blocks:             1       1
+		Clocking items:              5       5
+		Parallel blocks:            22      22
+		Cont. assignments:          20      27
+		Pseudo assignments:         10      10
+		Assertions:                 28      28
+		Compilation units:           1       1
+		SV Class declarations:      13      13
+		SV Class specializations:   13      13
+		Simulation timescale:      1ps
+	Writing initial simulation snapshot: worklib.top_C1:sv
+Loading snapshot worklib.top_C1:sv .................... Done
+ncsim> source /softwares/Linux/cadence/INCISIV102/tools/inca/files/ncsimrc
+ncsim> run
+Testing Read Miss Scenario using topReadMiss test case
+SVSEED default: 1
+
+****** Test topReadMiss Started ****** 
+SUCCESS:: Com_Bus_Req_Proc and CPU_stall are asserted within timeout after PrRd/PrWr is asserted
+SUCCESS:: BusRd Asserted Properly 
+SUCCESS:: Correct Address is placed on Address_Com Bus
+BUG:: Com_Bus_Req_Snoop is asserted while it should remain de-asserted
+
+ncsim: *E,ASRTST (./TestCases.sv,393): (time 48 PS) Assertion worklib.$unit_0x60362cfa::baseTestClass::check_MESI_fsm.__assert_18 has failed 
+BUG:: Next MESI State does not match with expected next MESI state: Expected = EXCLUSIVE, Actual = SHARED
+SUCCESS:: Data stored in Cache matches with Expected Data: Stored Data = babababa , Expected Data = babababa
+SUCCESS:: Line accessed = 0, LRU Var = 110 
+SUCCESS:: Correct data is placed by cache on Data_Bus to the proc: Data Bus = babababa, ClkBlk.Data_Bus_Com = babababa
+SUCCESS:: CPU_stall is De-asserted
+SUCCESS:: CPU_stall De-Asserted
+SUCCESS:: Com_Bus_Req_proc_0 De-Asserted
+****** Test topReadMiss Done Status = FAILED ******
+
+
+****** Test topReadHit Started ****** 
+Data to be checked against babababa
+SUCCESS:: Correct data is placed by cache on Data_Bus to the proc: Data Bus = babababa, ClkBlk.Data_Bus_Com = babababa
+SUCCESS:: CPU_stall De-Asserted
+SUCCESS:: Com_Bus_Req_proc_0 De-Asserted
+****** Test topReadHit Done Status = PASSED ******
+
+
+****** Test topWriteMiss Started ****** 
+SUCCESS:: Com_Bus_Req_Proc and CPU_stall are asserted within timeout after PrRd/PrWr is asserted
+SUCCESS:: BusRdX is asserted within timeout
+SUCCESS:: Correct Address is placed on Address_Com Bus
+SUCCESS:: Next MESI State consistent with Expected MESI State: Expected = MODIFIED, Actual = MODIFIED
+SUCCESS:: Data stored in Cache matches with Expected Data: Stored Data = cafecafe , Expected Data = cafecafe
+SUCCESS:: CPU_stall De-Asserted
+SUCCESS:: Com_Bus_Req_proc_0 De-Asserted
+BUG:: Com_Bus_Req_Snoop is asserted while it should remain de-asserted
+****** Test topWriteMiss Done Status = FAILED ******
+
+
+****** Test topWriteHit Started ****** 
+Current MESI State of the Block is MODIFIED
+SUCCESS:: Data stored in Cache matches with Expected Data: Stored Data = baabbaab , Expected Data = baabbaab
+SUCCESS:: Next MESI State consistent with Expected MESI State: Expected = MODIFIED, Actual = MODIFIED
+SUCCESS:: CPU_stall De-Asserted
+SUCCESS:: Com_Bus_Req_proc_0 De-Asserted
+****** Test topWriteHit Done Status = PASSED ******
+
+
+****** Test topWriteHit Started ****** 
+Current MESI State of the Block is SHARED
+ncsim: *E,ASRTST (./TestCases.sv,276): (time 624 PS) Assertion worklib.$unit_0x60362cfa::baseTestClass::check_Invalidate_assert.__assert_12 has failed 
+BUG:: Invalidate not asserted
+SUCCESS:: Data stored in Cache matches with Expected Data: Stored Data = baabbaab , Expected Data = baabbaab
+SUCCESS:: Next MESI State consistent with Expected MESI State: Expected = MODIFIED, Actual = MODIFIED
+SUCCESS:: CPU_stall De-Asserted
+SUCCESS:: Com_Bus_Req_proc_0 De-Asserted
+****** Test topWriteHit Done Status = FAILED ******
+
+***Setting up DUT Environment for ReadMiss Modified replacement test tag =     0 **
+
+****** Test topWriteMiss Started ****** 
+SUCCESS:: Com_Bus_Req_Proc and CPU_stall are asserted within timeout after PrRd/PrWr is asserted
+SUCCESS:: BusRdX is asserted within timeout
+SUCCESS:: Correct Address is placed on Address_Com Bus
+SUCCESS:: Next MESI State consistent with Expected MESI State: Expected = MODIFIED, Actual = MODIFIED
+SUCCESS:: Data stored in Cache matches with Expected Data: Stored Data = cafecafb , Expected Data = cafecafb
+SUCCESS:: CPU_stall De-Asserted
+SUCCESS:: Com_Bus_Req_proc_0 De-Asserted
+BUG:: Com_Bus_Req_Snoop is asserted while it should remain de-asserted
+****** Test topWriteMiss Done Status = FAILED ******
+
+***Setting up DUT Environment for ReadMiss Modified replacement test tag =     1 **
+
+****** Test topWriteMiss Started ****** 
+SUCCESS:: Com_Bus_Req_Proc and CPU_stall are asserted within timeout after PrRd/PrWr is asserted
+SUCCESS:: BusRdX is asserted within timeout
+SUCCESS:: Correct Address is placed on Address_Com Bus
+SUCCESS:: Next MESI State consistent with Expected MESI State: Expected = MODIFIED, Actual = MODIFIED
+SUCCESS:: Data stored in Cache matches with Expected Data: Stored Data = cafecafb , Expected Data = cafecafb
+SUCCESS:: CPU_stall De-Asserted
+SUCCESS:: Com_Bus_Req_proc_0 De-Asserted
+BUG:: Com_Bus_Req_Snoop is asserted while it should remain de-asserted
+****** Test topWriteMiss Done Status = FAILED ******
+
+***Setting up DUT Environment for ReadMiss Modified replacement test tag =     2 **
+
+****** Test topWriteMiss Started ****** 
+SUCCESS:: Com_Bus_Req_Proc and CPU_stall are asserted within timeout after PrRd/PrWr is asserted
+SUCCESS:: BusRdX is asserted within timeout
+SUCCESS:: Correct Address is placed on Address_Com Bus
+SUCCESS:: Next MESI State consistent with Expected MESI State: Expected = MODIFIED, Actual = MODIFIED
+SUCCESS:: Data stored in Cache matches with Expected Data: Stored Data = cafecafb , Expected Data = cafecafb
+SUCCESS:: CPU_stall De-Asserted
+SUCCESS:: Com_Bus_Req_proc_0 De-Asserted
+BUG:: Com_Bus_Req_Snoop is asserted while it should remain de-asserted
+****** Test topWriteMiss Done Status = FAILED ******
+
+***Setting up DUT Environment for ReadMiss Modified replacement test tag =     3 **
+
+****** Test topWriteMiss Started ****** 
+SUCCESS:: Com_Bus_Req_Proc and CPU_stall are asserted within timeout after PrRd/PrWr is asserted
+SUCCESS:: BusRdX is asserted within timeout
+SUCCESS:: Correct Address is placed on Address_Com Bus
+SUCCESS:: Next MESI State consistent with Expected MESI State: Expected = MODIFIED, Actual = MODIFIED
+SUCCESS:: Data stored in Cache matches with Expected Data: Stored Data = cafecafb , Expected Data = cafecafb
+SUCCESS:: CPU_stall De-Asserted
+SUCCESS:: Com_Bus_Req_proc_0 De-Asserted
+BUG:: Com_Bus_Req_Snoop is asserted while it should remain de-asserted
+****** Test topWriteMiss Done Status = FAILED ******
+
+***DONE Setting up DUT Environment for ReadMiss Modified replacement test
+
+****** Test topReadMissReplaceModified Started ****** 
+SUCCESS:: Com_Bus_Req_Proc and CPU_stall are asserted within timeout after PrRd/PrWr is asserted
+Address of the Block to be replaced = 00050004, Data at that location = cafecafb
+SUCCESS::Address_Com is loaded with correct address of the block to be replaced
+SUCCESS:: Mem_wr is asserted
+ncsim: *E,ASRTST (./TestCases.sv,375): (time 1248 PS) Assertion worklib.$unit_0x60362cfa::baseTestClass::check_DataBusCom_valid.__assert_17 has failed 
+BUG:: ClkBlk.Data_Bus_Com contains incorrect data
+Expected data on bus = cafecafb, actual data on bus = XXXXXXXb
+Simulation complete via $finish(1) at time 1348 PS + 0
+./TestBenchIn.sv:184    $finish;
+ncsim> exit
+TOOL:	ncverilog	10.20-s073: Exiting on Nov 14, 2015 at 18:54:11 CST  (total: 00:00:02)

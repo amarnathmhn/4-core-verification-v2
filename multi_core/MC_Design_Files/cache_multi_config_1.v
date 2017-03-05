@@ -5,37 +5,37 @@
 
 
 module cache_multi_config_1 (	clk,
-								PrWr              [0],
-								PrRd              [0],
+								PrWr_0,
+								PrRd_0,
 								Address           [0],
-								Data_Bus          [0],
+								Data_Bus_0        ,
 								CPU_stall         [0],
 								Com_Bus_Req_proc  [0],
 								Com_Bus_Gnt_proc  [0],
 								Com_Bus_Req_snoop [0],
 								Com_Bus_Gnt_snoop [0],
-								PrWr              [1],
-								PrRd              [1],
+								PrWr_1,
+								PrRd_1,
 								Address           [1],
-								Data_Bus          [1],
+								Data_Bus_1,
 								CPU_stall         [1],
 								Com_Bus_Req_proc  [1],
 								Com_Bus_Gnt_proc  [1],
 								Com_Bus_Req_snoop [1],
 								Com_Bus_Gnt_snoop [1],
-								PrWr              [2],
-								PrRd              [2],
+								PrWr_2,
+								PrRd_2,
 								Address           [2],
-								Data_Bus          [2],
+								Data_Bus_2         ,
 								CPU_stall         [2],
 								Com_Bus_Req_proc  [2],
 								Com_Bus_Gnt_proc  [2],
 								Com_Bus_Req_snoop [2],
 								Com_Bus_Gnt_snoop [2],
-								PrWr              [3],
-								PrRd              [3],
+								PrWr_3,
+								PrRd_3,
 								Address           [3],
-								Data_Bus          [3],
+								Data_Bus_3         ,
 								CPU_stall         [3],
 								Com_Bus_Req_proc  [3],
 								Com_Bus_Gnt_proc  [3],
@@ -47,34 +47,34 @@ module cache_multi_config_1 (	clk,
 								Mem_wr,
 								Mem_oprn_abort,
 								Mem_write_done,
-								PrWr              [4],
-								PrRd              [4],
+								PrWr_4,
+								PrRd_4,
 								Address           [4],
-								Data_Bus          [4],
+								Data_Bus_4         ,
 								CPU_stall         [4],
 								Com_Bus_Req_proc  [4],
 								Com_Bus_Gnt_proc  [4],
 								
-								PrWr              [5],
-								PrRd              [5],
+								PrWr_5,
+								PrRd_5,
 								Address           [5],
-								Data_Bus          [5],
+								Data_Bus_5         ,
 								CPU_stall         [5],
 								Com_Bus_Req_proc  [5],
 								Com_Bus_Gnt_proc  [5],
 								
-								PrWr              [6],
-								PrRd              [6],
+								PrWr_6,
+								PrRd_6,
 								Address           [6],
-								Data_Bus          [6],
+								Data_Bus_6        ,
 								CPU_stall         [6],
 								Com_Bus_Req_proc  [6],
 								Com_Bus_Gnt_proc  [6],
 								
-								PrWr              [7],
-								PrRd              [7],
+								PrWr_7,
+								PrRd_7,
 								Address           [7],
-								Data_Bus          [7],
+								Data_Bus_7,
 								CPU_stall         [7],
 								Com_Bus_Req_proc  [7],
 								Com_Bus_Gnt_proc  [7]);
@@ -82,10 +82,31 @@ module cache_multi_config_1 (	clk,
 
 
 input 							clk;
-input								         PrWr              [7 : 0];
-input								         PrRd              [7 : 0];
+input								         PrWr_0              ;
+input								         PrWr_1              ;
+input								         PrWr_2              ;
+input								         PrWr_3              ;
+input								         PrWr_4              ;
+input								         PrWr_5              ;
+input								         PrWr_6              ;
+input								         PrWr_7              ;
+input								         PrRd_0              ;
+input								         PrRd_1              ;
+input								         PrRd_2              ;
+input								         PrRd_3              ;
+input								         PrRd_4              ;
+input								         PrRd_5              ;
+input								         PrRd_6              ;
+input								         PrRd_7              ;
 input 	[`ADDRESSSIZE-1 : 0] 		Address           [7 : 0];
-inout 	[`ADDRESSSIZE-1 : 0] 		Data_Bus          [7 : 0];
+inout  	[`ADDRESSSIZE-1 : 0] 		Data_Bus_0          ;
+inout  	[`ADDRESSSIZE-1 : 0] 		Data_Bus_1          ;
+inout  	[`ADDRESSSIZE-1 : 0] 		Data_Bus_2          ;
+inout  	[`ADDRESSSIZE-1 : 0] 		Data_Bus_3          ;
+inout  	[`ADDRESSSIZE-1 : 0] 		Data_Bus_4          ;
+inout  	[`ADDRESSSIZE-1 : 0] 		Data_Bus_5          ;
+inout  	[`ADDRESSSIZE-1 : 0] 		Data_Bus_6          ;
+inout  	[`ADDRESSSIZE-1 : 0] 		Data_Bus_7          ;
 output								      CPU_stall         [7 : 0];
 output								      Com_Bus_Req_proc  [7 : 0];
 
@@ -125,10 +146,10 @@ assign All_Invalidation_done = Invalidation_done[0] & Invalidation_done[1] & Inv
 //assign      All_Invalidation_done = ((!Shared_local[0] & !Invalidation_done[0]) | Invalidation_done[0]) & ((!Shared_local[1] & !Invalidation_done[1]) |   Invalidation_done[1]) & ((!Shared_local[2] & !Invalidation_done[2]) |   Invalidation_done[2]) & ((!Shared_local[3] & !Invalidation_done[3]) |   Invalidation_done[3]);
 
 cache_wrapper_0     P1_DL (	clk,
-                              PrWr[0],
-                              PrRd[0],
+                              PrWr_0,
+                              PrRd_0,
                               Address[0],
-                              Data_Bus[0],
+                              Data_Bus_0,
                               CPU_stall[0],
                               Com_Bus_Req_proc[0],
                               Com_Bus_Gnt_proc[0],
@@ -149,9 +170,9 @@ cache_wrapper_0     P1_DL (	clk,
                               Shared
 );
 cache_wrapper_I_0   P1_IL (	clk,
-                              PrRd[4],
+                              PrRd_4,
                               Address[4],
-                              Data_Bus[4],
+                              Data_Bus_4,
                               CPU_stall[4],
                               Com_Bus_Req_proc[4],
                               Com_Bus_Gnt_proc[4],
@@ -161,10 +182,10 @@ cache_wrapper_I_0   P1_IL (	clk,
                            );
 
 cache_wrapper_1     P2_DL (   clk,
-                              PrWr[1],
-                              PrRd[1],
+                              PrWr_1,
+                              PrRd_1,
                               Address[1],
-                              Data_Bus[1],
+                              Data_Bus_1,
                               CPU_stall[1],
                               Com_Bus_Req_proc[1],
                               Com_Bus_Gnt_proc[1],
@@ -185,9 +206,9 @@ cache_wrapper_1     P2_DL (   clk,
                               Shared
 );
 cache_wrapper_I_1   P2_IL (clk,
-                              PrRd[5],
+                              PrRd_5,
                               Address[5],
-                              Data_Bus[5],
+                              Data_Bus_5,
                               CPU_stall[5],
                               Com_Bus_Req_proc[5],
                               Com_Bus_Gnt_proc[5],
@@ -197,10 +218,10 @@ cache_wrapper_I_1   P2_IL (clk,
                            );
 
 cache_wrapper_2     P3_DL (   clk,
-                              PrWr[2],
-                              PrRd[2],
+                              PrWr_2,
+                              PrRd_2,
                               Address[2],
-                              Data_Bus[2],
+                              Data_Bus_2,
                               CPU_stall[2],
                               Com_Bus_Req_proc[2],
                               Com_Bus_Gnt_proc[2],
@@ -221,9 +242,9 @@ cache_wrapper_2     P3_DL (   clk,
                               Shared
 );
 cache_wrapper_I_2   P3_IL (   clk,
-                              PrRd[7],
+                              PrRd_7,
                               Address[7],
-                              Data_Bus[7],
+                              Data_Bus_7,
                               CPU_stall[7],
                               Com_Bus_Req_proc[7],
                               Com_Bus_Gnt_proc[7],
@@ -233,10 +254,10 @@ cache_wrapper_I_2   P3_IL (   clk,
                            );
 
 cache_wrapper_3     P4_DL (   clk,
-                              PrWr[3],
-                              PrRd[3],
+                              PrWr_3,
+                              PrRd_3,
                               Address[3],
-                              Data_Bus[3],
+                              Data_Bus_3,
                               CPU_stall[3],
                               Com_Bus_Req_proc[3],
                               Com_Bus_Gnt_proc[3],
@@ -257,9 +278,9 @@ cache_wrapper_3     P4_DL (   clk,
                               Shared
 );
 cache_wrapper_I_3   P4_IL (   clk,
-                              PrRd[6],
+                              PrRd_6,
                               Address[6],
-                              Data_Bus[6],
+                              Data_Bus_6,
                               CPU_stall[6],
                               Com_Bus_Req_proc[6],
                               Com_Bus_Gnt_proc[6],

@@ -1,0 +1,280 @@
+****** Bug Report for L1 MESI Cache in a Multicore Environment. Bus are presented in
+the order of testing.*****
+UNIT and MACRO LEVEL testing are not done since their modules are not defined in the
+Design.
+
+COMPILER USED: Cadence - NCVERILOG
+
+1. Testing for syntax errors:
+
+  a) cache_block_1.v :
+     Warnings like this show up when this file is compiled for indices 2 and 3.
+     " Access_blk_proc[2]   <= 1'b0;
+                      |
+ncelab: *W,BNDWRN (./cache_block_1.v,294|15): Bit-select or part-select index out of declared bounds [4.2.1(IEEE)]."
+
+FIX: ASSOCIATIVITY MACRO needs to be redefined to 2. It was originally 1 which
+makes the index out of bound.
+
+
+
+  b) cache_controller_1.v :
+     This Error occurs when compiled: 
+    " file: cache_controller_1.v
+end
+  |
+ncvlog: *E,ILLPRI (cache_controller_1.v,287|2): illegal expression primary [4.2(IEEE)].
+        module worklib.cache_controller_1:v
+                errors: 1, warnings: 0"
+
+FIX: 'endcase' has been commented out at line 286. Comment needs to be removed.
+
+  c) cache_wrapper_1.v :
+     This Error occurs when compiled :
+    " cache_controller_0 cc (         PrRd, 
+                    |
+ncelab: *E,CUVMUR (./cache_wrapper_1.v,91|20): instance 'cache_wrapper_1.cc' of design unit 'cache_controller_0' is unresolved in 'worklib.cache_wrapper_1:v'.
+ncverilog: *E,ELBERR: Error during elaboration (status 1), exiting."
+
+FIX: 'cache_controller_0' has to be changed to 'cache_controller_1'
+   
+  d) fifo.v :
+     This Error occurs when compiled :
+     "input Com_Bus_req_Gnt[0:7];
+                     |
+ncvlog: *E,EXPSMC (fifo.v,7|21): expecting a semicolon (';') [12.3.2(IEEE)].
+        module worklib.fifo:v
+                errors: 1, warnings: 0"
+    
+
+ FIX: define as follows: input [0:7] Com_Bus_req_Gnt;
+
+   e) arbiter.v
+      This error occurs when compiled:
+      "file: arbiter.v
+input                                   Com_Bus_Req_proc[7:0];
+                                                        |
+ncvlog: *E,EXPSMC (arbiter.v,32|27): expecting a semicolon (';') [12.3.2(IEEE)].
+input                                   Com_Bus_Req_snoop[3:0];
+                                                         |
+ncvlog: *E,EXPSMC (arbiter.v,33|28): expecting a semicolon (';') [12.3.2(IEEE)].
+        module worklib.arbiter:v
+                errors: 2, warnings: 0"
+
+ FIX: put [7:0] and [3:0] before the register identifier.
+
+2. Testing for Functional Bugs:
+All the test cases in TestCases.sv file are run. Their Log is presented.
+Please look out for the word 'BUG'. The message following this word will tell
+what the bug is.
+
+a) ****** Test topReadMiss Started ****** 
+SUCCESS:: Com_Bus_Req_Proc and CPU_stall are asserted within timeout after PrRd/PrWr is asserted
+SUCCESS:: BusRd Asserted Properly 
+SUCCESS:: Correct Address is placed on Address_Com Bus
+BUG:: Com_Bus_Req_Snoop is asserted while it should remain de-asserted
+
+ncsim: *E,ASRTST (./TestCases.sv,395): (time 48 PS) Assertion worklib.$unit_0x60362cfa::baseTestClass::check_MESI_fsm.__assert_18 has failed 
+BUG:: Next MESI State does not match with expected next MESI state: Expected = EXCLUSIVE, Actual = SHARED
+SUCCESS:: Data stored in Cache matches with Expected Data: Stored Data = babababa , Expected Data = babababa
+SUCCESS:: Line accessed = 00, Expected LRU Var = 11x, Actual LRY Var = 110 
+SUCCESS:: Correct data is placed by cache on Data_Bus to the proc: Data Bus = babababa, ClkBlk.Data_Bus_Com = babababa
+SUCCESS:: CPU_stall is De-asserted
+SUCCESS:: CPU_stall De-Asserted
+SUCCESS:: Com_Bus_Req_proc_0 De-Asserted
+****** Test topReadMiss Done Status = FAILED ******
+
+
+b) ****** Test topReadHit Started ****** 
+Data to be checked against babababa
+SUCCESS:: Correct data is placed by cache on Data_Bus to the proc: Data Bus = babababa, ClkBlk.Data_Bus_Com = babababa
+SUCCESS:: CPU_stall De-Asserted
+SUCCESS:: Com_Bus_Req_proc_0 De-Asserted
+****** Test topReadHit Done Status = PASSED ******
+
+Testing Read Miss Scenario using topReadMiss test case when other Cache contain data in shared state
+
+c) ****** Test topReadMiss Started ****** 
+SUCCESS:: Com_Bus_Req_Proc and CPU_stall are asserted within timeout after PrRd/PrWr is asserted
+SUCCESS:: BusRd Asserted Properly 
+SUCCESS:: Correct Address is placed on Address_Com Bus
+SUCCESS:: Next MESI State consistent with Expected MESI State: Expected = SHARED, Actual = SHARED
+SUCCESS:: Data stored in Cache matches with Expected Data: Stored Data = babababa , Expected Data = babababa
+SUCCESS:: Line accessed = 00, Expected LRU Var = 11x, Actual LRY Var = 11x 
+SUCCESS:: Correct data is placed by cache on Data_Bus to the proc: Data Bus = babababa, ClkBlk.Data_Bus_Com = babababa
+SUCCESS:: CPU_stall is De-asserted
+SUCCESS:: CPU_stall De-Asserted
+SUCCESS:: Com_Bus_Req_proc_0 De-Asserted
+BUG:: Com_Bus_Req_Snoop is asserted while it should remain de-asserted
+
+****** Test topReadMiss Done Status = FAILED ******
+
+
+d) ****** Test topWriteMiss Started ****** 
+Processor Write Attempt is made for Address = babecafe with Data = cafecafe
+SUCCESS:: Com_Bus_Req_Proc and CPU_stall are asserted within timeout after PrRd/PrWr is asserted
+SUCCESS:: BusRdX is asserted within timeout
+SUCCESS:: Correct Address is placed on Address_Com Bus
+SUCCESS:: Next MESI State consistent with Expected MESI State: Expected = MODIFIED, Actual = MODIFIED
+SUCCESS:: Data stored in Cache matches with Expected Data: Stored Data = cafecafe , Expected Data = cafecafe
+SUCCESS:: CPU_stall De-Asserted
+SUCCESS:: Com_Bus_Req_proc_0 De-Asserted
+BUG:: Com_Bus_Req_Snoop is asserted while it should remain de-asserted
+****** Test topWriteMiss Done Status = FAILED ******
+
+
+e) ****** Test topWriteHit Started ****** 
+Current MESI State of the Block is MODIFIED
+SUCCESS:: Data stored in Cache matches with Expected Data: Stored Data = baabbaab , Expected Data = baabbaab
+SUCCESS:: Next MESI State consistent with Expected MESI State: Expected = MODIFIED, Actual = MODIFIED
+SUCCESS:: CPU_stall De-Asserted
+SUCCESS:: Com_Bus_Req_proc_0 De-Asserted
+****** Test topWriteHit Done Status = PASSED ******
+
+
+f) ****** Test topWriteHit Started ****** 
+Current MESI State of the Block is SHARED
+ncsim: *E,ASRTST (./TestCases.sv,278): (time 972 PS) Assertion worklib.$unit_0x60362cfa::baseTestClass::check_Invalidate_assert.__assert_12 has failed 
+BUG:: Invalidate not asserted
+SUCCESS:: Data stored in Cache matches with Expected Data: Stored Data = baabbaab , Expected Data = baabbaab
+SUCCESS:: Next MESI State consistent with Expected MESI State: Expected = MODIFIED, Actual = MODIFIED
+SUCCESS:: CPU_stall De-Asserted
+SUCCESS:: Com_Bus_Req_proc_0 De-Asserted
+****** Test topWriteHit Done Status = FAILED ******
+
+***Setting up DUT Environment for ReadMiss Modified replacement test tag =     0 **
+
+****** Test topWriteMiss Started ****** 
+Processor Write Attempt is made for Address = 00000004 with Data = cafecafb
+SUCCESS:: Com_Bus_Req_Proc and CPU_stall are asserted within timeout after PrRd/PrWr is asserted
+SUCCESS:: BusRdX is asserted within timeout
+SUCCESS:: Correct Address is placed on Address_Com Bus
+SUCCESS:: Next MESI State consistent with Expected MESI State: Expected = MODIFIED, Actual = MODIFIED
+SUCCESS:: Data stored in Cache matches with Expected Data: Stored Data = cafecafb , Expected Data = cafecafb
+SUCCESS:: CPU_stall De-Asserted
+SUCCESS:: Com_Bus_Req_proc_0 De-Asserted
+BUG:: Com_Bus_Req_Snoop is asserted while it should remain de-asserted
+****** Test topWriteMiss Done Status = FAILED ******
+
+***Setting up DUT Environment for ReadMiss Modified replacement test tag =     1 **
+
+****** Test topWriteMiss Started ****** 
+Processor Write Attempt is made for Address = 00010004 with Data = cafecafc
+SUCCESS:: Com_Bus_Req_Proc and CPU_stall are asserted within timeout after PrRd/PrWr is asserted
+SUCCESS:: BusRdX is asserted within timeout
+SUCCESS:: Correct Address is placed on Address_Com Bus
+SUCCESS:: Next MESI State consistent with Expected MESI State: Expected = MODIFIED, Actual = MODIFIED
+SUCCESS:: Data stored in Cache matches with Expected Data: Stored Data = cafecafc , Expected Data = cafecafc
+SUCCESS:: CPU_stall De-Asserted
+SUCCESS:: Com_Bus_Req_proc_0 De-Asserted
+BUG:: Com_Bus_Req_Snoop is asserted while it should remain de-asserted
+****** Test topWriteMiss Done Status = FAILED ******
+
+***Setting up DUT Environment for ReadMiss Modified replacement test tag =     2 **
+
+****** Test topWriteMiss Started ****** 
+Processor Write Attempt is made for Address = 00020004 with Data = cafecafd
+SUCCESS:: Com_Bus_Req_Proc and CPU_stall are asserted within timeout after PrRd/PrWr is asserted
+SUCCESS:: BusRdX is asserted within timeout
+SUCCESS:: Correct Address is placed on Address_Com Bus
+SUCCESS:: Next MESI State consistent with Expected MESI State: Expected = MODIFIED, Actual = MODIFIED
+SUCCESS:: Data stored in Cache matches with Expected Data: Stored Data = cafecafd , Expected Data = cafecafd
+SUCCESS:: CPU_stall De-Asserted
+SUCCESS:: Com_Bus_Req_proc_0 De-Asserted
+BUG:: Com_Bus_Req_Snoop is asserted while it should remain de-asserted
+****** Test topWriteMiss Done Status = FAILED ******
+
+***Setting up DUT Environment for ReadMiss Modified replacement test tag =     3 **
+
+****** Test topWriteMiss Started ****** 
+Processor Write Attempt is made for Address = 00030004 with Data = cafecafe
+SUCCESS:: Com_Bus_Req_Proc and CPU_stall are asserted within timeout after PrRd/PrWr is asserted
+SUCCESS:: BusRdX is asserted within timeout
+SUCCESS:: Correct Address is placed on Address_Com Bus
+SUCCESS:: Next MESI State consistent with Expected MESI State: Expected = MODIFIED, Actual = MODIFIED
+SUCCESS:: Data stored in Cache matches with Expected Data: Stored Data = cafecafe , Expected Data = cafecafe
+SUCCESS:: CPU_stall De-Asserted
+SUCCESS:: Com_Bus_Req_proc_0 De-Asserted
+BUG:: Com_Bus_Req_Snoop is asserted while it should remain de-asserted
+****** Test topWriteMiss Done Status = FAILED ******
+
+***DONE Setting up DUT Environment for ReadMiss Modified replacement test
+
+g) ****** Test topReadMissReplaceModified Started ****** 
+Processor Read Attempt is made for Address = 00050004
+SUCCESS:: Com_Bus_Req_Proc and CPU_stall are asserted within timeout after PrRd/PrWr is asserted
+Address of the Block to be replaced = 000000004, Data at that location = cafecafb
+SUCCESS::Address_Com is loaded with correct address of the block to be replaced
+SUCCESS::  Expected Address_Com = 00000004, Actual Address_Com = 00000004
+SUCCESS:: Mem_wr is asserted
+SUCCESS:: Data placed on ClkBlk.Data_Bus_Com matches input data
+BUG:: Com_Bus_Req_Snoop is asserted while it should remain de-asserted
+
+ncsim: *E,ASRTST (./TestCases.sv,670): (time 1766 PS) Assertion worklib.$unit_0x60362cfa::topReadMissReplaceModified::testReadMissReplaceModified.__assert_25 has failed 
+BUG: Updated MESI State = SHARED Does not match with Expected state = EXCLUSIVE
+****** Test topReadMissReplaceModified Done Status = FAILED ******
+
+
+h) ****** Test topWriteMissModifiedReplacement Started ****** 
+Processor Write Attempt is made for Address = 00640004 with Data = beadbead
+SUCCESS:: Com_Bus_Req_Proc and CPU_stall are asserted within timeout after PrRd/PrWr is asserted
+MESI State of the Block To Be Replaced is 3
+SUCCESS:: LRU Replacemet Proc = 2 matches with Expected Line To Be Replaced = 2
+Line To Be Replaced = 2, Address of the Block to be replaced = 000040004, Data at that location = cafecafd
+SUCCESS::Address_Com is loaded with correct address of the block to be replaced
+SUCCESS:: Mem_wr is made high
+BUG:: Com_Bus_Req_Snoop is asserted while it should remain de-asserted
+
+****** Test topWriteMissModifiedReplacement Done Status = FAILED ******
+
+i) ******Test topBusRdSnoop Started*********
+Bus Read  Attempt is made for Address = 00640004
+ncsim: *E,ASRTST (./TestCases.sv,72): (time 2210 PS) Assertion worklib.$unit_0x60362cfa::baseTestClass::check_ComBusReqSnoop_assert.__assert_2 has failed
+BUG:: Com_Bus_Req_snoop_0 is not asserted after BusRd/BusRdX
+MESI State of the Block to Be accessed = 3
+Last Test Timedout.. Moving on
+
+FIX: inout signals need to be 'Z' when not driven by _reg internal registers.
+AFTER FIX:
+Bus Read  Attempt is made for Address = 00640004
+SUCCESS:: Com_Bus_Req_snoop_0 is asserted within timeout after BusRd/BusRdX is asserted
+MESI State of the Block to Be accessed = 3
+Last Test Timedout.. Moving on
+
+ 
+
+
+j) ******Test topBusRdXSnoop Started*********
+Bus ReadX  Attempt is made for Address = 00640004
+ncsim: *E,ASRTST (./TestCases.sv,72): (time 2610 PS) Assertion worklib.$unit_0x60362cfa::baseTestClass::check_ComBusReqSnoop_assert.__assert_2 has failed 
+BUG:: Com_Bus_Req_snoop_0 is not asserted after BusRd/BusRdX
+MESI State of the Block to Be accessed = 3
+Last Test Timedout.. Moving on
+SAME FIX AS ABOVE.
+AFTER FIX:
+Bus ReadX  Attempt is made for Address = 00640004
+SUCCESS:: Com_Bus_Req_snoop_0 is asserted within timeout after BusRd/BusRdX is asserted
+MESI State of the Block to Be accessed = 3
+Last Test Timedout.. Moving on
+
+
+k) ****** TEST topSnoopInvalidate Started ******
+
+ncsim: *E,ASRTST (./TestCases.sv,1037): (time 2924 PS) Assertion worklib.$unit_0x60362cfa::topSnoopInvalidate::testInvalidation.__assert_32 has failed 
+BUG:: Invalidation Not Done upon snooping Invalidate
+
+****** Test topSnoopInvalidate Done Status = FAILED ******
+
+
+
+
+
+
+
+
+
+
+
+
+
+       

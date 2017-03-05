@@ -116,7 +116,8 @@ wire					All_Invalidation_done;
 wire    [(`ASSOCIATIVITY)-1 : 0]        LRU_replacement_proc;
 wire    [(`MESI_SIZE)-1 : 0]            Updated_MESI_state_proc;
 wire    [(`MESI_SIZE)-1 : 0]	        Updated_MESI_state_snoop;
-
+reg					CPU_stall; 
+// bug: CPU_stall wasn't reg
 reg					Com_Bus_Req_proc;
 reg					Com_Bus_Req_snoop;
 reg 	[((`ASSOCIATIVITY)-1) : 0]	Blk_accessed;
@@ -281,7 +282,7 @@ begin
     begin 
         Access_blk_proc[0]   <= 1'b1;
     end
-    if((Cache_proc_contr[{Index_proc,BLK2}][`CACHE_MESI_MSB : `CACHE_MESI_LSB] != INVALID) && (Cache_proc_contr[{Index_proc,BLK2}][`CACHE_TAG_MSB : `CACHE_TAG_LSB] = Tag_proc))
+    if((Cache_proc_contr[{Index_proc,BLK2}][`CACHE_MESI_MSB : `CACHE_MESI_LSB] != INVALID) && (Cache_proc_contr[{Index_proc,BLK2}][`CACHE_TAG_MSB : `CACHE_TAG_LSB] == /*= was a bug*/ Tag_proc))
     begin
 	Access_blk_proc[1]   <= 1'b0;
     end

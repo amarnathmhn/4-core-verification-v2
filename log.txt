@@ -1,0 +1,237 @@
+ncverilog: 10.20-s073: (c) Copyright 1995-2011 Cadence Design Systems, Inc.
+file: TestBenchMultiCore.sv
+								CPU_stall         [0],
+								        |
+ncvlog: *E,NOBSOS (MC_Design_Files//cache_multi_config_1.v,12|16): Bit-select operator cannot be applied to scalar [4.2.1(IEEE)].
+(`include file: MC_Design_Files//cache_multi_config_1.v line 292, file: TestBenchMultiCore.sv line 8)
+								Com_Bus_Req_proc  [0],
+								               |
+ncvlog: *E,NOBSOS (MC_Design_Files//cache_multi_config_1.v,13|23): Bit-select operator cannot be applied to scalar [4.2.1(IEEE)].
+(`include file: MC_Design_Files//cache_multi_config_1.v line 292, file: TestBenchMultiCore.sv line 8)
+								Com_Bus_Gnt_proc  [0],
+								               |
+ncvlog: *E,NOBSOS (MC_Design_Files//cache_multi_config_1.v,14|23): Bit-select operator cannot be applied to scalar [4.2.1(IEEE)].
+(`include file: MC_Design_Files//cache_multi_config_1.v line 292, file: TestBenchMultiCore.sv line 8)
+								Com_Bus_Req_snoop [0],
+								                |
+ncvlog: *E,NOBSOS (MC_Design_Files//cache_multi_config_1.v,15|24): Bit-select operator cannot be applied to scalar [4.2.1(IEEE)].
+(`include file: MC_Design_Files//cache_multi_config_1.v line 292, file: TestBenchMultiCore.sv line 8)
+								Com_Bus_Gnt_snoop [0],
+								                |
+ncvlog: *E,NOBSOS (MC_Design_Files//cache_multi_config_1.v,16|24): Bit-select operator cannot be applied to scalar [4.2.1(IEEE)].
+(`include file: MC_Design_Files//cache_multi_config_1.v line 292, file: TestBenchMultiCore.sv line 8)
+								CPU_stall         [1],
+								        |
+ncvlog: *E,NOBSOS (MC_Design_Files//cache_multi_config_1.v,21|16): Bit-select operator cannot be applied to scalar [4.2.1(IEEE)].
+(`include file: MC_Design_Files//cache_multi_config_1.v line 292, file: TestBenchMultiCore.sv line 8)
+								Com_Bus_Req_proc  [1],
+								               |
+ncvlog: *E,NOBSOS (MC_Design_Files//cache_multi_config_1.v,22|23): Bit-select operator cannot be applied to scalar [4.2.1(IEEE)].
+(`include file: MC_Design_Files//cache_multi_config_1.v line 292, file: TestBenchMultiCore.sv line 8)
+								Com_Bus_Gnt_proc  [1],
+								               |
+ncvlog: *E,NOBSOS (MC_Design_Files//cache_multi_config_1.v,23|23): Bit-select operator cannot be applied to scalar [4.2.1(IEEE)].
+(`include file: MC_Design_Files//cache_multi_config_1.v line 292, file: TestBenchMultiCore.sv line 8)
+								Com_Bus_Req_snoop [1],
+								                |
+ncvlog: *E,NOBSOS (MC_Design_Files//cache_multi_config_1.v,24|24): Bit-select operator cannot be applied to scalar [4.2.1(IEEE)].
+(`include file: MC_Design_Files//cache_multi_config_1.v line 292, file: TestBenchMultiCore.sv line 8)
+								Com_Bus_Gnt_snoop [1],
+								                |
+ncvlog: *E,NOBSOS (MC_Design_Files//cache_multi_config_1.v,25|24): Bit-select operator cannot be applied to scalar [4.2.1(IEEE)].
+(`include file: MC_Design_Files//cache_multi_config_1.v line 292, file: TestBenchMultiCore.sv line 8)
+								CPU_stall         [2],
+								        |
+ncvlog: *E,NOBSOS (MC_Design_Files//cache_multi_config_1.v,30|16): Bit-select operator cannot be applied to scalar [4.2.1(IEEE)].
+(`include file: MC_Design_Files//cache_multi_config_1.v line 292, file: TestBenchMultiCore.sv line 8)
+								Com_Bus_Req_proc  [2],
+								               |
+ncvlog: *E,NOBSOS (MC_Design_Files//cache_multi_config_1.v,31|23): Bit-select operator cannot be applied to scalar [4.2.1(IEEE)].
+(`include file: MC_Design_Files//cache_multi_config_1.v line 292, file: TestBenchMultiCore.sv line 8)
+								Com_Bus_Gnt_proc  [2],
+								               |
+ncvlog: *E,NOBSOS (MC_Design_Files//cache_multi_config_1.v,32|23): Bit-select operator cannot be applied to scalar [4.2.1(IEEE)].
+(`include file: MC_Design_Files//cache_multi_config_1.v line 292, file: TestBenchMultiCore.sv line 8)
+								Com_Bus_Req_snoop [2],
+								                |
+ncvlog: *E,NOBSOS (MC_Design_Files//cache_multi_config_1.v,33|24): Bit-select operator cannot be applied to scalar [4.2.1(IEEE)].
+(`include file: MC_Design_Files//cache_multi_config_1.v line 292, file: TestBenchMultiCore.sv line 8)
+								Com_Bus_Gnt_snoop [2],
+								                |
+ncvlog: *E,NOBSOS (MC_Design_Files//cache_multi_config_1.v,34|24): Bit-select operator cannot be applied to scalar [4.2.1(IEEE)].
+(`include file: MC_Design_Files//cache_multi_config_1.v line 292, file: TestBenchMultiCore.sv line 8)
+								CPU_stall         [3],
+								        |
+ncvlog: *E,NOBSOS (MC_Design_Files//cache_multi_config_1.v,39|16): Bit-select operator cannot be applied to scalar [4.2.1(IEEE)].
+(`include file: MC_Design_Files//cache_multi_config_1.v line 292, file: TestBenchMultiCore.sv line 8)
+								Com_Bus_Req_proc  [3],
+								               |
+ncvlog: *E,NOBSOS (MC_Design_Files//cache_multi_config_1.v,40|23): Bit-select operator cannot be applied to scalar [4.2.1(IEEE)].
+(`include file: MC_Design_Files//cache_multi_config_1.v line 292, file: TestBenchMultiCore.sv line 8)
+								Com_Bus_Gnt_proc  [3],
+								               |
+ncvlog: *E,NOBSOS (MC_Design_Files//cache_multi_config_1.v,41|23): Bit-select operator cannot be applied to scalar [4.2.1(IEEE)].
+(`include file: MC_Design_Files//cache_multi_config_1.v line 292, file: TestBenchMultiCore.sv line 8)
+								Com_Bus_Req_snoop [3],
+								                |
+ncvlog: *E,NOBSOS (MC_Design_Files//cache_multi_config_1.v,42|24): Bit-select operator cannot be applied to scalar [4.2.1(IEEE)].
+(`include file: MC_Design_Files//cache_multi_config_1.v line 292, file: TestBenchMultiCore.sv line 8)
+								Com_Bus_Gnt_snoop [3],
+								                |
+ncvlog: *E,NOBSOS (MC_Design_Files//cache_multi_config_1.v,43|24): Bit-select operator cannot be applied to scalar [4.2.1(IEEE)].
+(`include file: MC_Design_Files//cache_multi_config_1.v line 292, file: TestBenchMultiCore.sv line 8)
+								CPU_stall         [4],
+								        |
+ncvlog: *E,NOBSOS (MC_Design_Files//cache_multi_config_1.v,54|16): Bit-select operator cannot be applied to scalar [4.2.1(IEEE)].
+(`include file: MC_Design_Files//cache_multi_config_1.v line 292, file: TestBenchMultiCore.sv line 8)
+								Com_Bus_Req_proc  [4],
+								               |
+ncvlog: *E,NOBSOS (MC_Design_Files//cache_multi_config_1.v,55|23): Bit-select operator cannot be applied to scalar [4.2.1(IEEE)].
+(`include file: MC_Design_Files//cache_multi_config_1.v line 292, file: TestBenchMultiCore.sv line 8)
+								Com_Bus_Gnt_proc  [4],
+								               |
+ncvlog: *E,NOBSOS (MC_Design_Files//cache_multi_config_1.v,56|23): Bit-select operator cannot be applied to scalar [4.2.1(IEEE)].
+(`include file: MC_Design_Files//cache_multi_config_1.v line 292, file: TestBenchMultiCore.sv line 8)
+								CPU_stall         [5],
+								        |
+ncvlog: *E,NOBSOS (MC_Design_Files//cache_multi_config_1.v,62|16): Bit-select operator cannot be applied to scalar [4.2.1(IEEE)].
+(`include file: MC_Design_Files//cache_multi_config_1.v line 292, file: TestBenchMultiCore.sv line 8)
+								Com_Bus_Req_proc  [5],
+								               |
+ncvlog: *E,NOBSOS (MC_Design_Files//cache_multi_config_1.v,63|23): Bit-select operator cannot be applied to scalar [4.2.1(IEEE)].
+(`include file: MC_Design_Files//cache_multi_config_1.v line 292, file: TestBenchMultiCore.sv line 8)
+								Com_Bus_Gnt_proc  [5],
+								               |
+ncvlog: *E,NOBSOS (MC_Design_Files//cache_multi_config_1.v,64|23): Bit-select operator cannot be applied to scalar [4.2.1(IEEE)].
+(`include file: MC_Design_Files//cache_multi_config_1.v line 292, file: TestBenchMultiCore.sv line 8)
+								CPU_stall         [6],
+								        |
+ncvlog: *E,NOBSOS (MC_Design_Files//cache_multi_config_1.v,70|16): Bit-select operator cannot be applied to scalar [4.2.1(IEEE)].
+(`include file: MC_Design_Files//cache_multi_config_1.v line 292, file: TestBenchMultiCore.sv line 8)
+								Com_Bus_Req_proc  [6],
+								               |
+ncvlog: *E,NOBSOS (MC_Design_Files//cache_multi_config_1.v,71|23): Bit-select operator cannot be applied to scalar [4.2.1(IEEE)].
+(`include file: MC_Design_Files//cache_multi_config_1.v line 292, file: TestBenchMultiCore.sv line 8)
+								Com_Bus_Gnt_proc  [6],
+								               |
+ncvlog: *E,NOBSOS (MC_Design_Files//cache_multi_config_1.v,72|23): Bit-select operator cannot be applied to scalar [4.2.1(IEEE)].
+(`include file: MC_Design_Files//cache_multi_config_1.v line 292, file: TestBenchMultiCore.sv line 8)
+								CPU_stall         [7],
+								        |
+ncvlog: *E,NOBSOS (MC_Design_Files//cache_multi_config_1.v,78|16): Bit-select operator cannot be applied to scalar [4.2.1(IEEE)].
+(`include file: MC_Design_Files//cache_multi_config_1.v line 292, file: TestBenchMultiCore.sv line 8)
+								Com_Bus_Req_proc  [7],
+								               |
+ncvlog: *E,NOBSOS (MC_Design_Files//cache_multi_config_1.v,79|23): Bit-select operator cannot be applied to scalar [4.2.1(IEEE)].
+(`include file: MC_Design_Files//cache_multi_config_1.v line 292, file: TestBenchMultiCore.sv line 8)
+								Com_Bus_Gnt_proc  [7]);
+								               |
+ncvlog: *E,NOBSOS (MC_Design_Files//cache_multi_config_1.v,80|23): Bit-select operator cannot be applied to scalar [4.2.1(IEEE)].
+(`include file: MC_Design_Files//cache_multi_config_1.v line 292, file: TestBenchMultiCore.sv line 8)
+	module worklib.cache_multi_config_1:v
+		errors: 32, warnings: 0
+module fifo(Com_Bus_req_Gnt[0], Com_Bus_req_Gnt[1], Com_Bus_req_Gnt[2], Com_Bus_req_Gnt[3], Com_Bus_req_Gnt[4], Com_Bus_req_Gnt[5], Com_Bus_req_Gnt[6], Com_Bus_req_Gnt[7], rst, buf_out, rd_en, buf_empty, buf_full, fifo_counter );
+                          |
+ncvlog: *E,NOBSOS (Arbiter_design_files//fifo.v,4|26): Bit-select operator cannot be applied to scalar [4.2.1(IEEE)].
+(`include file: Arbiter_design_files//fifo.v line 177, `include file: Arbiter_design_files//arbiter.v line 3, file: TestBenchMultiCore.sv line 9)
+module fifo(Com_Bus_req_Gnt[0], Com_Bus_req_Gnt[1], Com_Bus_req_Gnt[2], Com_Bus_req_Gnt[3], Com_Bus_req_Gnt[4], Com_Bus_req_Gnt[5], Com_Bus_req_Gnt[6], Com_Bus_req_Gnt[7], rst, buf_out, rd_en, buf_empty, buf_full, fifo_counter );
+                                              |
+ncvlog: *E,NOBSOS (Arbiter_design_files//fifo.v,4|46): Bit-select operator cannot be applied to scalar [4.2.1(IEEE)].
+(`include file: Arbiter_design_files//fifo.v line 177, `include file: Arbiter_design_files//arbiter.v line 3, file: TestBenchMultiCore.sv line 9)
+module fifo(Com_Bus_req_Gnt[0], Com_Bus_req_Gnt[1], Com_Bus_req_Gnt[2], Com_Bus_req_Gnt[3], Com_Bus_req_Gnt[4], Com_Bus_req_Gnt[5], Com_Bus_req_Gnt[6], Com_Bus_req_Gnt[7], rst, buf_out, rd_en, buf_empty, buf_full, fifo_counter );
+                                                                  |
+ncvlog: *E,NOBSOS (Arbiter_design_files//fifo.v,4|66): Bit-select operator cannot be applied to scalar [4.2.1(IEEE)].
+(`include file: Arbiter_design_files//fifo.v line 177, `include file: Arbiter_design_files//arbiter.v line 3, file: TestBenchMultiCore.sv line 9)
+module fifo(Com_Bus_req_Gnt[0], Com_Bus_req_Gnt[1], Com_Bus_req_Gnt[2], Com_Bus_req_Gnt[3], Com_Bus_req_Gnt[4], Com_Bus_req_Gnt[5], Com_Bus_req_Gnt[6], Com_Bus_req_Gnt[7], rst, buf_out, rd_en, buf_empty, buf_full, fifo_counter );
+                                                                                      |
+ncvlog: *E,NOBSOS (Arbiter_design_files//fifo.v,4|86): Bit-select operator cannot be applied to scalar [4.2.1(IEEE)].
+(`include file: Arbiter_design_files//fifo.v line 177, `include file: Arbiter_design_files//arbiter.v line 3, file: TestBenchMultiCore.sv line 9)
+module fifo(Com_Bus_req_Gnt[0], Com_Bus_req_Gnt[1], Com_Bus_req_Gnt[2], Com_Bus_req_Gnt[3], Com_Bus_req_Gnt[4], Com_Bus_req_Gnt[5], Com_Bus_req_Gnt[6], Com_Bus_req_Gnt[7], rst, buf_out, rd_en, buf_empty, buf_full, fifo_counter );
+                                                                                                          |
+ncvlog: *E,NOBSOS (Arbiter_design_files//fifo.v,4|106): Bit-select operator cannot be applied to scalar [4.2.1(IEEE)].
+(`include file: Arbiter_design_files//fifo.v line 177, `include file: Arbiter_design_files//arbiter.v line 3, file: TestBenchMultiCore.sv line 9)
+module fifo(Com_Bus_req_Gnt[0], Com_Bus_req_Gnt[1], Com_Bus_req_Gnt[2], Com_Bus_req_Gnt[3], Com_Bus_req_Gnt[4], Com_Bus_req_Gnt[5], Com_Bus_req_Gnt[6], Com_Bus_req_Gnt[7], rst, buf_out, rd_en, buf_empty, buf_full, fifo_counter );
+                                                                                                                              |
+ncvlog: *E,NOBSOS (Arbiter_design_files//fifo.v,4|126): Bit-select operator cannot be applied to scalar [4.2.1(IEEE)].
+(`include file: Arbiter_design_files//fifo.v line 177, `include file: Arbiter_design_files//arbiter.v line 3, file: TestBenchMultiCore.sv line 9)
+module fifo(Com_Bus_req_Gnt[0], Com_Bus_req_Gnt[1], Com_Bus_req_Gnt[2], Com_Bus_req_Gnt[3], Com_Bus_req_Gnt[4], Com_Bus_req_Gnt[5], Com_Bus_req_Gnt[6], Com_Bus_req_Gnt[7], rst, buf_out, rd_en, buf_empty, buf_full, fifo_counter );
+                                                                                                                                                  |
+ncvlog: *E,NOBSOS (Arbiter_design_files//fifo.v,4|146): Bit-select operator cannot be applied to scalar [4.2.1(IEEE)].
+(`include file: Arbiter_design_files//fifo.v line 177, `include file: Arbiter_design_files//arbiter.v line 3, file: TestBenchMultiCore.sv line 9)
+module fifo(Com_Bus_req_Gnt[0], Com_Bus_req_Gnt[1], Com_Bus_req_Gnt[2], Com_Bus_req_Gnt[3], Com_Bus_req_Gnt[4], Com_Bus_req_Gnt[5], Com_Bus_req_Gnt[6], Com_Bus_req_Gnt[7], rst, buf_out, rd_en, buf_empty, buf_full, fifo_counter );
+                                                                                                                                                                      |
+ncvlog: *E,NOBSOS (Arbiter_design_files//fifo.v,4|166): Bit-select operator cannot be applied to scalar [4.2.1(IEEE)].
+(`include file: Arbiter_design_files//fifo.v line 177, `include file: Arbiter_design_files//arbiter.v line 3, file: TestBenchMultiCore.sv line 9)
+	module worklib.fifo:v
+		errors: 8, warnings: 0
+module arbiter (	Com_Bus_Req_proc[0],
+                	               |
+ncvlog: *E,NOBSOS (Arbiter_design_files//arbiter.v,5|32): Bit-select operator cannot be applied to scalar [4.2.1(IEEE)].
+(`include file: Arbiter_design_files//arbiter.v line 392, file: TestBenchMultiCore.sv line 9)
+					Com_Bus_Req_proc[1],
+					               |
+ncvlog: *E,NOBSOS (Arbiter_design_files//arbiter.v,6|20): Bit-select operator cannot be applied to scalar [4.2.1(IEEE)].
+(`include file: Arbiter_design_files//arbiter.v line 392, file: TestBenchMultiCore.sv line 9)
+					Com_Bus_Req_proc[2],
+					               |
+ncvlog: *E,NOBSOS (Arbiter_design_files//arbiter.v,7|20): Bit-select operator cannot be applied to scalar [4.2.1(IEEE)].
+(`include file: Arbiter_design_files//arbiter.v line 392, file: TestBenchMultiCore.sv line 9)
+					Com_Bus_Req_proc[3],
+					               |
+ncvlog: *E,NOBSOS (Arbiter_design_files//arbiter.v,8|20): Bit-select operator cannot be applied to scalar [4.2.1(IEEE)].
+(`include file: Arbiter_design_files//arbiter.v line 392, file: TestBenchMultiCore.sv line 9)
+					Com_Bus_Req_proc[4],
+					               |
+ncvlog: *E,NOBSOS (Arbiter_design_files//arbiter.v,9|20): Bit-select operator cannot be applied to scalar [4.2.1(IEEE)].
+(`include file: Arbiter_design_files//arbiter.v line 392, file: TestBenchMultiCore.sv line 9)
+					Com_Bus_Req_proc[5],
+					               |
+ncvlog: *E,NOBSOS (Arbiter_design_files//arbiter.v,10|20): Bit-select operator cannot be applied to scalar [4.2.1(IEEE)].
+(`include file: Arbiter_design_files//arbiter.v line 392, file: TestBenchMultiCore.sv line 9)
+					Com_Bus_Req_proc[6],
+					               |
+ncvlog: *E,NOBSOS (Arbiter_design_files//arbiter.v,11|20): Bit-select operator cannot be applied to scalar [4.2.1(IEEE)].
+(`include file: Arbiter_design_files//arbiter.v line 392, file: TestBenchMultiCore.sv line 9)
+					Com_Bus_Req_proc[7],
+					               |
+ncvlog: *E,NOBSOS (Arbiter_design_files//arbiter.v,12|20): Bit-select operator cannot be applied to scalar [4.2.1(IEEE)].
+(`include file: Arbiter_design_files//arbiter.v line 392, file: TestBenchMultiCore.sv line 9)
+					Com_Bus_Req_snoop[0],
+					                |
+ncvlog: *E,NOBSOS (Arbiter_design_files//arbiter.v,13|21): Bit-select operator cannot be applied to scalar [4.2.1(IEEE)].
+(`include file: Arbiter_design_files//arbiter.v line 392, file: TestBenchMultiCore.sv line 9)
+					Com_Bus_Req_snoop[1],
+					                |
+ncvlog: *E,NOBSOS (Arbiter_design_files//arbiter.v,14|21): Bit-select operator cannot be applied to scalar [4.2.1(IEEE)].
+(`include file: Arbiter_design_files//arbiter.v line 392, file: TestBenchMultiCore.sv line 9)
+					Com_Bus_Req_snoop[2],
+					                |
+ncvlog: *E,NOBSOS (Arbiter_design_files//arbiter.v,15|21): Bit-select operator cannot be applied to scalar [4.2.1(IEEE)].
+(`include file: Arbiter_design_files//arbiter.v line 392, file: TestBenchMultiCore.sv line 9)
+					Com_Bus_Req_snoop[3],
+					                |
+ncvlog: *E,NOBSOS (Arbiter_design_files//arbiter.v,16|21): Bit-select operator cannot be applied to scalar [4.2.1(IEEE)].
+(`include file: Arbiter_design_files//arbiter.v line 392, file: TestBenchMultiCore.sv line 9)
+	module worklib.arbiter:v
+		errors: 12, warnings: 0
+   logic [`CACHE_TAG_VALID_SIZE-1 : 0] Cache_proc_contr_IL[`CORES][0 : `CACHE_DEPTH-1];
+                              |
+ncvlog: *E,NOTDIR (interfacesMultiCore.sv,64|30): `CACHE_TAG_VALID_SIZE: not a recognized directive or macro [2.7.3][16.3.1][16(IEEE)].
+(`include file: interfacesMultiCore.sv line 64, `include file: TestCasesMultiCore.sv line 8, file: TestBenchMultiCore.sv line 11)
+	interface worklib.globalInterface:sv
+		errors: 1, warnings: 0
+//*************************************************************************************************************************************************************
+  |
+ncvlog: *W,NOCMIC (TestBenchMultiCore.sv,581|2): error-prone block comment nested within block comment [2.3(IEEE)].
+    determine_LRU_var_exp(sintf.Blk_access_proc[core],expected_lru_var);
+                        |
+ncvlog: *W,FUNTSK (TestCasesMultiCore.sv,561|24): function called as a task without void'().
+    determine_LRU_var_exp(sintf.Blk_access_proc[core],expected_lru_var);
+                        |
+ncvlog: *W,FUNTSK (TestCasesMultiCore.sv,644|24): function called as a task without void'().
+                determine_LRU_var_exp(sintf.Blk_access_proc[local_cache],expected_lru_var);
+                                    |
+ncvlog: *W,FUNTSK (TestCasesMultiCore.sv,919|36): function called as a task without void'().
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 3
+ncverilog: *E,VLGERR: An error occurred during parsing.  Review the log file for errors with the code *E and fix those identified problems to proceed.  Exiting with code (status 1).
