@@ -1,7 +1,7 @@
 /* Wrapper for Cache_Controller and Cache_block to make them as a single unit */
 `include "cache_block_0.v" 
 `include "cache_controller_0.v"
-`include "cache_def_0.v"
+//`include "cache_def_0.v"
 
 module cache_wrapper_0 (clk,
                         PrWr,

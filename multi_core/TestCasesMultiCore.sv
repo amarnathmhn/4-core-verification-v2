@@ -5,6 +5,7 @@
 `timescale 1ps/1ps
 //Include defines.sv file containing all Macros
 //`include "defines.sv"
+//`include "cache_def_I_0.v"
 `include "interfacesMultiCore.sv"
 //enum type for MESI States
 typedef enum bit[1:0] {INVALID, SHARED, EXCLUSIVE, MODIFIED} mesiStateType;

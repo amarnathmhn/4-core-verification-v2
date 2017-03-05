@@ -2,18 +2,18 @@
 `define BUF_SIZE ( 1<<`BUF_WIDTH )
 `include "fifo.v"
 
-module arbiter (	Com_Bus_Req_proc[0],
-					Com_Bus_Req_proc[1],
-					Com_Bus_Req_proc[2],
-					Com_Bus_Req_proc[3],
-					Com_Bus_Req_proc[4],
-					Com_Bus_Req_proc[5],
-					Com_Bus_Req_proc[6],
-					Com_Bus_Req_proc[7],
-					Com_Bus_Req_snoop[0],
-					Com_Bus_Req_snoop[1],
-					Com_Bus_Req_snoop[2],
-					Com_Bus_Req_snoop[3],
+module arbiter (			Com_Bus_Req_proc_0,
+					Com_Bus_Req_proc_1,
+					Com_Bus_Req_proc_2,
+					Com_Bus_Req_proc_3,
+					Com_Bus_Req_proc_4,
+					Com_Bus_Req_proc_5,
+					Com_Bus_Req_proc_6,
+					Com_Bus_Req_proc_7,
+					Com_Bus_Req_snoop_0,
+					Com_Bus_Req_snoop_1,
+					Com_Bus_Req_snoop_2,
+					Com_Bus_Req_snoop_3,
 					Com_Bus_Gnt_proc_0,
 					Com_Bus_Gnt_proc_1,
 					Com_Bus_Gnt_proc_2,
@@ -29,12 +29,24 @@ module arbiter (	Com_Bus_Req_proc[0],
 					Mem_snoop_req,
 					Mem_snoop_gnt);
 					
-//BUG: input				Com_Bus_Req_proc[7:0];
-//FIX
-  input     [7:0]                       Com_Bus_Req_proc;
-//BUG: input 					Com_Bus_Req_snoop[3:0];
-//FIX 
-  input     [3:0]                       Com_Bus_Req_snoop; 
+input 					Com_Bus_Req_proc_0;
+input 					Com_Bus_Req_proc_1;
+input 					Com_Bus_Req_proc_2;
+input 					Com_Bus_Req_proc_3;
+input 					Com_Bus_Req_proc_4;
+input 					Com_Bus_Req_proc_5;
+input 					Com_Bus_Req_proc_6;
+input 					Com_Bus_Req_proc_7;
+
+input 					Com_Bus_Req_snoop_0;
+input 					Com_Bus_Req_snoop_1;
+input 					Com_Bus_Req_snoop_2;
+input 					Com_Bus_Req_snoop_3;
+input 					Com_Bus_Req_snoop_4;
+input 					Com_Bus_Req_snoop_5;
+input 					Com_Bus_Req_snoop_6;
+input 					Com_Bus_Req_snoop_7;
+
 //output					Com_Bus_Gnt_proc[7:0];
 //output					Com_Bus_Gnt_snoop[3:0];
 input 					Mem_snoop_req;
@@ -115,7 +127,7 @@ integer temp_snoop;
 
 parameter IDLE 		= 2'b00;
 parameter PROC_REQ 	= 2'b01;
-parameter SNOOP_REQ     = 2'b10;
+parameter SNOOP_REQ = 2'b10;
 parameter MEM_REQ 	= 2'b11;
 
 parameter PROC1		= 4'b0001;
@@ -133,7 +145,7 @@ begin
 	#2 rst = 1'b0;
 end
 
-fifo f1 (Com_Bus_Req_proc[0], Com_Bus_Req_proc[1], Com_Bus_Req_proc[2], Com_Bus_Req_proc[3],Com_Bus_Req_proc[4], Com_Bus_Req_proc[5], Com_Bus_Req_proc[6], Com_Bus_Req_proc[7], rst, buf_out, rd_en, buf_empty, buf_full, fifo_counter);
+fifo f1 (Com_Bus_Req_proc_0, Com_Bus_Req_proc_1, Com_Bus_Req_proc_2, Com_Bus_Req_proc_3,Com_Bus_Req_proc_4, Com_Bus_Req_proc_5, Com_Bus_Req_proc_6, Com_Bus_Req_proc_7, rst, buf_out, rd_en, buf_empty, buf_full, fifo_counter);
 
 // Logic for rd_en
 //always @ *
@@ -233,44 +245,44 @@ begin
 		Mem_snoop_give	= 1'b0;
 end
 
-always @ (Com_Bus_Req_snoop[0] or posedge rst)
+always @ (Com_Bus_Req_snoop_0 or posedge rst)
 begin
 	if (rst)
 		snoop_0 = 1'b0;
-	else if (state == PROC_REQ && temp!= 0 && Com_Bus_Req_snoop[0])
+	else if (state == PROC_REQ && temp!= 0 && Com_Bus_Req_snoop_0)
 	begin
 		snoop_0 = 1'b1;
 	end
 	else
 		snoop_0 = 1'b0;
 end
-always @ (Com_Bus_Req_snoop[1]  or posedge rst)
+always @ (Com_Bus_Req_snoop_1  or posedge rst)
 begin
 	if (rst)
 		snoop_1 = 1'b0;
-	else if (state == PROC_REQ && temp!= 1 && Com_Bus_Req_snoop[1])
+	else if (state == PROC_REQ && temp!= 1 && Com_Bus_Req_snoop_1)
 	begin
 		snoop_1 = 1'b1;
 	end
 	else
 		snoop_1 = 1'b0;
 end
-always @ (Com_Bus_Req_snoop[2]  or posedge rst)
+always @ (Com_Bus_Req_snoop_2  or posedge rst)
 begin
 	if (rst)
 		snoop_2 = 1'b0;
-	else if (state == PROC_REQ && temp!= 2 && Com_Bus_Req_snoop[2])
+	else if (state == PROC_REQ && temp!= 2 && Com_Bus_Req_snoop_2)
 	begin
 		snoop_2 = 1'b1;
 	end
 	else
 		snoop_2 = 1'b0;
 end
-always @ (Com_Bus_Req_snoop[3]  or posedge rst)
+always @ (Com_Bus_Req_snoop_3  or posedge rst)
 begin
 	if (rst)
 		snoop_3 = 1'b0;
-	else if (state == PROC_REQ && temp!= 3 && Com_Bus_Req_snoop[3])
+	else if (state == PROC_REQ && temp!= 3 && Com_Bus_Req_snoop_3)
 	begin
 		snoop_3 = 1'b1;
 	end
@@ -392,6 +404,5 @@ begin
 		end
 	endcase
 end
-
 
 endmodule

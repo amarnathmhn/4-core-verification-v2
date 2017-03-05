@@ -1,0 +1,5 @@
+define NCSIMRC	( /softwares/Linux/cadence/INCISIV102/tools/inca/files/ncsimrc, ~/.ncsimrc )
+include ./hdlrun.var
+define SNAPSHOT worklib.cache_controller_1:v
+DEFINE RUNMODEDEFAULT 1
+DEFINE LIB_MAP ($LIB_MAP, + => worklib )

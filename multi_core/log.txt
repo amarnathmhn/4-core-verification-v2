@@ -1,0 +1,184 @@
+ncverilog: 10.20-s073: (c) Copyright 1995-2011 Cadence Design Systems, Inc.
+file: TestBenchMultiCore.sv
+`define SET_SIZE 		   14
+                 		     |
+ncvlog: *W,MACRDF (MC_Design_Files/cache_def_I_0.v,2|24): text macro 'SET_SIZE' redefined - replaced with new definition.
+(`include file: MC_Design_Files/cache_def_I_0.v line 2, `include file: MC_Design_Files/cache_multi_config_1.v line 2, file: TestBenchMultiCore.sv line 8)
+`define ASSOCIATIVITY 	2 
+                      	  |
+ncvlog: *W,MACRDF (MC_Design_Files/cache_def_I_0.v,3|25): text macro 'ASSOCIATIVITY' redefined - replaced with new definition.
+(`include file: MC_Design_Files/cache_def_I_0.v line 3, `include file: MC_Design_Files/cache_multi_config_1.v line 2, file: TestBenchMultiCore.sv line 8)
+`define BLK_OFFSET_SIZE       (`NUM_BYTES)
+                                          |
+ncvlog: *W,MACRDF (MC_Design_Files/cache_def_I_0.v,10|42): text macro 'BLK_OFFSET_SIZE' redefined - replaced with new definition.
+(`include file: MC_Design_Files/cache_def_I_0.v line 10, `include file: MC_Design_Files/cache_multi_config_1.v line 2, file: TestBenchMultiCore.sv line 8)
+`define INDEX_SIZE 		      (`SET_SIZE)
+                   		                 |
+ncvlog: *W,MACRDF (MC_Design_Files/cache_def_I_0.v,11|38): text macro 'INDEX_SIZE' redefined - replaced with new definition.
+(`include file: MC_Design_Files/cache_def_I_0.v line 11, `include file: MC_Design_Files/cache_multi_config_1.v line 2, file: TestBenchMultiCore.sv line 8)
+`define TAG_SIZE 		         ((`ADDRESSSIZE) - (`BLK_OFFSET_SIZE) - (`INDEX_SIZE))
+                 		                                                              |
+ncvlog: *W,MACRDF (MC_Design_Files/cache_def_I_0.v,12|81): text macro 'TAG_SIZE' redefined - replaced with new definition.
+(`include file: MC_Design_Files/cache_def_I_0.v line 12, `include file: MC_Design_Files/cache_multi_config_1.v line 2, file: TestBenchMultiCore.sv line 8)
+`define DATA_SIZE 		      (1<<((`BLK_OFFSET_SIZE) + (`BYTE_SIZE)))
+                  		                                              |
+ncvlog: *W,MACRDF (MC_Design_Files/cache_def_I_0.v,13|66): text macro 'DATA_SIZE' redefined - replaced with new definition.
+(`include file: MC_Design_Files/cache_def_I_0.v line 13, `include file: MC_Design_Files/cache_multi_config_1.v line 2, file: TestBenchMultiCore.sv line 8)
+`define NUM_OF_SETS 		      (1<<(`SET_SIZE))
+                    		                      |
+ncvlog: *W,MACRDF (MC_Design_Files/cache_def_I_0.v,16|44): text macro 'NUM_OF_SETS' redefined - replaced with new definition.
+(`include file: MC_Design_Files/cache_def_I_0.v line 16, `include file: MC_Design_Files/cache_multi_config_1.v line 2, file: TestBenchMultiCore.sv line 8)
+`define LRU_SIZE 		         ((1<<`ASSOCIATIVITY)-1)
+                 		                                |
+ncvlog: *W,MACRDF (MC_Design_Files/cache_def_I_0.v,17|51): text macro 'LRU_SIZE' redefined - replaced with new definition.
+(`include file: MC_Design_Files/cache_def_I_0.v line 17, `include file: MC_Design_Files/cache_multi_config_1.v line 2, file: TestBenchMultiCore.sv line 8)
+`define CACHE_DATA_SIZE	      (`DATA_SIZE)
+                       	                  |
+ncvlog: *W,MACRDF (MC_Design_Files/cache_def_I_0.v,20|42): text macro 'CACHE_DATA_SIZE' redefined - replaced with new definition.
+(`include file: MC_Design_Files/cache_def_I_0.v line 20, `include file: MC_Design_Files/cache_multi_config_1.v line 2, file: TestBenchMultiCore.sv line 8)
+`define CACHE_DEPTH 		      (1<<((`INDEX_SIZE)+(`ASSOCIATIVITY)))
+                    		                                           |
+ncvlog: *W,MACRDF (MC_Design_Files/cache_def_I_0.v,22|65): text macro 'CACHE_DEPTH' redefined - replaced with new definition.
+(`include file: MC_Design_Files/cache_def_I_0.v line 22, `include file: MC_Design_Files/cache_multi_config_1.v line 2, file: TestBenchMultiCore.sv line 8)
+`define BLK_OFFSET_LSB 		   0
+                       		    |
+ncvlog: *W,MACRDF (MC_Design_Files/cache_def_I_0.v,25|29): text macro 'BLK_OFFSET_LSB' redefined - replaced with new definition.
+(`include file: MC_Design_Files/cache_def_I_0.v line 25, `include file: MC_Design_Files/cache_multi_config_1.v line 2, file: TestBenchMultiCore.sv line 8)
+`define BLK_OFFSET_MSB 		   (`BLK_OFFSET_SIZE-1)
+                       		                       |
+ncvlog: *W,MACRDF (MC_Design_Files/cache_def_I_0.v,26|48): text macro 'BLK_OFFSET_MSB' redefined - replaced with new definition.
+(`include file: MC_Design_Files/cache_def_I_0.v line 26, `include file: MC_Design_Files/cache_multi_config_1.v line 2, file: TestBenchMultiCore.sv line 8)
+`define INDEX_LSB 		      (`BLK_OFFSET_SIZE)
+                  		                        |
+ncvlog: *W,MACRDF (MC_Design_Files/cache_def_I_0.v,27|44): text macro 'INDEX_LSB' redefined - replaced with new definition.
+(`include file: MC_Design_Files/cache_def_I_0.v line 27, `include file: MC_Design_Files/cache_multi_config_1.v line 2, file: TestBenchMultiCore.sv line 8)
+`define INDEX_MSB 		      ((`BLK_OFFSET_SIZE) + (`INDEX_SIZE) - 1)
+                  		                                              |
+ncvlog: *W,MACRDF (MC_Design_Files/cache_def_I_0.v,28|66): text macro 'INDEX_MSB' redefined - replaced with new definition.
+(`include file: MC_Design_Files/cache_def_I_0.v line 28, `include file: MC_Design_Files/cache_multi_config_1.v line 2, file: TestBenchMultiCore.sv line 8)
+`define TAG_LSB 		         ((`BLK_OFFSET_SIZE) + (`INDEX_SIZE))
+                		                                             |
+ncvlog: *W,MACRDF (MC_Design_Files/cache_def_I_0.v,29|63): text macro 'TAG_LSB' redefined - replaced with new definition.
+(`include file: MC_Design_Files/cache_def_I_0.v line 29, `include file: MC_Design_Files/cache_multi_config_1.v line 2, file: TestBenchMultiCore.sv line 8)
+`define TAG_MSB 		         31
+                		           |
+ncvlog: *W,MACRDF (MC_Design_Files/cache_def_I_0.v,30|29): text macro 'TAG_MSB' redefined - replaced with new definition.
+(`include file: MC_Design_Files/cache_def_I_0.v line 30, `include file: MC_Design_Files/cache_multi_config_1.v line 2, file: TestBenchMultiCore.sv line 8)
+`define CACHE_TAG_MSB 		   ((`VALID_BIT_SIZE) + (`TAG_SIZE) - 1)
+                      		                                        |
+ncvlog: *W,MACRDF (MC_Design_Files/cache_def_I_0.v,33|64): text macro 'CACHE_TAG_MSB' redefined - replaced with new definition.
+(`include file: MC_Design_Files/cache_def_I_0.v line 33, `include file: MC_Design_Files/cache_multi_config_1.v line 2, file: TestBenchMultiCore.sv line 8)
+`define CACHE_TAG_LSB 		   (`VALID_BIT_SIZE)
+                      		                    |
+ncvlog: *W,MACRDF (MC_Design_Files/cache_def_I_0.v,34|44): text macro 'CACHE_TAG_LSB' redefined - replaced with new definition.
+(`include file: MC_Design_Files/cache_def_I_0.v line 34, `include file: MC_Design_Files/cache_multi_config_1.v line 2, file: TestBenchMultiCore.sv line 8)
+`define CACHE_DATA_MSB 		   ((`DATA_SIZE) - 1)
+                       		                     |
+ncvlog: *W,MACRDF (MC_Design_Files/cache_def_I_0.v,37|46): text macro 'CACHE_DATA_MSB' redefined - replaced with new definition.
+(`include file: MC_Design_Files/cache_def_I_0.v line 37, `include file: MC_Design_Files/cache_multi_config_1.v line 2, file: TestBenchMultiCore.sv line 8)
+`define CACHE_DATA_LSB 		   0
+                       		    |
+ncvlog: *W,MACRDF (MC_Design_Files/cache_def_I_0.v,38|29): text macro 'CACHE_DATA_LSB' redefined - replaced with new definition.
+(`include file: MC_Design_Files/cache_def_I_0.v line 38, `include file: MC_Design_Files/cache_multi_config_1.v line 2, file: TestBenchMultiCore.sv line 8)
+`define SET_SIZE 		14
+                 		  |
+ncvlog: *W,MACRDF (MC_Design_Files/cache_def_1.v,2|21): text macro 'SET_SIZE' redefined - replaced with new definition.
+(`include file: MC_Design_Files/cache_def_1.v line 2, `include file: MC_Design_Files/cache_block_1.v line 13, `include file: MC_Design_Files/cache_wrapper_1.v line 2, `include file: MC_Design_Files/cache_multi_config_1.v line 4, file: TestBenchMultiCore.sv line 8)
+`define ASSOCIATIVITY 		2
+                      		 |
+ncvlog: *W,MACRDF (MC_Design_Files/cache_def_1.v,3|25): text macro 'ASSOCIATIVITY' redefined - replaced with new definition.
+(`include file: MC_Design_Files/cache_def_1.v line 3, `include file: MC_Design_Files/cache_block_1.v line 13, `include file: MC_Design_Files/cache_wrapper_1.v line 2, `include file: MC_Design_Files/cache_multi_config_1.v line 4, file: TestBenchMultiCore.sv line 8)
+`define BLK_OFFSET_SIZE 	(`NUM_BYTES)
+                        	            |
+ncvlog: *W,MACRDF (MC_Design_Files/cache_def_1.v,10|37): text macro 'BLK_OFFSET_SIZE' redefined - replaced with new definition.
+(`include file: MC_Design_Files/cache_def_1.v line 10, `include file: MC_Design_Files/cache_block_1.v line 13, `include file: MC_Design_Files/cache_wrapper_1.v line 2, `include file: MC_Design_Files/cache_multi_config_1.v line 4, file: TestBenchMultiCore.sv line 8)
+`define INDEX_SIZE 		(`SET_SIZE)
+                   		           |
+ncvlog: *W,MACRDF (MC_Design_Files/cache_def_1.v,11|32): text macro 'INDEX_SIZE' redefined - replaced with new definition.
+(`include file: MC_Design_Files/cache_def_1.v line 11, `include file: MC_Design_Files/cache_block_1.v line 13, `include file: MC_Design_Files/cache_wrapper_1.v line 2, `include file: MC_Design_Files/cache_multi_config_1.v line 4, file: TestBenchMultiCore.sv line 8)
+`define TAG_SIZE 		((`ADDRESSSIZE) - (`BLK_OFFSET_SIZE) - (`INDEX_SIZE))
+                 		                                                     |
+ncvlog: *W,MACRDF (MC_Design_Files/cache_def_1.v,12|72): text macro 'TAG_SIZE' redefined - replaced with new definition.
+(`include file: MC_Design_Files/cache_def_1.v line 12, `include file: MC_Design_Files/cache_block_1.v line 13, `include file: MC_Design_Files/cache_wrapper_1.v line 2, `include file: MC_Design_Files/cache_multi_config_1.v line 4, file: TestBenchMultiCore.sv line 8)
+`define DATA_SIZE 		(1<<((`BLK_OFFSET_SIZE) + (`BYTE_SIZE)))
+                  		                                        |
+ncvlog: *W,MACRDF (MC_Design_Files/cache_def_1.v,13|60): text macro 'DATA_SIZE' redefined - replaced with new definition.
+(`include file: MC_Design_Files/cache_def_1.v line 13, `include file: MC_Design_Files/cache_block_1.v line 13, `include file: MC_Design_Files/cache_wrapper_1.v line 2, `include file: MC_Design_Files/cache_multi_config_1.v line 4, file: TestBenchMultiCore.sv line 8)
+`define NUM_OF_SETS 		(1<<(`SET_SIZE))
+                    		                |
+ncvlog: *W,MACRDF (MC_Design_Files/cache_def_1.v,16|38): text macro 'NUM_OF_SETS' redefined - replaced with new definition.
+(`include file: MC_Design_Files/cache_def_1.v line 16, `include file: MC_Design_Files/cache_block_1.v line 13, `include file: MC_Design_Files/cache_wrapper_1.v line 2, `include file: MC_Design_Files/cache_multi_config_1.v line 4, file: TestBenchMultiCore.sv line 8)
+`define LRU_SIZE 		((1<<`ASSOCIATIVITY)-1)
+                 		                       |
+ncvlog: *W,MACRDF (MC_Design_Files/cache_def_1.v,17|42): text macro 'LRU_SIZE' redefined - replaced with new definition.
+(`include file: MC_Design_Files/cache_def_1.v line 17, `include file: MC_Design_Files/cache_block_1.v line 13, `include file: MC_Design_Files/cache_wrapper_1.v line 2, `include file: MC_Design_Files/cache_multi_config_1.v line 4, file: TestBenchMultiCore.sv line 8)
+`define CACHE_DATA_SIZE		(`DATA_SIZE)
+                       		            |
+ncvlog: *W,MACRDF (MC_Design_Files/cache_def_1.v,20|37): text macro 'CACHE_DATA_SIZE' redefined - replaced with new definition.
+(`include file: MC_Design_Files/cache_def_1.v line 20, `include file: MC_Design_Files/cache_block_1.v line 13, `include file: MC_Design_Files/cache_wrapper_1.v line 2, `include file: MC_Design_Files/cache_multi_config_1.v line 4, file: TestBenchMultiCore.sv line 8)
+`define CACHE_DEPTH 		(1<<((`INDEX_SIZE)+(`ASSOCIATIVITY)))
+                    		                                     |
+ncvlog: *W,MACRDF (MC_Design_Files/cache_def_1.v,22|59): text macro 'CACHE_DEPTH' redefined - replaced with new definition.
+(`include file: MC_Design_Files/cache_def_1.v line 22, `include file: MC_Design_Files/cache_block_1.v line 13, `include file: MC_Design_Files/cache_wrapper_1.v line 2, `include file: MC_Design_Files/cache_multi_config_1.v line 4, file: TestBenchMultiCore.sv line 8)
+`define BLK_OFFSET_LSB 		0
+                       		 |
+ncvlog: *W,MACRDF (MC_Design_Files/cache_def_1.v,25|26): text macro 'BLK_OFFSET_LSB' redefined - replaced with new definition.
+(`include file: MC_Design_Files/cache_def_1.v line 25, `include file: MC_Design_Files/cache_block_1.v line 13, `include file: MC_Design_Files/cache_wrapper_1.v line 2, `include file: MC_Design_Files/cache_multi_config_1.v line 4, file: TestBenchMultiCore.sv line 8)
+`define BLK_OFFSET_MSB 		(`BLK_OFFSET_SIZE-1)
+                       		                    |
+ncvlog: *W,MACRDF (MC_Design_Files/cache_def_1.v,26|45): text macro 'BLK_OFFSET_MSB' redefined - replaced with new definition.
+(`include file: MC_Design_Files/cache_def_1.v line 26, `include file: MC_Design_Files/cache_block_1.v line 13, `include file: MC_Design_Files/cache_wrapper_1.v line 2, `include file: MC_Design_Files/cache_multi_config_1.v line 4, file: TestBenchMultiCore.sv line 8)
+`define INDEX_LSB 		(`BLK_OFFSET_SIZE)
+                  		                  |
+ncvlog: *W,MACRDF (MC_Design_Files/cache_def_1.v,27|38): text macro 'INDEX_LSB' redefined - replaced with new definition.
+(`include file: MC_Design_Files/cache_def_1.v line 27, `include file: MC_Design_Files/cache_block_1.v line 13, `include file: MC_Design_Files/cache_wrapper_1.v line 2, `include file: MC_Design_Files/cache_multi_config_1.v line 4, file: TestBenchMultiCore.sv line 8)
+`define INDEX_MSB 		((`BLK_OFFSET_SIZE) + (`INDEX_SIZE) - 1)
+                  		                                        |
+ncvlog: *W,MACRDF (MC_Design_Files/cache_def_1.v,28|60): text macro 'INDEX_MSB' redefined - replaced with new definition.
+(`include file: MC_Design_Files/cache_def_1.v line 28, `include file: MC_Design_Files/cache_block_1.v line 13, `include file: MC_Design_Files/cache_wrapper_1.v line 2, `include file: MC_Design_Files/cache_multi_config_1.v line 4, file: TestBenchMultiCore.sv line 8)
+`define TAG_LSB 		((`BLK_OFFSET_SIZE) + (`INDEX_SIZE))
+                		                                    |
+ncvlog: *W,MACRDF (MC_Design_Files/cache_def_1.v,29|54): text macro 'TAG_LSB' redefined - replaced with new definition.
+(`include file: MC_Design_Files/cache_def_1.v line 29, `include file: MC_Design_Files/cache_block_1.v line 13, `include file: MC_Design_Files/cache_wrapper_1.v line 2, `include file: MC_Design_Files/cache_multi_config_1.v line 4, file: TestBenchMultiCore.sv line 8)
+`define TAG_MSB 		31
+                		  |
+ncvlog: *W,MACRDF (MC_Design_Files/cache_def_1.v,30|20): text macro 'TAG_MSB' redefined - replaced with new definition.
+(`include file: MC_Design_Files/cache_def_1.v line 30, `include file: MC_Design_Files/cache_block_1.v line 13, `include file: MC_Design_Files/cache_wrapper_1.v line 2, `include file: MC_Design_Files/cache_multi_config_1.v line 4, file: TestBenchMultiCore.sv line 8)
+`define CACHE_TAG_MSB 		((`MESI_SIZE) + (`TAG_SIZE) - 1)
+                      		                                |
+ncvlog: *W,MACRDF (MC_Design_Files/cache_def_1.v,33|56): text macro 'CACHE_TAG_MSB' redefined - replaced with new definition.
+(`include file: MC_Design_Files/cache_def_1.v line 33, `include file: MC_Design_Files/cache_block_1.v line 13, `include file: MC_Design_Files/cache_wrapper_1.v line 2, `include file: MC_Design_Files/cache_multi_config_1.v line 4, file: TestBenchMultiCore.sv line 8)
+`define CACHE_TAG_LSB 		(`MESI_SIZE)
+                      		            |
+ncvlog: *W,MACRDF (MC_Design_Files/cache_def_1.v,34|36): text macro 'CACHE_TAG_LSB' redefined - replaced with new definition.
+(`include file: MC_Design_Files/cache_def_1.v line 34, `include file: MC_Design_Files/cache_block_1.v line 13, `include file: MC_Design_Files/cache_wrapper_1.v line 2, `include file: MC_Design_Files/cache_multi_config_1.v line 4, file: TestBenchMultiCore.sv line 8)
+`define CACHE_DATA_MSB 		((`DATA_SIZE) - 1)
+                       		                  |
+ncvlog: *W,MACRDF (MC_Design_Files/cache_def_1.v,37|43): text macro 'CACHE_DATA_MSB' redefined - replaced with new definition.
+(`include file: MC_Design_Files/cache_def_1.v line 37, `include file: MC_Design_Files/cache_block_1.v line 13, `include file: MC_Design_Files/cache_wrapper_1.v line 2, `include file: MC_Design_Files/cache_multi_config_1.v line 4, file: TestBenchMultiCore.sv line 8)
+`define CACHE_DATA_LSB 		0
+                       		 |
+ncvlog: *W,MACRDF (MC_Design_Files/cache_def_1.v,38|26): text macro 'CACHE_DATA_LSB' redefined - replaced with new definition.
+(`include file: MC_Design_Files/cache_def_1.v line 38, `include file: MC_Design_Files/cache_block_1.v line 13, `include file: MC_Design_Files/cache_wrapper_1.v line 2, `include file: MC_Design_Files/cache_multi_config_1.v line 4, file: TestBenchMultiCore.sv line 8)
+	interface worklib.globalInterface:sv
+		errors: 0, warnings: 0
+//*************************************************************************************************************************************************************
+  |
+ncvlog: *W,NOCMIC (TestBenchMultiCore.sv,581|2): error-prone block comment nested within block comment [2.3(IEEE)].
+    determine_LRU_var_exp(sintf.Blk_access_proc[core],expected_lru_var);
+                        |
+ncvlog: *W,FUNTSK (TestCasesMultiCore.sv,562|24): function called as a task without void'().
+    determine_LRU_var_exp(sintf.Blk_access_proc[core],expected_lru_var);
+                        |
+ncvlog: *W,FUNTSK (TestCasesMultiCore.sv,645|24): function called as a task without void'().
+                determine_LRU_var_exp(sintf.Blk_access_proc[local_cache],expected_lru_var);
+                                    |
+ncvlog: *W,FUNTSK (TestCasesMultiCore.sv,920|36): function called as a task without void'().
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 43
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+     $display("Data on Data_Bus = %x", CMC.Data_Bus[local_cache]);
+                                                  |
+ncelab: *F,CUVUNF (./TestBenchMultiCore.sv,677|50): Hierarchical name component lookup failed at 'Data_Bus'.
+ncverilog: *E,ELBERR: Error during elaboration (status 2), exiting.

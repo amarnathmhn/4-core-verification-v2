@@ -1,7 +1,7 @@
 //Module for cache controller 
 //Implemented Pseudo LRU and MESI state machine
 
-`include "cache_def_I_3.v"
+//`include "cache_def_I_3.v"
 
 module cache_controller_I_3(            PrRd, 
                                     Address,

@@ -1,7 +1,7 @@
 //Module for cache controller 
 //Implemented Pseudo LRU and MESI state machine
 
-`include "cache_def_I_0.v"
+//`include "cache_def_I_0.v"
 
 module cache_controller_I_0(            PrRd, 
                                     Address,
@@ -66,7 +66,7 @@ parameter BLK4_REPLACEMENT = 3'b1x1;
 always @ *
 begin
         Index_proc 		   = Address[`INDEX_MSB : `INDEX_LSB];
-        Tag_proc 		      = Address[TAG_MSB : `TAG_LSB];
+        Tag_proc 		      = Address[`TAG_MSB : `TAG_LSB];
         Blk_offset_proc 	= Address[`BLK_OFFSET_MSB : `BLK_OFFSET_LSB];
 end
 /**********************************************************************************/

@@ -10,7 +10,7 @@
 // This module contains the Cache Tag, MESI, data and the logic for cache access with both Processor and Snoop requests
 // The module communicates with its processor, its cache_controller, All_invalidation checking block, Common Arbiter and Common Bus (which is shared among all caches & L2 level - separate for both Data & instruction)
 
-`include "cache_def_0.v"
+//`include "cache_def_0.v"
 
 /* Cache block Module declaration*/
 module cache_block_0( clk,

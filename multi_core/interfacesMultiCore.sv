@@ -8,9 +8,9 @@
 interface globalInterface (input logic clk);
   //Most of the fields defined are common to cache_controller, cache_block, cache_wrapper
   //Interface between Proc and Cache
-   wire 			PrRd[2*`CORES-1:0]; 
-   wire 			PrWr[2*`CORES-1:0];
-   wire [`ADDRESSSIZE-1 : 0]	Address[2*`CORES-1:0];
+   logic			PrRd[2*`CORES-1:0]; 
+   logic 			PrWr[2*`CORES-1:0];
+   logic [`ADDRESSSIZE-1 : 0]	Address[2*`CORES-1:0];
    logic			CPU_stall[2*`CORES-1:0]; 
   //Interface between Proc and Arbiter                     
   logic 			Com_Bus_Gnt_proc[0:7];
@@ -100,6 +100,8 @@ interface globalInterface (input logic clk);
      end
    
   
-  endtask : check_UndefinedBehavior  
+  endtask : check_UndefinedBehavior 
+
+ 
 endinterface 
 
