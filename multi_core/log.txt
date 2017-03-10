@@ -160,11 +160,12 @@ ncvlog: *W,MACRDF (MC_Design_Files/cache_def_1.v,37|43): text macro 'CACHE_DATA_
                        		 |
 ncvlog: *W,MACRDF (MC_Design_Files/cache_def_1.v,38|26): text macro 'CACHE_DATA_LSB' redefined - replaced with new definition.
 (`include file: MC_Design_Files/cache_def_1.v line 38, `include file: MC_Design_Files/cache_block_1.v line 13, `include file: MC_Design_Files/cache_wrapper_1.v line 2, `include file: MC_Design_Files/cache_multi_config_1.v line 4, file: TestBenchMultiCore.sv line 8)
-	interface worklib.globalInterface:sv
-		errors: 0, warnings: 0
+/*$display("*********** START OF TEST %d",2);
+ |
+ncvlog: *W,NOCMIC (TestBenchMultiCore.sv,517|1): error-prone block comment nested within block comment [2.3(IEEE)].
 //*************************************************************************************************************************************************************
   |
-ncvlog: *W,NOCMIC (TestBenchMultiCore.sv,581|2): error-prone block comment nested within block comment [2.3(IEEE)].
+ncvlog: *W,NOCMIC (TestBenchMultiCore.sv,580|2): error-prone block comment nested within block comment [2.3(IEEE)].
     determine_LRU_var_exp(sintf.Blk_access_proc[core],expected_lru_var);
                         |
 ncvlog: *W,FUNTSK (TestCasesMultiCore.sv,562|24): function called as a task without void'().
@@ -178,7 +179,19 @@ ncvlog: *W,FUNTSK (TestCasesMultiCore.sv,920|36): function called as a task with
 		errors: 0, warnings: 43
 		Caching library 'worklib' ....... Done
 	Elaborating the design hierarchy:
-     $display("Data on Data_Bus = %x", CMC.Data_Bus[local_cache]);
-                                                  |
-ncelab: *F,CUVUNF (./TestBenchMultiCore.sv,677|50): Hierarchical name component lookup failed at 'Data_Bus'.
-ncverilog: *E,ELBERR: Error during elaboration (status 2), exiting.
+assign g_intf.Cache_var[3]            = CMC.P4_DL.cb.Cache_var;
+                                                             |
+ncelab: *E,TYCMPAT (./TestBenchMultiCore.sv,45|61): assignment operator type check failed (expecting datatype compatible with 'unpacked array [0:65535] of packed array [31:0] of logic' but found 'unpacked array [31:0] of packed array [0:65535] of reg' instead).
+assign g_intf.Cache_var[7]             = CMC.P4_IL.cb.Cache_var;
+                                                              |
+ncelab: *E,TYCMPAT (./TestBenchMultiCore.sv,65|62): assignment operator type check failed (expecting datatype compatible with 'unpacked array [0:65535] of packed array [31:0] of logic' but found 'unpacked array [0:1024] of packed array [31:0] of reg' instead).
+ assign g_intf.Cache_proc_contr_IL[3]     = CMC.P4_IL.cb.Cache_proc_contr;
+                                                                        |
+ncelab: *E,TYCMPAT (./TestBenchMultiCore.sv,66|72): assignment operator type check failed (expecting datatype compatible with 'unpacked array [0:65535] of packed array [17:0] of logic' but found 'unpacked array [0:1024] of packed array [17:0] of reg' instead).
+             CMC.P4_DL.cb.Cache_var[{index,line[1:0]}][`CACHE_DATA_MSB:`CACHE_DATA_LSB]           = Data;
+                                                                     |
+ncelab: *E,RNGDIR (./TestBenchMultiCore.sv,242|69): Reversed part-select index expression ordering [4.2.1(IEEE)].
+             Data = CMC.P4_DL.cb.Cache_var[{index,line[1:0]}][`CACHE_DATA_MSB:`CACHE_DATA_LSB];
+                                                                            |
+ncelab: *E,RNGDIR (./TestBenchMultiCore.sv,270|76): Reversed part-select index expression ordering [4.2.1(IEEE)].
+ncverilog: *E,ELBERR: Error during elaboration (status 1), exiting.

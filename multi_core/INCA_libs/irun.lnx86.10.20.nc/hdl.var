@@ -3,3 +3,5 @@ include ./hdlrun.var
 define SNAPSHOT worklib.cache_controller_1:v
 DEFINE RUNMODEDEFAULT 1
 DEFINE LIB_MAP ($LIB_MAP, + => worklib )
+define ELAB_SNAPSHOT
+define SNAPSHOT worklib.cache_controller_1:v

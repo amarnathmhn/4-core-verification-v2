@@ -1,5 +1,5 @@
 ncverilog: 10.20-s073: (c) Copyright 1995-2011 Cadence Design Systems, Inc.
-TOOL:	ncverilog	10.20-s073: Started on Mar 05, 2017 at 14:44:17 CST
+TOOL:	ncverilog	10.20-s073: Started on Mar 10, 2017 at 13:42:05 CST
 ncverilog
 	-sv
 	-access
@@ -167,11 +167,16 @@ ncvlog: *W,MACRDF (MC_Design_Files/cache_def_1.v,37|43): text macro 'CACHE_DATA_
                        		 |
 ncvlog: *W,MACRDF (MC_Design_Files/cache_def_1.v,38|26): text macro 'CACHE_DATA_LSB' redefined - replaced with new definition.
 (`include file: MC_Design_Files/cache_def_1.v line 38, `include file: MC_Design_Files/cache_block_1.v line 13, `include file: MC_Design_Files/cache_wrapper_1.v line 2, `include file: MC_Design_Files/cache_multi_config_1.v line 4, file: TestBenchMultiCore.sv line 8)
-	interface worklib.globalInterface:sv
+	module worklib.cache_block_I_0:v
 		errors: 0, warnings: 0
+	module worklib.cache_block_I_3:v
+		errors: 0, warnings: 0
+/*$display("*********** START OF TEST %d",2);
+ |
+ncvlog: *W,NOCMIC (TestBenchMultiCore.sv,517|1): error-prone block comment nested within block comment [2.3(IEEE)].
 //*************************************************************************************************************************************************************
   |
-ncvlog: *W,NOCMIC (TestBenchMultiCore.sv,581|2): error-prone block comment nested within block comment [2.3(IEEE)].
+ncvlog: *W,NOCMIC (TestBenchMultiCore.sv,580|2): error-prone block comment nested within block comment [2.3(IEEE)].
     determine_LRU_var_exp(sintf.Blk_access_proc[core],expected_lru_var);
                         |
 ncvlog: *W,FUNTSK (TestCasesMultiCore.sv,562|24): function called as a task without void'().
@@ -185,8 +190,439 @@ ncvlog: *W,FUNTSK (TestCasesMultiCore.sv,920|36): function called as a task with
 		errors: 0, warnings: 43
 		Caching library 'worklib' ....... Done
 	Elaborating the design hierarchy:
-     $display("Data on Data_Bus = %x", CMC.Data_Bus[local_cache]);
-                                                  |
-ncelab: *F,CUVUNF (./TestBenchMultiCore.sv,677|50): Hierarchical name component lookup failed at 'Data_Bus'.
-ncverilog: *E,ELBERR: Error during elaboration (status 2), exiting.
-TOOL:	ncverilog	10.20-s073: Exiting on Mar 05, 2017 at 14:44:17 CST  (total: 00:00:00)
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.\$unit_0x320b262b :compilation_unit <0x100a16ac>
+			streams:   8, words: 27122
+		worklib.\$unit_0x320b262b :compilation_unit <0x452bbe51>
+			streams:  15, words: 95168
+		worklib.\$unit_0x320b262b :compilation_unit <0x545be470>
+			streams:   6, words:  6729
+		worklib.\$unit_0x320b262b :compilation_unit <0x5e51b85d>
+			streams:   8, words: 26655
+		worklib.\$unit_0x320b262b :compilation_unit <0x5ee45c80>
+			streams:   6, words: 12382
+		worklib.\$unit_0x320b262b :compilation_unit <0x632b9ec4>
+			streams:   0, words:     0
+		worklib.\$unit_0x320b262b :compilation_unit <0x63333324>
+			streams:   6, words: 10662
+		worklib.\$unit_0x320b262b :compilation_unit <0x7e33cf21>
+			streams:  86, words: 172153
+		worklib.arbiter:v <0x602c1852>
+			streams:  27, words: 11973
+		worklib.cache_block_0:v <0x59eb1390>
+			streams:  40, words: 38460
+		worklib.cache_block_1:v <0x3acbb85b>
+			streams:  46, words: 39116
+		worklib.cache_block_2:v <0x339d1fa6>
+			streams:  46, words: 39532
+		worklib.cache_block_3:v <0x2c6e86f1>
+			streams:  46, words: 39348
+		worklib.cache_block_I_0:v <0x0d8a216d>
+			streams:  25, words: 14342
+		worklib.cache_block_I_1:v <0x13ba7322>
+			streams:  25, words: 14475
+		worklib.cache_block_I_2:v <0x2c112471>
+			streams:  25, words: 14673
+		worklib.cache_block_I_3:v <0x7f329458>
+			streams:  25, words: 14520
+		worklib.cache_controller_0:v <0x781e0368>
+			streams:   8, words:  6467
+		worklib.cache_controller_1:v <0x73d87c8a>
+			streams:  11, words:  5856
+		worklib.cache_controller_2:v <0x79fece42>
+			streams:   8, words:  6466
+		worklib.cache_controller_3:v <0x58624dc6>
+			streams:   8, words:  6466
+		worklib.cache_controller_I_0:v <0x4fead703>
+			streams:   3, words:  2879
+		worklib.cache_controller_I_1:v <0x4c0eff6e>
+			streams:   3, words:  2879
+		worklib.cache_controller_I_2:v <0x483327d9>
+			streams:   3, words:  2879
+		worklib.cache_controller_I_3:v <0x44575044>
+			streams:   3, words:  2879
+		worklib.cache_multi_config_1:v <0x0d612cfc>
+			streams:   2, words:   333
+		worklib.fifo:v <0x30e1bc97>
+			streams:  13, words:  7145
+		worklib.globalInterface:sv <0x5472e102>
+			streams:  13, words: 13459
+		worklib.top_C1:sv <0x132e5021>
+			streams: 127, words: 65244
+	Loading native compiled code:     .................... Done
+	Building instance specific data structures.
+	Design hierarchy summary:
+		                     Instances  Unique
+		Modules:                    29      28
+		Interfaces:                  1       1
+		Registers:                 530     548
+		Scalar wires:              352       -
+		Expanded wires:            896      28
+		Vectored wires:            104       -
+		Always blocks:             145     130
+		Initial blocks:             19      19
+		Clocking blocks:             1       1
+		Clocking items:              5       5
+		Parallel blocks:            21      21
+		Cont. assignments:          97     130
+		Pseudo assignments:         62      62
+		Assertions:                 26      26
+		Compilation units:           1       1
+		SV Class declarations:       7       7
+		SV Class specializations:    7       7
+		Simulation timescale:      1ps
+	Writing initial simulation snapshot: worklib.cache_controller_1:v
+Loading snapshot worklib.cache_controller_1:v .................... Done
+ncsim> source /softwares/Linux/cadence/INCISIV102/tools/inca/files/ncsimrc
+ncsim> run
+*** START Testing for the combination local_cache =  0, other_cache =  1
+*********** START OF TEST           1
+Starting testLocal_NonLocalCore, hitMiss =   
+Attemptig to create   state for block with Address deadbeef in Cache  1
+MESI STATES BEFORE TEST
+MESI State of block 0 in Core  0 with Tag 0000 set 2fbb is  
+MESI State of block 1 in Core  0 with Tag 0000 set 2fbb is  
+MESI State of block 2 in Core  0 with Tag 0000 set 2fbb is  
+MESI State of block 3 in Core  0 with Tag 0000 set 2fbb is  
+
+
+MESI State of block 0 in Core  1 with Tag 0000 set 2fbb is  
+MESI State of block 1 in Core  1 with Tag 0000 set 2fbb is  
+MESI State of block 2 in Core  1 with Tag 0000 set 2fbb is  
+MESI State of block 3 in Core  1 with Tag 0000 set 2fbb is  
+
+
+Attempting a   on local cache  0 for Address deadbeef while this block is present in other Cache  1 in   state
+Checking check_ComBusReqproc_CPUStall_assert for core 0 
+SUCCESS:: Com_Bus_Req_Proc[ 0] and CPU_stall are asserted within timeout after PrRd/PrWr is asserted
+SUCCESS:: Correct Address is placed on Address_Com Bus
+SUCCESS:: Next MESI State consistent with Expected MESI State: Expected = EXCLUSIVE, Actual = EXCLUSIVE
+SUCCESS:: Data stored in Cache matches with Expected Data: Stored Data = babababa , Expected Data = babababa
+MESI State of block 0 in Core  0 with Tag dead set 2fbb is 
+MESI State of block 1 in Core  0 with Tag 0000 set 2fbb is  
+MESI State of block 2 in Core  0 with Tag 0000 set 2fbb is  
+MESI State of block 3 in Core  0 with Tag 0000 set 2fbb is  
+
+
+MESI State of block 0 in Core  1 with Tag 0000 set 2fbb is  
+MESI State of block 1 in Core  1 with Tag 0000 set 2fbb is  
+MESI State of block 2 in Core  1 with Tag 0000 set 2fbb is  
+MESI State of block 3 in Core  1 with Tag 0000 set 2fbb is  
+
+
+*********** END OF TEST           1
+
+*********** START OF TEST           2
+Starting testLocal_NonLocalCore, hitMiss =   
+Attemptig to create  state for block with Address deadbef3 in Cache  1
+
+****** Test topReadMiss Started for core =  1 for Address deadbef3****** 
+Checking check_ComBusReqproc_CPUStall_assert for core 1 
+SUCCESS:: Com_Bus_Req_Proc[ 1] and CPU_stall are asserted within timeout after PrRd/PrWr is asserted
+SUCCESS:: BusRd Asserted Properly 
+SUCCESS:: Correct Address is placed on Address_Com Bus
+SUCCESS:: Next MESI State consistent with Expected MESI State: Expected = EXCLUSIVE, Actual = EXCLUSIVE
+ncsim: *E,ASRTST (./TestCasesMultiCore.sv,432): (time 42 PS) Assertion worklib.$unit_0x320b262b::baseTestClass::check_CacheVar_Data.__assert_20 has failed 
+BUG:: Incorrect data is stored in the Cache: Stored Data = 000000000000002a , Expected Data = 00000000          x
+SVDEBUG:: Block Accessed is 0
+SUCCESS:: Line accessed = 00, Expected LRU Var = 11x, Actual LRY Var = 110 
+SUCCESS:: Correct data is placed by cache on Data_Bus to the proc: Data Bus = xxxxxxxx, ClkBlk.Data_Bus_Com = xxxxxxxx
+SUCCESS:: CPU_stall is De-asserted
+SUCCESS:: CPU_stall De-Asserted
+SUCCESS:: Com_Bus_Req_proc[ 1] De-Asserted
+****** Test topReadMiss Done Status = PASSED ******
+
+Successfully Created  state for block with Address deadbef3 in Cache  1
+MESI STATES BEFORE TEST
+MESI State of block 0 in Core  0 with Tag 0000 set 2fbc is  
+MESI State of block 1 in Core  0 with Tag 0000 set 2fbc is  
+MESI State of block 2 in Core  0 with Tag 0000 set 2fbc is  
+MESI State of block 3 in Core  0 with Tag 0000 set 2fbc is  
+
+
+MESI State of block 0 in Core  1 with Tag dead set 2fbc is 
+MESI State of block 1 in Core  1 with Tag 0000 set 2fbc is  
+MESI State of block 2 in Core  1 with Tag 0000 set 2fbc is  
+MESI State of block 3 in Core  1 with Tag 0000 set 2fbc is  
+
+
+Attempting a   on local cache  0 for Address deadbef3 while this block is present in other Cache  1 in  state
+Checking check_ComBusReqproc_CPUStall_assert for core 0 
+SUCCESS:: Com_Bus_Req_Proc[ 0] and CPU_stall are asserted within timeout after PrRd/PrWr is asserted
+SUCCESS:: Correct Address is placed on Address_Com Bus
+ncsim: *W,ASRTST (./TestCasesMultiCore.sv,241): (time 118 PS) Assertion $unit_0x320b262b.baseTestClass.check_MemOprnAbrt_assert.__assert_10 has failed
+          1 Checker:  Mem_oprn_abort not asserted                 118
+ncsim: *E,ASRTST (./TestCasesMultiCore.sv,259): (time 140 PS) Assertion worklib.$unit_0x320b262b::baseTestClass::check_Shared_assert.__assert_11 has failed 
+BUG:: Shared not asserted
+ncsim: *W,ASRTST (./TestCasesMultiCore.sv,321): (time 162 PS) Assertion $unit_0x320b262b.baseTestClass.check_DataInBus_assert.__assert_14 has failed
+          1 Checker:  Data in Bus not asserted                 162
+BUG:: State of block with Address deadbef3 is changed to  instead of SHARED in other core  1
+BUG:: State of block with Address deadbef3 is changed to   instead of SHARED in local core  0
+MESI State of block 0 in Core  0 with Tag 0000 set 2fbc is  
+MESI State of block 1 in Core  0 with Tag 0000 set 2fbc is  
+MESI State of block 2 in Core  0 with Tag 0000 set 2fbc is  
+MESI State of block 3 in Core  0 with Tag 0000 set 2fbc is  
+
+
+MESI State of block 0 in Core  1 with Tag dead set 2fbc is 
+MESI State of block 1 in Core  1 with Tag 0000 set 2fbc is  
+MESI State of block 2 in Core  1 with Tag 0000 set 2fbc is  
+MESI State of block 3 in Core  1 with Tag 0000 set 2fbc is  
+
+
+*********** END OF TEST           2
+
+*********** START OF TEST           6
+Starting testLocal_NonLocalCore, hitMiss =   
+Attemptig to create  state for block with Address deadbef7 in Cache  1
+
+****** Test topReadMiss Started for core =  1 for Address deadbef7****** 
+Checking check_ComBusReqproc_CPUStall_assert for core 1 
+SUCCESS:: Com_Bus_Req_Proc[ 1] and CPU_stall are asserted within timeout after PrRd/PrWr is asserted
+SUCCESS:: BusRd Asserted Properly 
+SUCCESS:: Correct Address is placed on Address_Com Bus
+SUCCESS:: Next MESI State consistent with Expected MESI State: Expected = EXCLUSIVE, Actual = EXCLUSIVE
+ncsim: *E,ASRTST (./TestCasesMultiCore.sv,432): (time 176 PS) Assertion worklib.$unit_0x320b262b::baseTestClass::check_CacheVar_Data.__assert_20 has failed 
+BUG:: Incorrect data is stored in the Cache: Stored Data = 00000000000000b0 , Expected Data = 00000000          x
+SVDEBUG:: Block Accessed is 0
+SUCCESS:: Line accessed = 00, Expected LRU Var = 11x, Actual LRY Var = 11x 
+SUCCESS:: Correct data is placed by cache on Data_Bus to the proc: Data Bus = xxxxxxxx, ClkBlk.Data_Bus_Com = xxxxxxxx
+SUCCESS:: CPU_stall is De-asserted
+SUCCESS:: CPU_stall De-Asserted
+SUCCESS:: Com_Bus_Req_proc[ 1] De-Asserted
+****** Test topReadMiss Done Status = PASSED ******
+
+Successfully Created  state for block with Address deadbef7 in Cache  1
+MESI STATES BEFORE TEST
+MESI State of block 0 in Core  0 with Tag 0000 set 2fbd is  
+MESI State of block 1 in Core  0 with Tag 0000 set 2fbd is  
+MESI State of block 2 in Core  0 with Tag 0000 set 2fbd is  
+MESI State of block 3 in Core  0 with Tag 0000 set 2fbd is  
+
+
+MESI State of block 0 in Core  1 with Tag dead set 2fbd is 
+MESI State of block 1 in Core  1 with Tag 0000 set 2fbd is  
+MESI State of block 2 in Core  1 with Tag 0000 set 2fbd is  
+MESI State of block 3 in Core  1 with Tag 0000 set 2fbd is  
+
+
+Attempting a   on local cache  0 for Address deadbef7 while this block is present in other Cache  1 in  state
+Checking check_ComBusReqproc_CPUStall_assert for core 0 
+SUCCESS:: Com_Bus_Req_Proc[ 0] and CPU_stall are asserted within timeout after PrRd/PrWr is asserted
+SUCCESS:: Correct Address is placed on Address_Com Bus
+ncsim: *W,ASRTST (./TestCasesMultiCore.sv,241): (time 272 PS) Assertion $unit_0x320b262b.baseTestClass.check_MemOprnAbrt_assert.__assert_10 has failed
+          1 Checker:  Mem_oprn_abort not asserted                 272
+ncsim: *E,ASRTST (./TestCasesMultiCore.sv,259): (time 294 PS) Assertion worklib.$unit_0x320b262b::baseTestClass::check_Shared_assert.__assert_11 has failed 
+BUG:: Shared not asserted
+ncsim: *W,ASRTST (./TestCasesMultiCore.sv,321): (time 316 PS) Assertion $unit_0x320b262b.baseTestClass.check_DataInBus_assert.__assert_14 has failed
+          1 Checker:  Data in Bus not asserted                 316
+ncsim: *E,ASRTST (./TestCasesMultiCore.sv,398): (time 336 PS) Assertion worklib.$unit_0x320b262b::baseTestClass::check_MESI_fsm.__assert_18 has failed 
+BUG:: Next MESI State does not match with expected next MESI state: Expected = SHARED, Actual = EXCLUSIVE
+MESI State of block 0 in Core  0 with Tag 0000 set 2fbd is  
+MESI State of block 1 in Core  0 with Tag 0000 set 2fbd is  
+MESI State of block 2 in Core  0 with Tag 0000 set 2fbd is  
+MESI State of block 3 in Core  0 with Tag 0000 set 2fbd is  
+
+
+MESI State of block 0 in Core  1 with Tag dead set 2fbd is 
+MESI State of block 1 in Core  1 with Tag 0000 set 2fbd is  
+MESI State of block 2 in Core  1 with Tag 0000 set 2fbd is  
+MESI State of block 3 in Core  1 with Tag 0000 set 2fbd is  
+
+
+*********** END OF TEST           6
+
+*********** START OF TEST           4
+Starting testLocal_NonLocalCore, hitMiss =   
+Attemptig to create  state for block with Address deadbefb in Cache  1
+
+****** Test topWriteMiss Started ****** 
+Processor Write Attempt is made for Address = deadbefb with Data = babababa
+Checking check_ComBusReqproc_CPUStall_assert for core 1 
+SUCCESS:: Com_Bus_Req_Proc[ 1] and CPU_stall are asserted within timeout after PrRd/PrWr is asserted
+SUCCESS:: BusRdX is asserted within timeout
+SUCCESS:: Correct Address is placed on Address_Com Bus
+SUCCESS:: Next MESI State consistent with Expected MESI State: Expected = MODIFIED, Actual = MODIFIED
+ncsim: *E,ASRTST (./TestCasesMultiCore.sv,432): (time 352 PS) Assertion worklib.$unit_0x320b262b::baseTestClass::check_CacheVar_Data.__assert_20 has failed 
+BUG:: Incorrect data is stored in the Cache: Stored Data = 0000000000000160 , Expected Data = zzzzzzzz 3132799674
+SUCCESS:: CPU_stall De-Asserted
+SUCCESS:: Com_Bus_Req_proc[ 1] De-Asserted
+****** Test topWriteMiss Done Status = PASSED ******
+
+Successfully Created  state for block with Address deadbefb in Cache  1
+MESI STATES BEFORE TEST
+MESI State of block 0 in Core  0 with Tag 0000 set 2fbe is  
+MESI State of block 1 in Core  0 with Tag 0000 set 2fbe is  
+MESI State of block 2 in Core  0 with Tag 0000 set 2fbe is  
+MESI State of block 3 in Core  0 with Tag 0000 set 2fbe is  
+
+
+MESI State of block 0 in Core  1 with Tag dead set 2fbe is 
+MESI State of block 1 in Core  1 with Tag 0000 set 2fbe is  
+MESI State of block 2 in Core  1 with Tag 0000 set 2fbe is  
+MESI State of block 3 in Core  1 with Tag 0000 set 2fbe is  
+
+
+Attempting a   on local cache  0 for Address deadbefb while this block is present in other Cache  1 in  state
+Checking check_ComBusReqproc_CPUStall_assert for core 0 
+SUCCESS:: Com_Bus_Req_Proc[ 0] and CPU_stall are asserted within timeout after PrRd/PrWr is asserted
+SUCCESS:: Correct Address is placed on Address_Com Bus
+ncsim: *W,ASRTST (./TestCasesMultiCore.sv,241): (time 598 PS) Assertion $unit_0x320b262b.baseTestClass.check_MemOprnAbrt_assert.__assert_10 has failed
+          1 Checker:  Mem_oprn_abort not asserted                 598
+ncsim: *W,ASRTST (./TestCasesMultiCore.sv,302): (time 620 PS) Assertion $unit_0x320b262b.baseTestClass.check_MemWr_assert.__assert_13 has failed
+          1 Checker:  Invalidate not asserted                 620
+ncsim: *E,ASRTST (./TestCasesMultiCore.sv,259): (time 642 PS) Assertion worklib.$unit_0x320b262b::baseTestClass::check_Shared_assert.__assert_11 has failed 
+BUG:: Shared not asserted
+ncsim: *W,ASRTST (./TestCasesMultiCore.sv,321): (time 664 PS) Assertion $unit_0x320b262b.baseTestClass.check_DataInBus_assert.__assert_14 has failed
+          1 Checker:  Data in Bus not asserted                 664
+ncsim: *E,ASRTST (./TestCasesMultiCore.sv,398): (time 684 PS) Assertion worklib.$unit_0x320b262b::baseTestClass::check_MESI_fsm.__assert_18 has failed 
+BUG:: Next MESI State does not match with expected next MESI state: Expected = SHARED, Actual = EXCLUSIVE
+MESI State of block 0 in Core  0 with Tag 0000 set 2fbe is  
+MESI State of block 1 in Core  0 with Tag 0000 set 2fbe is  
+MESI State of block 2 in Core  0 with Tag 0000 set 2fbe is  
+MESI State of block 3 in Core  0 with Tag 0000 set 2fbe is  
+
+
+MESI State of block 0 in Core  1 with Tag dead set 2fbe is 
+MESI State of block 1 in Core  1 with Tag 0000 set 2fbe is  
+MESI State of block 2 in Core  1 with Tag 0000 set 2fbe is  
+MESI State of block 3 in Core  1 with Tag 0000 set 2fbe is  
+
+
+*********** END OF TEST           4
+
+*********** START OF TEST           8
+Starting testLocal_NonLocalCore, hitMiss =   
+Attemptig to create   state for block with Address deadbeff in Cache  1
+MESI STATES BEFORE TEST
+MESI State of block 0 in Core  0 with Tag 0000 set 2fbf is  
+MESI State of block 1 in Core  0 with Tag 0000 set 2fbf is  
+MESI State of block 2 in Core  0 with Tag 0000 set 2fbf is  
+MESI State of block 3 in Core  0 with Tag 0000 set 2fbf is  
+
+
+MESI State of block 0 in Core  1 with Tag 0000 set 2fbf is  
+MESI State of block 1 in Core  1 with Tag 0000 set 2fbf is  
+MESI State of block 2 in Core  1 with Tag 0000 set 2fbf is  
+MESI State of block 3 in Core  1 with Tag 0000 set 2fbf is  
+
+
+Attempting a  on local cache  0 for Address deadbeff while this block is present in other Cache  1 in   state
+Checking check_ComBusReqproc_CPUStall_assert for core 0 
+SUCCESS:: Com_Bus_Req_Proc[ 0] and CPU_stall are asserted within timeout after PrRd/PrWr is asserted
+SUCCESS:: BusRdX is asserted within timeout
+SUCCESS:: Correct Address is placed on Address_Com Bus
+SUCCESS:: Next MESI State consistent with Expected MESI State: Expected = MODIFIED, Actual = MODIFIED
+SUCCESS:: CPU_stall De-Asserted
+SUCCESS:: Com_Bus_Req_proc[ 0] De-Asserted
+MESI State of block 0 in Core  0 with Tag dead set 2fbf is 
+MESI State of block 1 in Core  0 with Tag 0000 set 2fbf is  
+MESI State of block 2 in Core  0 with Tag 0000 set 2fbf is  
+MESI State of block 3 in Core  0 with Tag 0000 set 2fbf is  
+
+
+MESI State of block 0 in Core  1 with Tag 0000 set 2fbf is  
+MESI State of block 1 in Core  1 with Tag 0000 set 2fbf is  
+MESI State of block 2 in Core  1 with Tag 0000 set 2fbf is  
+MESI State of block 3 in Core  1 with Tag 0000 set 2fbf is  
+
+
+*********** END OF TEST           8
+
+*********** START OF TEST           9
+Starting testLocal_NonLocalCore, hitMiss =   
+Attemptig to create  state for block with Address deadbf03 in Cache  1
+
+****** Test topReadMiss Started for core =  1 for Address deadbf03****** 
+Checking check_ComBusReqproc_CPUStall_assert for core 1 
+SUCCESS:: Com_Bus_Req_Proc[ 1] and CPU_stall are asserted within timeout after PrRd/PrWr is asserted
+SUCCESS:: BusRd Asserted Properly 
+SUCCESS:: Correct Address is placed on Address_Com Bus
+SUCCESS:: Next MESI State consistent with Expected MESI State: Expected = EXCLUSIVE, Actual = EXCLUSIVE
+ncsim: *E,ASRTST (./TestCasesMultiCore.sv,432): (time 830 PS) Assertion worklib.$unit_0x320b262b::baseTestClass::check_CacheVar_Data.__assert_20 has failed 
+BUG:: Incorrect data is stored in the Cache: Stored Data = 000000000000033e , Expected Data = 00000000          x
+SVDEBUG:: Block Accessed is 0
+SUCCESS:: Line accessed = 00, Expected LRU Var = 11x, Actual LRY Var = 11x 
+SUCCESS:: Correct data is placed by cache on Data_Bus to the proc: Data Bus = xxxxxxxx, ClkBlk.Data_Bus_Com = xxxxxxxx
+SUCCESS:: CPU_stall is De-asserted
+SUCCESS:: CPU_stall De-Asserted
+SUCCESS:: Com_Bus_Req_proc[ 1] De-Asserted
+****** Test topReadMiss Done Status = PASSED ******
+
+Successfully Created  state for block with Address deadbf03 in Cache  1
+MESI STATES BEFORE TEST
+MESI State of block 0 in Core  0 with Tag 0000 set 2fc0 is  
+MESI State of block 1 in Core  0 with Tag 0000 set 2fc0 is  
+MESI State of block 2 in Core  0 with Tag 0000 set 2fc0 is  
+MESI State of block 3 in Core  0 with Tag 0000 set 2fc0 is  
+
+
+MESI State of block 0 in Core  1 with Tag dead set 2fc0 is 
+MESI State of block 1 in Core  1 with Tag 0000 set 2fc0 is  
+MESI State of block 2 in Core  1 with Tag 0000 set 2fc0 is  
+MESI State of block 3 in Core  1 with Tag 0000 set 2fc0 is  
+
+
+Attempting a  on local cache  0 for Address deadbf03 while this block is present in other Cache  1 in  state
+Checking check_ComBusReqproc_CPUStall_assert for core 0 
+SUCCESS:: Com_Bus_Req_Proc[ 0] and CPU_stall are asserted within timeout after PrRd/PrWr is asserted
+SUCCESS:: BusRdX is asserted within timeout
+SUCCESS:: Correct Address is placed on Address_Com Bus
+SUCCESS:: Next MESI State consistent with Expected MESI State: Expected = MODIFIED, Actual = MODIFIED
+MESI State of block 0 in Core  0 with Tag dead set 2fc0 is 
+MESI State of block 1 in Core  0 with Tag 0000 set 2fc0 is  
+MESI State of block 2 in Core  0 with Tag 0000 set 2fc0 is  
+MESI State of block 3 in Core  0 with Tag 0000 set 2fc0 is  
+
+
+MESI State of block 0 in Core  1 with Tag dead set 2fc0 is  
+MESI State of block 1 in Core  1 with Tag 0000 set 2fc0 is  
+MESI State of block 2 in Core  1 with Tag 0000 set 2fc0 is  
+MESI State of block 3 in Core  1 with Tag 0000 set 2fc0 is  
+
+
+*********** END OF TEST           9
+
+*********** START OF TEST          11
+Starting testLocal_NonLocalCore, hitMiss =   
+Attemptig to create  state for block with Address deadbf07 in Cache  1
+
+****** Test topWriteMiss Started ****** 
+Processor Write Attempt is made for Address = deadbf07 with Data = babababa
+Checking check_ComBusReqproc_CPUStall_assert for core 1 
+SUCCESS:: Com_Bus_Req_Proc[ 1] and CPU_stall are asserted within timeout after PrRd/PrWr is asserted
+SUCCESS:: BusRdX is asserted within timeout
+SUCCESS:: Correct Address is placed on Address_Com Bus
+SUCCESS:: Next MESI State consistent with Expected MESI State: Expected = MODIFIED, Actual = MODIFIED
+ncsim: *E,ASRTST (./TestCasesMultiCore.sv,432): (time 1 NS) Assertion worklib.$unit_0x320b262b::baseTestClass::check_CacheVar_Data.__assert_20 has failed 
+BUG:: Incorrect data is stored in the Cache: Stored Data = 00000000000003e8 , Expected Data = zzzzzzzz 3132799674
+SUCCESS:: CPU_stall De-Asserted
+SUCCESS:: Com_Bus_Req_proc[ 1] De-Asserted
+****** Test topWriteMiss Done Status = PASSED ******
+
+Successfully Created  state for block with Address deadbf07 in Cache  1
+MESI STATES BEFORE TEST
+MESI State of block 0 in Core  0 with Tag 0000 set 2fc1 is  
+MESI State of block 1 in Core  0 with Tag 0000 set 2fc1 is  
+MESI State of block 2 in Core  0 with Tag 0000 set 2fc1 is  
+MESI State of block 3 in Core  0 with Tag 0000 set 2fc1 is  
+
+
+MESI State of block 0 in Core  1 with Tag dead set 2fc1 is 
+MESI State of block 1 in Core  1 with Tag 0000 set 2fc1 is  
+MESI State of block 2 in Core  1 with Tag 0000 set 2fc1 is  
+MESI State of block 3 in Core  1 with Tag 0000 set 2fc1 is  
+
+
+Attempting a  on local cache  0 for Address deadbf07 while this block is present in other Cache  1 in  state
+Checking check_ComBusReqproc_CPUStall_assert for core 0 
+SUCCESS:: Com_Bus_Req_Proc[ 0] and CPU_stall are asserted within timeout after PrRd/PrWr is asserted
+SUCCESS:: BusRdX is asserted within timeout
+SUCCESS:: Correct Address is placed on Address_Com Bus
+ncsim: *E,ASRTST (./TestCasesMultiCore.sv,74): (time 1246 PS) Assertion worklib.$unit_0x320b262b::baseTestClass::check_ComBusReqSnoop_assert.__assert_2 has failed 
+BUG:: Com_Bus_Req_snoop[ 1] is not asserted after BusRd/BusRdX
+Simulation interrupted at 7820212 PS + 1
+ncsim> ^C
+ncsim> exit
+TOOL:	ncverilog	10.20-s073: Exiting on Mar 10, 2017 at 13:42:15 CST  (total: 00:00:10)

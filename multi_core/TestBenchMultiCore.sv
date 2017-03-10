@@ -371,7 +371,6 @@ initial
  for(int i=0; i <=3 ; i++) begin
     blockStateOtherCache[i] = mesiStateType'(i); 
  end
-/*
 while(other_cache <=3) begin
 //Test 1 in the test plan. local cache read miss while other cache contains block in invalid state and free  block is available
 $display("*** START Testing for the combination local_cache = %d, other_cache = %d",local_cache,other_cache);
@@ -388,7 +387,6 @@ $display("*********** START OF TEST %d",1);
     dispMesiStates(other_cache,Address);
   
 $display("*********** END OF TEST %d\n",1);
-
 //Test 2 in the test plan. local cache read miss while other cache contains block in EXCLUSIVE state and free  block is available
 $display("*********** START OF TEST %d",2);
     Address[`INDEX_MSB:`INDEX_LSB] += 1;
@@ -513,6 +511,7 @@ $display("*********** START OF TEST %d",2);
  $display("************ END of tests for combination local_cache %d, other_cache %d",local_cache,other_cache);
   other_cache += 1;
 end//while */
+/*
 
 //Test 2 with local cache = 0,  other cache = 2
 /*$display("*********** START OF TEST %d",2);
@@ -642,6 +641,8 @@ $display("*********** END OF TEST %d\n",17);
 //******************************************* END OF TEST 17 Instruction Cache (IL) TESTING ****************************************************************************
 
 //******************************************* START TEST 18 Instruction Cache (IL) TESTING *****************************************************************************
+
+/*
 $display("*********** START OF TEST %d\n *** Read Hit Checking for Instruction Caches",18); 
 //PLRU Checking in IL
 Address                           = 32'hdeadbeef;
@@ -684,6 +685,7 @@ repeat(4) begin
      dispCacheVarData(local_cache,Address); 
      Address[`TAG_MSB:`TAG_LSB] += 1;  //move to next block
 end
+*/
 //******************************************* END OF TEST 18 Instruction Cache (IL) TESTING ****************************************************************************
 #100;
 $finish;       
@@ -713,6 +715,8 @@ for(i = 0; i < 7; i++) begin
    end
 end //for
 endgenerate
+
+
 endmodule
 
 

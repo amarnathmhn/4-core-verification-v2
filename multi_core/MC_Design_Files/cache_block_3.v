@@ -187,7 +187,7 @@ parameter BLK4          = 2'b11;
 
 /***********************************Internal Cache Structure***************************************************/
 //Cache & LRU memory structure
-reg 	[0 : `CACHE_DEPTH-1]			Cache_var	   [`CACHE_DATA_SIZE-1 : 0];
+reg 	[`CACHE_DATA_SIZE-1 : 0]	Cache_var           [0 : `CACHE_DEPTH-1];
 reg 	[`CACHE_TAG_MESI_SIZE-1 : 0]    Cache_proc_contr    [0 : `CACHE_DEPTH-1];
 /***************************************************************************************************************/
 
