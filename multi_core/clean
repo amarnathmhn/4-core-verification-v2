@@ -1,1 +1,1 @@
-rm -rf INCA_libs/ *.log *.shm
+rm -rf INCA_libs/ *.log *.shm *.key

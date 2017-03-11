@@ -1,9 +1,0 @@
-//
-// File created by:  ncverilog
-// Do not modify this file
-//
--sv
--access
-+rwc
-TestBenchMultiCore.sv
-+incdir+MC_Design_Files+Arbiter_design_files
