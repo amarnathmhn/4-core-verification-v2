@@ -20,6 +20,6 @@ module top;
 
 	initial begin
 		$display("Hello World.. starting test Now!");
-		//run_test();
+		run_test();
 	end
 endmodule
