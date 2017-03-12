@@ -9,5 +9,5 @@ import uvm_pkg::*;
 `include "agent.svh"
 `include "env.svh"
 // tests
-`include "base_test.svh"
+`include "helloworld.svh"
 `include "top_test.svh"

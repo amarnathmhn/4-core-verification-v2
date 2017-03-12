@@ -3,11 +3,10 @@
 `timescale 1ns/1ps
 
 // import uvm class definitions
-
+import uvm_pkg::*;
 
 `include "uvm_macros.svh"
-`include "uvm_pkg.sv"
-import uvm_pkg::*;
+
 // top design module
 `include "cache_multi_config_1.v"
 
