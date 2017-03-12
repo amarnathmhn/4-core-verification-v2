@@ -1,7 +1,0 @@
-//
-// File created by:  irun
-// Do not modify this file
-//
--top
-worklib.top
-+UVM_TESTNAME=hello_test
