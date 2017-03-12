@@ -1,15 +1,22 @@
 typedef enum {READ, WRITE} CommandType;
 typedef enum {ALL_ZEROS, SMALL, MEDIUM, LARGE, ALL_ONES} AddrType;
 // Transaction to communicate with a single cache
-class TopCmd extends uvm_sequence_item;
+class BaseCmd extends uvm_sequence_item;
+	
+	function new(string name = "BaseCmd");
+		super.new(name);
+	endfunction
+
+endclass
+class CpuCmd extends BaseCmd;
 
 	rand CommandType cmdType; // READ and WRITE knob for command type
 	rand AddrType    addrType; // knob for Address range
-	rand int addr; // address of data requested
-	rand int data; // data requested
-	rand int  core; // core number 0 to 3
-	int PrRd;
-	int PrWr;
+	rand int unsigned addr; // address of data requested
+	rand int unsigned data; // data requested
+	rand int unsigned  core; // core number 0 to 3
+	rand int PrRd;
+	rand int PrWr;
 
 	// constrain the address and data to 32  bits
 	constraint addr_data_range {
@@ -20,7 +27,7 @@ class TopCmd extends uvm_sequence_item;
 		(addrType == LARGE)     -> ( addr inside {[( 1<< (`ADDRESSSIZE/2) ) : ( 1<< (`ADDRESSSIZE) ) - 2 ]} );
 		(addrType == ALL_ONES)  -> ( addr == (1 << `ADDRESSSIZE ) - 1 );
 
-		data inside {[0: (1 << (`ADDRESSSIZE - 1)) ]};	
+		data inside {[0: (1 << `ADDRESSSIZE ) - 1  ]};	
 	}
 	constraint cmdType_to_pin
 	{
@@ -35,7 +42,7 @@ class TopCmd extends uvm_sequence_item;
 	
 	// UVM automation macros for objects
 	// Implements copy, print, and compare utility functions for these members.
-	`uvm_object_utils_begin(TopCmd)
+	`uvm_object_utils_begin(CpuCmd)
 		`uvm_field_enum(CommandType,cmdType,UVM_ALL_ON)
 		`uvm_field_int(addr, UVM_ALL_ON)
 		`uvm_field_int(data, UVM_ALL_ON)
@@ -44,11 +51,11 @@ class TopCmd extends uvm_sequence_item;
 		`uvm_field_int(PrWr, UVM_ALL_ON)
 	`uvm_object_utils_end
 
-	function new(string name = "TopCmd");
+	function new(string name = "CpuCmd");
 		super.new(name);
 	endfunction
 
 	// try overriding constraints in derived classes
 
-endclass:TopCmd
+endclass:CpuCmd
 

@@ -1,13 +1,14 @@
 
-class TopSequence extends uvm_sequence #(TopCmd);
+class CpuSequence extends uvm_sequence #(CpuCmd);
 
-	function new(string name="TopSequence");
+	function new(string name="CpuSequence");
 		super.new(name);
 	endfunction
 
-	`uvm_object_utils(TopSequence)
+	`uvm_object_utils(CpuSequence)
 
 	virtual task body();
-		`uvm_do(req)
+		`uvm_info("SVDEBUG","TopSequenceBody",UVM_MEDIUM);
+		`uvm_do_with(req,{cmdType==READ;core==0;})
 	endtask
-endclass:TopSequence
+endclass:CpuSequence

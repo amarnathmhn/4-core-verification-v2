@@ -5,7 +5,8 @@ import uvm_pkg::*;
 `define CORE_BITS 2	// bits to represent each core
 `include "transaction.sv"
 `include "sequence.sv"
-`include "driver.sv"
+`include "base_driver.sv"
+`include "cache_driver.sv"
 `include "agent.sv"
 `include "env.sv"
 // tests

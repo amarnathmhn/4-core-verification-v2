@@ -24,7 +24,7 @@ module top;
 	always #50 clk = ~clk;
 
 	 //Virtual interface for global interface
-	virtual interface globalInterface local_intf;
+	virtual interface globalInterface local_intf;// = g_intf;
 	//Connect internal registers of DUT to interface
 	assign g_intf.Cache_var[0]            = CMC.P1_DL.cb.Cache_var;
 	assign g_intf.Cache_proc_contr[0]    = CMC.P1_DL.cb.Cache_proc_contr;
@@ -195,9 +195,39 @@ cache_multi_config_1 CMC (
 );
 
 
+/*
+Mimics the Arbiter
+*/
+always @(posedge g_intf.Mem_snoop_req) begin
+     g_intf.Mem_snoop_gnt = 1;
+     wait(g_intf.Mem_snoop_req == 0);
+     g_intf.Mem_snoop_gnt = 0;
+end
+
+genvar i;
+generate
+for(i = 0; i < 7; i++) begin
+   always @(posedge g_intf.Com_Bus_Req_proc[i]) begin
+     g_intf.Com_Bus_Gnt_proc[i] = 1;
+     wait(g_intf.Com_Bus_Req_proc[i] == 0);
+     g_intf.Com_Bus_Gnt_proc[i] = 0;
+   end
+   if(i <= 3) begin
+     always @(posedge g_intf.Com_Bus_Req_snoop[i]) begin
+      #2;
+      g_intf.Com_Bus_Gnt_snoop[i] = 1;
+      wait(g_intf.Com_Bus_Req_snoop[i] == 0);
+      g_intf.Com_Bus_Gnt_snoop[i] = 0;
+     end
+   end
+end //for
+endgenerate
+
+
 	initial begin
 		clk = 0;
-		$display("Hello World.. starting test!");
+		`uvm_info("SVDEBUG","Hello World.. starting test!",UVM_MEDIUM);
+		uvm_config_db#(virtual globalInterface)::set(null, "*","vif",g_intf);	
 		run_test();
 	end
 endmodule
