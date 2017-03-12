@@ -1,2 +1,2 @@
 ../testbench/top.sv
-+incdir+../tests+../interface+../packages
++incdir+../tests+../interface+../packages+../agent+../env+../sequence+../transaction+../driver

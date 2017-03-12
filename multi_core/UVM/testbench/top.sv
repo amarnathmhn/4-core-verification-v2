@@ -5,9 +5,9 @@
 // import uvm class definitions
 
 
-`include "uvm_macros.svh"
-`include "uvm_pkg.sv"
+//`include "uvm_pkg.sv" // uncomment for home modelsim pe
 import uvm_pkg::*;
+`include "uvm_macros.svh"
 // top design module
 `include "cache_multi_config_1.v"
 
@@ -16,10 +16,10 @@ import uvm_pkg::*;
 
 module top;
 
+	reg clk;
 	// Instantiate Interface
 	globalInterface g_intf (.clk(clk));
 
-	reg clk;
 	// run clock
 	always #50 clk = ~clk;
 
@@ -47,7 +47,7 @@ module top;
 	assign g_intf.LRU_replacement_proc[3] = CMC.P4_DL.LRU_replacement_proc;
 	
 	assign g_intf.Cache_var[4]            =  CMC.P1_IL.cb.Cache_var;
-	/ assign g_intf.Cache_proc_contr_IL[0]     = CMC.P1_IL.cb.Cache_proc_contr;
+	assign g_intf.Cache_proc_contr_IL[0]     = CMC.P1_IL.cb.Cache_proc_contr;
 	assign g_intf.LRU_var[4]              = CMC.P1_IL.cc.LRU_var;
 	assign g_intf.LRU_replacement_proc[4] = CMC.P1_IL.LRU_replacement_proc;
 	
@@ -73,7 +73,7 @@ module top;
 	
 	
 	
-	/always @(g_intf.clk) begin
+	//always @(g_intf.clk) begin
 	
 	assign g_intf.Updated_MESI_state_proc[0]  = CMC.P1_DL.cb.Updated_MESI_state_proc; 
 	assign g_intf.Blk_access_proc[0]          = CMC.P1_DL.cb.Blk_access_proc;

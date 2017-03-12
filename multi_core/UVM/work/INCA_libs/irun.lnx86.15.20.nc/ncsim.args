@@ -1,0 +1,31 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+-INPUT
+"@source /softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/additions/sv/files/tcl/uvm_sim.tcl"
+-uvmhome
+/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d
+-sv_lib
+/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/additions/sv/lib/libuvmpli.so
++UVM_TESTNAME=BaseTest
+-MESSAGES
+-RUN
+-SV_LIB
+/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/additions/sv/lib/libuvmdpi.so
++EMGRLOG
+irun.log
+-XLSTIME
+1489334120
+-XLKEEP
+-XLMODE
+./INCA_libs/irun.lnx86.15.20.nc
+-RUNMODE
+-CDSLIB
+./INCA_libs/irun.lnx86.15.20.nc/cds.lib
+-HDLVAR
+./INCA_libs/irun.lnx86.15.20.nc/hdl.var
+-XLNAME
+irun
+-XLVERSION
+"TOOL:	irun	15.20-s021"

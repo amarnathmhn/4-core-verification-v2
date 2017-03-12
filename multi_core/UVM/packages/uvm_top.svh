@@ -1,13 +1,13 @@
 import uvm_pkg::*;
-`include "interfacesMultiCore.svh"
+`include "interfacesMultiCore.sv"
 `include "uvm_macros.svh"
 
 `define CORE_BITS 2	// bits to represent each core
-`include "transaction.svh"
-`include "sequence.svh"
-`include "driver.svh"
-`include "agent.svh"
-`include "env.svh"
+`include "transaction.sv"
+`include "sequence.sv"
+`include "driver.sv"
+`include "agent.sv"
+`include "env.sv"
 // tests
-`include "base_test.svh"
-`include "top_test.svh"
+`include "base_test.sv"
+`include "top_test.sv"

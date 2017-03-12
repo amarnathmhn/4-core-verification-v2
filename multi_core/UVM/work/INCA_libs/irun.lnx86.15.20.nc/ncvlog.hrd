@@ -1,0 +1,28 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+-INCDIR
+../../MC_Design_Files/
+-INCDIR
+../tests
+-INCDIR
+../interface
+-INCDIR
+../packages
+-INCDIR
+../agent
+-INCDIR
+../env
+-INCDIR
+../sequence
+-INCDIR
+../transaction
+-INCDIR
+../driver
+-I_INCDIR
+/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src
+-DEFINE
+USE_PARAMETERIZED_WRAPPER
+-I_INCDIR
+/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/additions/sv

@@ -1,1 +1,1 @@
-irun -top worklib.top +UVM_TESTNAME=hello_test
+irun -top worklib.top +UVM_TESTNAME=BaseTest
