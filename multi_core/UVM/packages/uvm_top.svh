@@ -9,6 +9,7 @@ import uvm_pkg::*;
 `include "sequencer.sv"
 `include "cpu_sequence.sv"
 `include "main_mem_sequence.sv"
+`include "wrapper_unit_sequence.sv"
 `include "base_driver.sv"
 `include "cache_driver.sv"
 `include "main_mem_driver.sv"
@@ -18,3 +19,4 @@ import uvm_pkg::*;
 // tests
 `include "base_test.sv"
 `include "top_test.sv"
+`include "wrapper_serial_command_test.sv"

@@ -5,7 +5,7 @@ class CpuCmd extends BaseCmd;
 	rand AddrType    addrType; // knob for Address range
 	rand bit[`ADDRESSSIZE-1:0] addr; // address of data requested
 	rand bit[`DATA_SIZE-1:0] data; // data requested
-	rand int unsigned  core; // core number 0 to 3
+	rand bit[`CORE_BITS-1:0]  core; // core number 0 to 3
 	rand int PrRd;
 	rand int PrWr;
 
