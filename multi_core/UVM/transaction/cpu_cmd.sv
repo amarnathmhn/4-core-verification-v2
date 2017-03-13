@@ -1,19 +1,10 @@
-typedef enum {READ, WRITE} CommandType;
-typedef enum {ALL_ZEROS, SMALL, MEDIUM, LARGE, ALL_ONES} AddrType;
 // Transaction to communicate with a single cache
-class BaseCmd extends uvm_sequence_item;
-	
-	function new(string name = "BaseCmd");
-		super.new(name);
-	endfunction
-
-endclass
 class CpuCmd extends BaseCmd;
 
 	rand CommandType cmdType; // READ and WRITE knob for command type
 	rand AddrType    addrType; // knob for Address range
-	rand int unsigned addr; // address of data requested
-	rand int unsigned data; // data requested
+	rand bit[`ADDRESSSIZE-1:0] addr; // address of data requested
+	rand bit[`DATA_SIZE-1:0] data; // data requested
 	rand int unsigned  core; // core number 0 to 3
 	rand int PrRd;
 	rand int PrWr;

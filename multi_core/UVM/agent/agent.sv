@@ -8,9 +8,13 @@ Override the sequencer and driver with user defined class types.
 class Agent extends uvm_agent;
 	uvm_active_passive_enum is_active; // UVM_ACTIVE or UVM_PASSIVE
 	
-	uvm_sequencer #(BaseCmd) cpuSequencer; // sequencer to create sequences with CpuCmd type item
+	Sequencer  cpuSequencer; // sequencer to create sequences with CpuCmd type item
+	Sequencer  mainMemSequencer; // sequencer to create sequences with mainMemCmd type item
 	
-	BaseDriver driver;
+	BaseDriver cacheDriver;
+	BaseDriver mainMemDriver;
+
+	Monitor monitor;	
 	
 	`uvm_component_utils(Agent)
 
@@ -23,8 +27,16 @@ class Agent extends uvm_agent;
 		// create sequencer object and driver object if the agent is active
 		if(is_active == UVM_ACTIVE)begin
 			`uvm_info("SVDEBUG","creating sequencer",UVM_MEDIUM);
-			cpuSequencer = uvm_sequencer #(BaseCmd)::type_id::create("cpuSequencer",this);
-			driver    = BaseDriver::type_id::create("driver",this);
+			cpuSequencer     = Sequencer ::type_id::create("cpuSequencer",this);
+			cpuSequencer.pAgent = this;
+			
+			mainMemSequencer = Sequencer ::type_id::create("mainMemSequencer",this);
+			mainMemSequencer.pAgent = this;
+			
+			cacheDriver      = BaseDriver::type_id::create("cacheDriver",this);
+			mainMemDriver    = BaseDriver::type_id::create("mainMemDriver",this);
+			monitor		 = Monitor::type_id::create("monitor",this);
+
 		end
 	endfunction:build_phase
 
@@ -32,7 +44,8 @@ class Agent extends uvm_agent;
 	virtual function void connect_phase(uvm_phase phase);
 		if(is_active == UVM_ACTIVE)begin
 			// connect driver's item port to sequencer's item export
-			driver.seq_item_port.connect(cpuSequencer.seq_item_export);
+			cacheDriver.seq_item_port.connect(cpuSequencer.seq_item_export);
+			mainMemDriver.seq_item_port.connect(mainMemSequencer.seq_item_export);
 		end
 	endfunction:connect_phase
 

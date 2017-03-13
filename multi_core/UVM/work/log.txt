@@ -1,396 +1,359 @@
 irun: 15.20-s021: (c) Copyright 1995-2017 Cadence Design Systems, Inc.
 file: ../testbench/top.sv
-ncvlog: *E,DLCSMD: Dependent checksum verilog_package worklib.uvm_pkg:sv (VST) doesn't match with the checksum that's in the header of: verilog_package worklib.cdns_uvm_pkg:sv (VST).
-	module worklib.cache_block_0:v
-		errors: 0, warnings: 0
-	module worklib.cache_controller_0:v
-		errors: 0, warnings: 0
-	module worklib.cache_wrapper_0:v
-		errors: 0, warnings: 0
-	module worklib.cache_block_1:v
-		errors: 0, warnings: 0
-	module worklib.cache_controller_1:v
-		errors: 0, warnings: 0
-	module worklib.cache_wrapper_1:v
-		errors: 0, warnings: 0
-	module worklib.cache_block_2:v
-		errors: 0, warnings: 0
-	module worklib.cache_controller_2:v
-		errors: 0, warnings: 0
-	module worklib.cache_wrapper_2:v
-		errors: 0, warnings: 0
-	module worklib.cache_block_3:v
-		errors: 0, warnings: 0
-	module worklib.cache_controller_3:v
-		errors: 0, warnings: 0
-	module worklib.cache_wrapper_3:v
-		errors: 0, warnings: 0
-	module worklib.cache_block_I_0:v
-		errors: 0, warnings: 0
-	module worklib.cache_controller_I_0:v
-		errors: 0, warnings: 0
-	module worklib.cache_wrapper_I_0:v
-		errors: 0, warnings: 0
-	module worklib.cache_block_I_1:v
-		errors: 0, warnings: 0
-	module worklib.cache_controller_I_1:v
-		errors: 0, warnings: 0
-	module worklib.cache_wrapper_I_1:v
-		errors: 0, warnings: 0
-	module worklib.cache_block_I_2:v
-		errors: 0, warnings: 0
-	module worklib.cache_controller_I_2:v
-		errors: 0, warnings: 0
-	module worklib.cache_wrapper_I_2:v
-		errors: 0, warnings: 0
-	module worklib.cache_block_I_3:v
-		errors: 0, warnings: 0
-	module worklib.cache_controller_I_3:v
-		errors: 0, warnings: 0
-	module worklib.cache_wrapper_I_3:v
-		errors: 0, warnings: 0
-	module worklib.cache_multi_config_1:v
-		errors: 0, warnings: 0
-	interface worklib.globalInterface:sv
-		errors: 0, warnings: 0
-class TopCmd extends uvm_sequence_item;
-                                     |
-ncvlog: *E,SVNOTY (../transaction/transaction.sv,4|37): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
-(`include file: ../transaction/transaction.sv line 4, `include file: ../packages/uvm_top.svh line 6, file: ../testbench/top.sv line 15)
-	rand CommandType cmdType; // READ and WRITE knob for command type
-	               |
-ncvlog: *E,NOIPRT (../transaction/transaction.sv,6|16): Unrecognized declaration 'CommandType' could be an unsupported keyword, a spelling mistake or missing instance port list '()' [SystemVerilog].
-(`include file: ../transaction/transaction.sv line 6, `include file: ../packages/uvm_top.svh line 6, file: ../testbench/top.sv line 15)
-	rand AddrType    addrType; // knob for Address range
-	            |
-ncvlog: *E,NOIPRT (../transaction/transaction.sv,7|13): Unrecognized declaration 'AddrType' could be an unsupported keyword, a spelling mistake or missing instance port list '()' [SystemVerilog].
-(`include file: ../transaction/transaction.sv line 7, `include file: ../packages/uvm_top.svh line 6, file: ../testbench/top.sv line 15)
-	`uvm_object_utils_begin(TopCmd)
-	                              |
-ncvlog: *E,SVNOTY (../transaction/transaction.sv,38|31): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
-(`define macro: m_uvm_object_registry_internal [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 439], `define macro: uvm_object_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 253], `include file: ../transaction/transaction.sv line 38, `include file: ../packages/uvm_top.svh line 6, file: ../testbench/top.sv line 15)
-	`uvm_object_utils_begin(TopCmd)
-	                              |
-ncvlog: *E,SVEXTK (../transaction/transaction.sv,38|31): expecting a ';' (to terminate a type_declaration).
-(`define macro: m_uvm_object_registry_internal [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 439], `define macro: uvm_object_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 253], `include file: ../transaction/transaction.sv line 38, `include file: ../packages/uvm_top.svh line 6, file: ../testbench/top.sv line 15)
-	`uvm_object_utils_begin(TopCmd)
-	                              |
-ncvlog: *E,SVEXTK (../transaction/transaction.sv,38|31): expecting a ';' (to terminate a type_declaration).
-(`define macro: m_uvm_object_registry_internal [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 439], `define macro: uvm_object_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 253], `include file: ../transaction/transaction.sv line 38, `include file: ../packages/uvm_top.svh line 6, file: ../testbench/top.sv line 15)
-	`uvm_object_utils_begin(TopCmd)
-	                              |
-ncvlog: *E,SVNOTY (../transaction/transaction.sv,38|31): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
-(`define macro: m_uvm_object_registry_internal [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 439], `define macro: uvm_object_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 253], `include file: ../transaction/transaction.sv line 38, `include file: ../packages/uvm_top.svh line 6, file: ../testbench/top.sv line 15)
-	`uvm_object_utils_begin(TopCmd)
-	                              |
-ncvlog: *E,EXPSMC (../transaction/transaction.sv,38|31): expecting a semicolon (';') [10.3.1(IEEE)].
-(`define macro: m_uvm_object_registry_internal [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 439], `define macro: uvm_object_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 253], `include file: ../transaction/transaction.sv line 38, `include file: ../packages/uvm_top.svh line 6, file: ../testbench/top.sv line 15)
-	`uvm_object_utils_begin(TopCmd)
-	                              |
-ncvlog: *E,SVNOTY (../transaction/transaction.sv,38|31): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
-(`define macro: m_uvm_object_registry_internal [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 439], `define macro: uvm_object_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 253], `include file: ../transaction/transaction.sv line 38, `include file: ../packages/uvm_top.svh line 6, file: ../testbench/top.sv line 15)
-	`uvm_object_utils_begin(TopCmd)
-	                              |
-ncvlog: *E,EXPSMC (../transaction/transaction.sv,38|31): expecting a semicolon (';') [10.3.1(IEEE)].
-(`define macro: m_uvm_object_registry_internal [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 439], `define macro: uvm_object_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 253], `include file: ../transaction/transaction.sv line 38, `include file: ../packages/uvm_top.svh line 6, file: ../testbench/top.sv line 15)
-	`uvm_object_utils_begin(TopCmd)
-	                              |
-ncvlog: *E,SVNOTY (../transaction/transaction.sv,38|31): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
-(`define macro: m_uvm_object_create_func [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 409], `define macro: uvm_object_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 253], `include file: ../transaction/transaction.sv line 38, `include file: ../packages/uvm_top.svh line 6, file: ../testbench/top.sv line 15)
-	`uvm_object_utils_begin(TopCmd)
-	                              |
-ncvlog: *E,EXPSMC (../transaction/transaction.sv,38|31): expecting a semicolon (';') [10.3.1(IEEE)].
-(`define macro: m_uvm_object_create_func [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 409], `define macro: uvm_object_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 253], `include file: ../transaction/transaction.sv line 38, `include file: ../packages/uvm_top.svh line 6, file: ../testbench/top.sv line 15)
-	`uvm_object_utils_begin(TopCmd)
-	                              |
-ncvlog: *E,NOIPRT (../transaction/transaction.sv,38|31): Unrecognized declaration 'TopCmd' could be an unsupported keyword, a spelling mistake or missing instance port list '()' [SystemVerilog].
-(`define macro: m_uvm_object_create_func [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 409], `define macro: uvm_object_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 253], `include file: ../transaction/transaction.sv line 38, `include file: ../packages/uvm_top.svh line 6, file: ../testbench/top.sv line 15)
-	`uvm_object_utils_begin(TopCmd)
-	                              |
-ncvlog: *E,NOTINF (../transaction/transaction.sv,38|31): Interfaces are not allowed within functions [SystemVerilog].
-(`define macro: m_uvm_object_create_func [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 409], `define macro: uvm_object_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 253], `include file: ../transaction/transaction.sv line 38, `include file: ../packages/uvm_top.svh line 6, file: ../testbench/top.sv line 15)
-	`uvm_object_utils_begin(TopCmd)
-	                              |
-ncvlog: *E,SVNOTY (../transaction/transaction.sv,38|31): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
-(`define macro: uvm_field_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 151], `define macro: uvm_object_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 253], `include file: ../transaction/transaction.sv line 38, `include file: ../packages/uvm_top.svh line 6, file: ../testbench/top.sv line 15)
-	`uvm_object_utils_begin(TopCmd)
-	                              |
-ncvlog: *E,SVNOTY (../transaction/transaction.sv,38|31): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
-(`define macro: uvm_field_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 151], `define macro: uvm_object_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 253], `include file: ../transaction/transaction.sv line 38, `include file: ../packages/uvm_top.svh line 6, file: ../testbench/top.sv line 15)
-	`uvm_object_utils_begin(TopCmd)
-	                              |
-ncvlog: *E,NOTSTT (../transaction/transaction.sv,38|31): expecting a statement [9(IEEE)].
-(`define macro: uvm_field_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 151], `define macro: uvm_object_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 253], `include file: ../transaction/transaction.sv line 38, `include file: ../packages/uvm_top.svh line 6, file: ../testbench/top.sv line 15)
-	`uvm_object_utils_begin(TopCmd)
-	                              |
-ncvlog: *E,MISEXX (../transaction/transaction.sv,38|31): expecting an '=' or '<=' sign in an assignment [9.2(IEEE)].
-(`define macro: uvm_field_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 151], `define macro: uvm_object_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 253], `include file: ../transaction/transaction.sv line 38, `include file: ../packages/uvm_top.svh line 6, file: ../testbench/top.sv line 15)
-	`uvm_object_utils_begin(TopCmd)
-	                              |
-ncvlog: *E,NOTSTT (../transaction/transaction.sv,38|31): expecting a statement [9(IEEE)].
-(`define macro: uvm_field_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 151], `define macro: uvm_object_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 253], `include file: ../transaction/transaction.sv line 38, `include file: ../packages/uvm_top.svh line 6, file: ../testbench/top.sv line 15)
-	`uvm_object_utils_begin(TopCmd)
-	                              |
-ncvlog: *E,MISEXX (../transaction/transaction.sv,38|31): expecting an '=' or '<=' sign in an assignment [9.2(IEEE)].
-(`define macro: uvm_field_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 151], `define macro: uvm_object_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 253], `include file: ../transaction/transaction.sv line 38, `include file: ../packages/uvm_top.svh line 6, file: ../testbench/top.sv line 15)
-	`uvm_object_utils_begin(TopCmd)
-	                              |
-ncvlog: *E,MISEXX (../transaction/transaction.sv,38|31): expecting an '=' or '<=' sign in an assignment [9.2(IEEE)].
-(`define macro: uvm_field_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 151], `define macro: uvm_object_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 253], `include file: ../transaction/transaction.sv line 38, `include file: ../packages/uvm_top.svh line 6, file: ../testbench/top.sv line 15)
-		super.new(name);
-		    |
-ncvlog: *E,CLSSPX (../transaction/transaction.sv,48|6): 'super' can only be used within a class scope that derives from a base class.
-(`include file: ../transaction/transaction.sv line 48, `include file: ../packages/uvm_top.svh line 6, file: ../testbench/top.sv line 15)
-class TopSequence extends uvm_sequence #(TopCmd);
-                                     |
-ncvlog: *E,SVNOTY (../sequence/sequence.sv,2|37): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
-(`include file: ../sequence/sequence.sv line 2, `include file: ../packages/uvm_top.svh line 7, file: ../testbench/top.sv line 15)
-		super.new(name);
-		    |
-ncvlog: *E,CLSSPX (../sequence/sequence.sv,5|6): 'super' can only be used within a class scope that derives from a base class.
-(`include file: ../sequence/sequence.sv line 5, `include file: ../packages/uvm_top.svh line 7, file: ../testbench/top.sv line 15)
-	`uvm_object_utils(TopSequence)
-	                             |
-ncvlog: *E,SVNOTY (../sequence/sequence.sv,8|30): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
-(`define macro: m_uvm_object_registry_internal [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 439], `define macro: uvm_object_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 253], `define macro: uvm_object_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 245], `include file: ../sequence/sequence.sv line 8, `include file: ../packages/uvm_top.svh line 7, file: ../testbench/top.sv line 15)
-	`uvm_object_utils(TopSequence)
-	                             |
-ncvlog: *E,SVEXTK (../sequence/sequence.sv,8|30): expecting a ';' (to terminate a type_declaration).
-(`define macro: m_uvm_object_registry_internal [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 439], `define macro: uvm_object_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 253], `define macro: uvm_object_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 245], `include file: ../sequence/sequence.sv line 8, `include file: ../packages/uvm_top.svh line 7, file: ../testbench/top.sv line 15)
-	`uvm_object_utils(TopSequence)
-	                             |
-ncvlog: *E,SVEXTK (../sequence/sequence.sv,8|30): expecting a ';' (to terminate a type_declaration).
-(`define macro: m_uvm_object_registry_internal [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 439], `define macro: uvm_object_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 253], `define macro: uvm_object_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 245], `include file: ../sequence/sequence.sv line 8, `include file: ../packages/uvm_top.svh line 7, file: ../testbench/top.sv line 15)
-	`uvm_object_utils(TopSequence)
-	                             |
-ncvlog: *E,SVNOTY (../sequence/sequence.sv,8|30): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
-(`define macro: m_uvm_object_registry_internal [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 439], `define macro: uvm_object_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 253], `define macro: uvm_object_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 245], `include file: ../sequence/sequence.sv line 8, `include file: ../packages/uvm_top.svh line 7, file: ../testbench/top.sv line 15)
-	`uvm_object_utils(TopSequence)
-	                             |
-ncvlog: *E,EXPSMC (../sequence/sequence.sv,8|30): expecting a semicolon (';') [10.3.1(IEEE)].
-(`define macro: m_uvm_object_registry_internal [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 439], `define macro: uvm_object_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 253], `define macro: uvm_object_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 245], `include file: ../sequence/sequence.sv line 8, `include file: ../packages/uvm_top.svh line 7, file: ../testbench/top.sv line 15)
-	`uvm_object_utils(TopSequence)
-	                             |
-ncvlog: *E,SVNOTY (../sequence/sequence.sv,8|30): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
-(`define macro: m_uvm_object_registry_internal [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 439], `define macro: uvm_object_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 253], `define macro: uvm_object_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 245], `include file: ../sequence/sequence.sv line 8, `include file: ../packages/uvm_top.svh line 7, file: ../testbench/top.sv line 15)
-	`uvm_object_utils(TopSequence)
-	                             |
-ncvlog: *E,EXPSMC (../sequence/sequence.sv,8|30): expecting a semicolon (';') [10.3.1(IEEE)].
-(`define macro: m_uvm_object_registry_internal [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 439], `define macro: uvm_object_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 253], `define macro: uvm_object_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 245], `include file: ../sequence/sequence.sv line 8, `include file: ../packages/uvm_top.svh line 7, file: ../testbench/top.sv line 15)
-	`uvm_object_utils(TopSequence)
-	                             |
-ncvlog: *E,SVNOTY (../sequence/sequence.sv,8|30): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
-(`define macro: m_uvm_object_create_func [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 409], `define macro: uvm_object_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 253], `define macro: uvm_object_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 245], `include file: ../sequence/sequence.sv line 8, `include file: ../packages/uvm_top.svh line 7, file: ../testbench/top.sv line 15)
-	`uvm_object_utils(TopSequence)
-	                             |
-ncvlog: *E,EXPSMC (../sequence/sequence.sv,8|30): expecting a semicolon (';') [10.3.1(IEEE)].
-(`define macro: m_uvm_object_create_func [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 409], `define macro: uvm_object_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 253], `define macro: uvm_object_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 245], `include file: ../sequence/sequence.sv line 8, `include file: ../packages/uvm_top.svh line 7, file: ../testbench/top.sv line 15)
-	`uvm_object_utils(TopSequence)
-	                             |
-ncvlog: *E,NOIPRT (../sequence/sequence.sv,8|30): Unrecognized declaration 'TopSequence' could be an unsupported keyword, a spelling mistake or missing instance port list '()' [SystemVerilog].
-(`define macro: m_uvm_object_create_func [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 409], `define macro: uvm_object_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 253], `define macro: uvm_object_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 245], `include file: ../sequence/sequence.sv line 8, `include file: ../packages/uvm_top.svh line 7, file: ../testbench/top.sv line 15)
-	`uvm_object_utils(TopSequence)
-	                             |
-ncvlog: *E,NOTINF (../sequence/sequence.sv,8|30): Interfaces are not allowed within functions [SystemVerilog].
-(`define macro: m_uvm_object_create_func [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 409], `define macro: uvm_object_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 253], `define macro: uvm_object_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 245], `include file: ../sequence/sequence.sv line 8, `include file: ../packages/uvm_top.svh line 7, file: ../testbench/top.sv line 15)
-	`uvm_object_utils(TopSequence)
-	                             |
-ncvlog: *E,SVNOTY (../sequence/sequence.sv,8|30): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
-(`define macro: uvm_field_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 151], `define macro: uvm_object_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 253], `define macro: uvm_object_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 245], `include file: ../sequence/sequence.sv line 8, `include file: ../packages/uvm_top.svh line 7, file: ../testbench/top.sv line 15)
-	`uvm_object_utils(TopSequence)
-	                             |
-ncvlog: *E,SVNOTY (../sequence/sequence.sv,8|30): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
-(`define macro: uvm_field_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 151], `define macro: uvm_object_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 253], `define macro: uvm_object_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 245], `include file: ../sequence/sequence.sv line 8, `include file: ../packages/uvm_top.svh line 7, file: ../testbench/top.sv line 15)
-	`uvm_object_utils(TopSequence)
-	                             |
-ncvlog: *E,NOTSTT (../sequence/sequence.sv,8|30): expecting a statement [9(IEEE)].
-(`define macro: uvm_field_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 151], `define macro: uvm_object_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 253], `define macro: uvm_object_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 245], `include file: ../sequence/sequence.sv line 8, `include file: ../packages/uvm_top.svh line 7, file: ../testbench/top.sv line 15)
-	`uvm_object_utils(TopSequence)
-	                             |
-ncvlog: *E,MISEXX (../sequence/sequence.sv,8|30): expecting an '=' or '<=' sign in an assignment [9.2(IEEE)].
-(`define macro: uvm_field_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 151], `define macro: uvm_object_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 253], `define macro: uvm_object_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 245], `include file: ../sequence/sequence.sv line 8, `include file: ../packages/uvm_top.svh line 7, file: ../testbench/top.sv line 15)
-	`uvm_object_utils(TopSequence)
-	                             |
-ncvlog: *E,NOTSTT (../sequence/sequence.sv,8|30): expecting a statement [9(IEEE)].
-(`define macro: uvm_field_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 151], `define macro: uvm_object_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 253], `define macro: uvm_object_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 245], `include file: ../sequence/sequence.sv line 8, `include file: ../packages/uvm_top.svh line 7, file: ../testbench/top.sv line 15)
-	`uvm_object_utils(TopSequence)
-	                             |
-ncvlog: *E,MISEXX (../sequence/sequence.sv,8|30): expecting an '=' or '<=' sign in an assignment [9.2(IEEE)].
-(`define macro: uvm_field_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 151], `define macro: uvm_object_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 253], `define macro: uvm_object_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 245], `include file: ../sequence/sequence.sv line 8, `include file: ../packages/uvm_top.svh line 7, file: ../testbench/top.sv line 15)
-	`uvm_object_utils(TopSequence)
-	                             |
-ncvlog: *E,MISEXX (../sequence/sequence.sv,8|30): expecting an '=' or '<=' sign in an assignment [9.2(IEEE)].
-(`define macro: uvm_field_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 151], `define macro: uvm_object_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 253], `define macro: uvm_object_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 245], `include file: ../sequence/sequence.sv line 8, `include file: ../packages/uvm_top.svh line 7, file: ../testbench/top.sv line 15)
-		`uvm_do(req)
-		           |
-ncvlog: *E,SVNOTY (../sequence/sequence.sv,11|13): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
-(`define macro: uvm_do_on_pri_with [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_sequence_defines.svh line 199], `define macro: uvm_do [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_sequence_defines.svh line 90], `include file: ../sequence/sequence.sv line 11, `include file: ../packages/uvm_top.svh line 7, file: ../testbench/top.sv line 15)
-		`uvm_do(req)
-		           |
-ncvlog: *E,SVNOTY (../sequence/sequence.sv,11|13): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
-(`define macro: uvm_create_on [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_sequence_defines.svh line 146], `define macro: uvm_do_on_pri_with [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_sequence_defines.svh line 199], `define macro: uvm_do [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_sequence_defines.svh line 90], `include file: ../sequence/sequence.sv line 11, `include file: ../packages/uvm_top.svh line 7, file: ../testbench/top.sv line 15)
-class DutDriver extends uvm_driver #(TopCmd);
-                                 |
-ncvlog: *E,SVNOTY (../driver/driver.sv,2|33): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
-(`include file: ../driver/driver.sv line 2, `include file: ../packages/uvm_top.svh line 8, file: ../testbench/top.sv line 15)
-	TopCmd topCmd; // reference to basic transaction modeling the cpu command
-	     |
-ncvlog: *E,NOIPRT (../driver/driver.sv,4|6): Unrecognized declaration 'TopCmd' could be an unsupported keyword, a spelling mistake or missing instance port list '()' [SystemVerilog].
-(`include file: ../driver/driver.sv line 4, `include file: ../packages/uvm_top.svh line 8, file: ../testbench/top.sv line 15)
-	`uvm_component_utils(DutDriver)
-	                              |
-ncvlog: *E,SVNOTY (../driver/driver.sv,8|31): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
-(`define macro: m_uvm_component_registry_internal [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ../driver/driver.sv line 8, `include file: ../packages/uvm_top.svh line 8, file: ../testbench/top.sv line 15)
-	`uvm_component_utils(DutDriver)
-	                              |
-ncvlog: *E,SVEXTK (../driver/driver.sv,8|31): expecting a ';' (to terminate a type_declaration).
-(`define macro: m_uvm_component_registry_internal [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ../driver/driver.sv line 8, `include file: ../packages/uvm_top.svh line 8, file: ../testbench/top.sv line 15)
-	`uvm_component_utils(DutDriver)
-	                              |
-ncvlog: *E,SVEXTK (../driver/driver.sv,8|31): expecting a ';' (to terminate a type_declaration).
-(`define macro: m_uvm_component_registry_internal [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ../driver/driver.sv line 8, `include file: ../packages/uvm_top.svh line 8, file: ../testbench/top.sv line 15)
-	`uvm_component_utils(DutDriver)
-	                              |
-ncvlog: *E,SVNOTY (../driver/driver.sv,8|31): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
-(`define macro: m_uvm_component_registry_internal [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ../driver/driver.sv line 8, `include file: ../packages/uvm_top.svh line 8, file: ../testbench/top.sv line 15)
-	`uvm_component_utils(DutDriver)
-	                              |
-ncvlog: *E,EXPSMC (../driver/driver.sv,8|31): expecting a semicolon (';') [10.3.1(IEEE)].
-(`define macro: m_uvm_component_registry_internal [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ../driver/driver.sv line 8, `include file: ../packages/uvm_top.svh line 8, file: ../testbench/top.sv line 15)
-	`uvm_component_utils(DutDriver)
-	                              |
-ncvlog: *E,SVNOTY (../driver/driver.sv,8|31): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
-(`define macro: m_uvm_component_registry_internal [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ../driver/driver.sv line 8, `include file: ../packages/uvm_top.svh line 8, file: ../testbench/top.sv line 15)
-	`uvm_component_utils(DutDriver)
-	                              |
-ncvlog: *E,EXPSMC (../driver/driver.sv,8|31): expecting a semicolon (';') [10.3.1(IEEE)].
-(`define macro: m_uvm_component_registry_internal [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ../driver/driver.sv line 8, `include file: ../packages/uvm_top.svh line 8, file: ../testbench/top.sv line 15)
-	function new(string name = "DutDriver", uvm_component parent);
-	                                                    |
-ncvlog: *E,EXPRPA (../driver/driver.sv,11|53): expecting a right parenthesis (')') [A.2.6(IEEE)].
-(`include file: ../driver/driver.sv line 11, `include file: ../packages/uvm_top.svh line 8, file: ../testbench/top.sv line 15)
-	function new(string name = "DutDriver", uvm_component parent);
-	                                                    |
-ncvlog: *E,NOIPRT (../driver/driver.sv,11|53): Unrecognized declaration 'uvm_component' could be an unsupported keyword, a spelling mistake or missing instance port list '()' [SystemVerilog].
-(`include file: ../driver/driver.sv line 11, `include file: ../packages/uvm_top.svh line 8, file: ../testbench/top.sv line 15)
-	function new(string name = "DutDriver", uvm_component parent);
-	                                                    |
-ncvlog: *E,NOTINF (../driver/driver.sv,11|53): Interfaces are not allowed within tasks [SystemVerilog].
-(`include file: ../driver/driver.sv line 11, `include file: ../packages/uvm_top.svh line 8, file: ../testbench/top.sv line 15)
-	function new(string name = "DutDriver", uvm_component parent);
-	                                                           |
-ncvlog: *E,ILLPDL (../driver/driver.sv,11|60): Mixing of ansi & non-ansi style port declaration is not legal.
-(`include file: ../driver/driver.sv line 11, `include file: ../packages/uvm_top.svh line 8, file: ../testbench/top.sv line 15)
-	function new(string name = "DutDriver", uvm_component parent);
+	`uvm_declare_p_sequencer(Sequencer)
+	                                  |
+ncvlog: *E,NOIPRT (../sequence/main_mem_sequence.sv,9|35): Unrecognized declaration 'Sequencer' could be an unsupported keyword, a spelling mistake or missing instance port list '()' [SystemVerilog].
+(`define macro: uvm_declare_p_sequencer [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_sequence_defines.svh line 447], `include file: ../sequence/main_mem_sequence.sv line 9, `include file: ../packages/uvm_top.svh line 11, file: ../testbench/top.sv line 15)
+				`uvm_do_with(req,{dataInBus==1;})
+				                                |
+ncvlog: *E,SVNOTY (../sequence/main_mem_sequence.sv,19|36): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
+(`define macro: uvm_do_on_pri_with [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_sequence_defines.svh line 199], `define macro: uvm_do_with [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_sequence_defines.svh line 113], `include file: ../sequence/main_mem_sequence.sv line 19, `include file: ../packages/uvm_top.svh line 11, file: ../testbench/top.sv line 15)
+				`uvm_do_with(req,{dataInBus==1;})
+				                                |
+ncvlog: *E,SVNOTY (../sequence/main_mem_sequence.sv,19|36): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
+(`define macro: uvm_create_on [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_sequence_defines.svh line 146], `define macro: uvm_do_on_pri_with [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_sequence_defines.svh line 199], `define macro: uvm_do_with [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_sequence_defines.svh line 113], `include file: ../sequence/main_mem_sequence.sv line 19, `include file: ../packages/uvm_top.svh line 11, file: ../testbench/top.sv line 15)
+class BaseDriver extends uvm_driver#(BaseCmd);
+                                  |
+ncvlog: *E,SVNOTY (../driver/base_driver.sv,2|34): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
+(`include file: ../driver/base_driver.sv line 2, `include file: ../packages/uvm_top.svh line 12, file: ../testbench/top.sv line 15)
+	BaseCmd baseCmd;
+	      |
+ncvlog: *E,NOIPRT (../driver/base_driver.sv,5|7): Unrecognized declaration 'BaseCmd' could be an unsupported keyword, a spelling mistake or missing instance port list '()' [SystemVerilog].
+(`include file: ../driver/base_driver.sv line 5, `include file: ../packages/uvm_top.svh line 12, file: ../testbench/top.sv line 15)
+	function new(string name = "BaseDriver", uvm_component parent);
+	                                                     |
+ncvlog: *E,EXPRPA (../driver/base_driver.sv,9|54): expecting a right parenthesis (')') [A.2.6(IEEE)].
+(`include file: ../driver/base_driver.sv line 9, `include file: ../packages/uvm_top.svh line 12, file: ../testbench/top.sv line 15)
+	function new(string name = "BaseDriver", uvm_component parent);
+	                                                     |
+ncvlog: *E,NOIPRT (../driver/base_driver.sv,9|54): Unrecognized declaration 'uvm_component' could be an unsupported keyword, a spelling mistake or missing instance port list '()' [SystemVerilog].
+(`include file: ../driver/base_driver.sv line 9, `include file: ../packages/uvm_top.svh line 12, file: ../testbench/top.sv line 15)
+	function new(string name = "BaseDriver", uvm_component parent);
+	                                                     |
+ncvlog: *E,NOTINF (../driver/base_driver.sv,9|54): Interfaces are not allowed within tasks [SystemVerilog].
+(`include file: ../driver/base_driver.sv line 9, `include file: ../packages/uvm_top.svh line 12, file: ../testbench/top.sv line 15)
+	function new(string name = "BaseDriver", uvm_component parent);
 	                                                            |
-ncvlog: *E,EXPSMC (../driver/driver.sv,11|61): expecting a semicolon (';') [12.3.2(IEEE)].
-(`include file: ../driver/driver.sv line 11, `include file: ../packages/uvm_top.svh line 8, file: ../testbench/top.sv line 15)
+ncvlog: *E,ILLPDL (../driver/base_driver.sv,9|61): Mixing of ansi & non-ansi style port declaration is not legal.
+(`include file: ../driver/base_driver.sv line 9, `include file: ../packages/uvm_top.svh line 12, file: ../testbench/top.sv line 15)
+	function new(string name = "BaseDriver", uvm_component parent);
+	                                                             |
+ncvlog: *E,EXPSMC (../driver/base_driver.sv,9|62): expecting a semicolon (';') [12.3.2(IEEE)].
+(`include file: ../driver/base_driver.sv line 9, `include file: ../packages/uvm_top.svh line 12, file: ../testbench/top.sv line 15)
 		super.new(name, parent);
 		    |
-ncvlog: *E,EXPRPA (../driver/driver.sv,12|6): expecting a right parenthesis (')') [A.2.6(IEEE)].
-(`include file: ../driver/driver.sv line 12, `include file: ../packages/uvm_top.svh line 8, file: ../testbench/top.sv line 15)
-	function void build_phase(uvm_phase phase);
-	                                  |
-ncvlog: *E,SVNOTY (../driver/driver.sv,15|35): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
-(`include file: ../driver/driver.sv line 15, `include file: ../packages/uvm_top.svh line 8, file: ../testbench/top.sv line 15)
-	task run_phase(uvm_phase phase);
-	                       |
-ncvlog: *E,SVNOTY (../driver/driver.sv,23|24): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
-(`include file: ../driver/driver.sv line 23, `include file: ../packages/uvm_top.svh line 8, file: ../testbench/top.sv line 15)
-	task drive_item(input TopCmd cmd);
-	                           |
-ncvlog: *E,SVNOTY (../driver/driver.sv,34|28): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
-(`include file: ../driver/driver.sv line 34, `include file: ../packages/uvm_top.svh line 8, file: ../testbench/top.sv line 15)
-class Agent extends uvm_agent;
-                            |
-ncvlog: *E,SVNOTY (../agent/agent.sv,1|28): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
-(`include file: ../agent/agent.sv line 1, `include file: ../packages/uvm_top.svh line 9, file: ../testbench/top.sv line 15)
-	uvm_active_passive_enum is_active; // UVM_ACTIVE or UVM_PASSIVE
-	                      |
-ncvlog: *E,NOIPRT (../agent/agent.sv,2|23): Unrecognized declaration 'uvm_active_passive_enum' could be an unsupported keyword, a spelling mistake or missing instance port list '()' [SystemVerilog].
-(`include file: ../agent/agent.sv line 2, `include file: ../packages/uvm_top.svh line 9, file: ../testbench/top.sv line 15)
-	uvm_sequencer #(TopCmd) sequencer; // sequencer to create sequences with TopCmd type item
-	            |
-ncvlog: *E,EXPENC (../agent/agent.sv,4|13): Expecting the keyword 'endclass'.
-(`include file: ../agent/agent.sv line 4, `include file: ../packages/uvm_top.svh line 9, file: ../testbench/top.sv line 15)
-	`uvm_component_utils(Agent)
-	                          |
-ncvlog: *E,BADQAL (../agent/agent.sv,8|27): Lifetime or qualifier(s) 'static' not allowed before function declaration.
-(`define macro: m_uvm_component_registry_internal [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ../agent/agent.sv line 8, `include file: ../packages/uvm_top.svh line 9, file: ../testbench/top.sv line 15)
-	`uvm_component_utils(Agent)
-	                          |
-ncvlog: *E,SVNOTY (../agent/agent.sv,8|27): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
-(`define macro: m_uvm_component_registry_internal [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ../agent/agent.sv line 8, `include file: ../packages/uvm_top.svh line 9, file: ../testbench/top.sv line 15)
-	`uvm_component_utils(Agent)
-	                          |
-ncvlog: *E,EXPSMC (../agent/agent.sv,8|27): expecting a semicolon (';') [10.3.1(IEEE)].
-(`define macro: m_uvm_component_registry_internal [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ../agent/agent.sv line 8, `include file: ../packages/uvm_top.svh line 9, file: ../testbench/top.sv line 15)
-	`uvm_component_utils(Agent)
-	                          |
-ncvlog: *E,BADQAL (../agent/agent.sv,8|27): Lifetime or qualifier(s) 'virtual' not allowed before function declaration.
-(`define macro: m_uvm_component_registry_internal [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ../agent/agent.sv line 8, `include file: ../packages/uvm_top.svh line 9, file: ../testbench/top.sv line 15)
-	`uvm_component_utils(Agent)
-	                          |
-ncvlog: *E,SVNOTY (../agent/agent.sv,8|27): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
-(`define macro: m_uvm_component_registry_internal [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ../agent/agent.sv line 8, `include file: ../packages/uvm_top.svh line 9, file: ../testbench/top.sv line 15)
-	`uvm_component_utils(Agent)
-	                          |
-ncvlog: *E,EXPSMC (../agent/agent.sv,8|27): expecting a semicolon (';') [10.3.1(IEEE)].
-(`define macro: m_uvm_component_registry_internal [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ../agent/agent.sv line 8, `include file: ../packages/uvm_top.svh line 9, file: ../testbench/top.sv line 15)
-	`uvm_component_utils(Agent)
-	                          |
-ncvlog: *E,BADQAL (../agent/agent.sv,8|27): Lifetime or qualifier(s) 'virtual' not allowed before function declaration.
-(`define macro: m_uvm_get_type_name_func [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 427], `define macro: uvm_component_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ../agent/agent.sv line 8, `include file: ../packages/uvm_top.svh line 9, file: ../testbench/top.sv line 15)
-	function new(string name="agent",uvm_component parent);
-	           |
-ncvlog: *E,NEWOIC (../agent/agent.sv,10|12): The class constructor method 'new' is only allowed within a class declaration.
-(`include file: ../agent/agent.sv line 10, `include file: ../packages/uvm_top.svh line 9, file: ../testbench/top.sv line 15)
-	function new(string name="agent",uvm_component parent);
-	                                             |
-ncvlog: *E,EXPRPA (../agent/agent.sv,10|46): expecting a right parenthesis (')') [A.2.6(IEEE)].
-(`include file: ../agent/agent.sv line 10, `include file: ../packages/uvm_top.svh line 9, file: ../testbench/top.sv line 15)
-	function new(string name="agent",uvm_component parent);
-	                                             |
-ncvlog: *E,NOIPRT (../agent/agent.sv,10|46): Unrecognized declaration 'uvm_component' could be an unsupported keyword, a spelling mistake or missing instance port list '()' [SystemVerilog].
-(`include file: ../agent/agent.sv line 10, `include file: ../packages/uvm_top.svh line 9, file: ../testbench/top.sv line 15)
-	function new(string name="agent",uvm_component parent);
-	                                             |
-ncvlog: *E,NOTINF (../agent/agent.sv,10|46): Interfaces are not allowed within tasks [SystemVerilog].
-(`include file: ../agent/agent.sv line 10, `include file: ../packages/uvm_top.svh line 9, file: ../testbench/top.sv line 15)
-	function new(string name="agent",uvm_component parent);
-	                                                    |
-ncvlog: *E,ILLPDL (../agent/agent.sv,10|53): Mixing of ansi & non-ansi style port declaration is not legal.
-(`include file: ../agent/agent.sv line 10, `include file: ../packages/uvm_top.svh line 9, file: ../testbench/top.sv line 15)
-	function new(string name="agent",uvm_component parent);
-	                                                     |
-ncvlog: *E,EXPSMC (../agent/agent.sv,10|54): expecting a semicolon (';') [12.3.2(IEEE)].
-(`include file: ../agent/agent.sv line 10, `include file: ../packages/uvm_top.svh line 9, file: ../testbench/top.sv line 15)
-		super.new(name,parent);
-		    |
-ncvlog: *E,EXPRPA (../agent/agent.sv,11|6): expecting a right parenthesis (')') [A.2.6(IEEE)].
-(`include file: ../agent/agent.sv line 11, `include file: ../packages/uvm_top.svh line 9, file: ../testbench/top.sv line 15)
-	virtual function void build_phase(uvm_phase phase);
-	               |
-ncvlog: *E,BADQAL (../agent/agent.sv,14|16): Lifetime or qualifier(s) 'virtual' not allowed before function declaration.
-(`include file: ../agent/agent.sv line 14, `include file: ../packages/uvm_top.svh line 9, file: ../testbench/top.sv line 15)
+ncvlog: *E,EXPRPA (../driver/base_driver.sv,10|6): expecting a right parenthesis (')') [A.2.6(IEEE)].
+(`include file: ../driver/base_driver.sv line 10, `include file: ../packages/uvm_top.svh line 12, file: ../testbench/top.sv line 15)
+	`uvm_component_utils(BaseDriver)
+	                               |
+ncvlog: *E,SVNOTY (../driver/base_driver.sv,13|32): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
+(`define macro: m_uvm_component_registry_internal [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ../driver/base_driver.sv line 13, `include file: ../packages/uvm_top.svh line 12, file: ../testbench/top.sv line 15)
+	`uvm_component_utils(BaseDriver)
+	                               |
+ncvlog: *E,SVEXTK (../driver/base_driver.sv,13|32): expecting a ';' (to terminate a type_declaration).
+(`define macro: m_uvm_component_registry_internal [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ../driver/base_driver.sv line 13, `include file: ../packages/uvm_top.svh line 12, file: ../testbench/top.sv line 15)
+	`uvm_component_utils(BaseDriver)
+	                               |
+ncvlog: *E,SVEXTK (../driver/base_driver.sv,13|32): expecting a ';' (to terminate a type_declaration).
+(`define macro: m_uvm_component_registry_internal [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ../driver/base_driver.sv line 13, `include file: ../packages/uvm_top.svh line 12, file: ../testbench/top.sv line 15)
+	`uvm_component_utils(BaseDriver)
+	                               |
+ncvlog: *E,SVNOTY (../driver/base_driver.sv,13|32): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
+(`define macro: m_uvm_component_registry_internal [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ../driver/base_driver.sv line 13, `include file: ../packages/uvm_top.svh line 12, file: ../testbench/top.sv line 15)
+	`uvm_component_utils(BaseDriver)
+	                               |
+ncvlog: *E,EXPSMC (../driver/base_driver.sv,13|32): expecting a semicolon (';') [10.3.1(IEEE)].
+(`define macro: m_uvm_component_registry_internal [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ../driver/base_driver.sv line 13, `include file: ../packages/uvm_top.svh line 12, file: ../testbench/top.sv line 15)
+	`uvm_component_utils(BaseDriver)
+	                               |
+ncvlog: *E,SVNOTY (../driver/base_driver.sv,13|32): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
+(`define macro: m_uvm_component_registry_internal [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ../driver/base_driver.sv line 13, `include file: ../packages/uvm_top.svh line 12, file: ../testbench/top.sv line 15)
+	`uvm_component_utils(BaseDriver)
+	                               |
+ncvlog: *E,EXPSMC (../driver/base_driver.sv,13|32): expecting a semicolon (';') [10.3.1(IEEE)].
+(`define macro: m_uvm_component_registry_internal [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ../driver/base_driver.sv line 13, `include file: ../packages/uvm_top.svh line 12, file: ../testbench/top.sv line 15)
 	virtual function void build_phase(uvm_phase phase);
 	                                          |
-ncvlog: *E,SVNOTY (../agent/agent.sv,14|43): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
-(`include file: ../agent/agent.sv line 14, `include file: ../packages/uvm_top.svh line 9, file: ../testbench/top.sv line 15)
-	virtual function void connect_phase(uvm_phase phase);
-	               |
-ncvlog: *E,BADQAL (../agent/agent.sv,24|16): Lifetime or qualifier(s) 'virtual' not allowed before function declaration.
-(`include file: ../agent/agent.sv line 24, `include file: ../packages/uvm_top.svh line 9, file: ../testbench/top.sv line 15)
-	virtual function void connect_phase(uvm_phase phase);
-	                                            |
-ncvlog: *E,SVNOTY (../agent/agent.sv,24|45): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
-(`include file: ../agent/agent.sv line 24, `include file: ../packages/uvm_top.svh line 9, file: ../testbench/top.sv line 15)
-endclass:Agent
+ncvlog: *E,SVNOTY (../driver/base_driver.sv,16|43): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
+(`include file: ../driver/base_driver.sv line 16, `include file: ../packages/uvm_top.svh line 12, file: ../testbench/top.sv line 15)
+	virtual task run_phase(uvm_phase phase);
+	                               |
+ncvlog: *E,SVNOTY (../driver/base_driver.sv,24|32): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
+(`include file: ../driver/base_driver.sv line 24, `include file: ../packages/uvm_top.svh line 12, file: ../testbench/top.sv line 15)
+	virtual task drive_item(input BaseCmd cmd);
+	                                    |
+ncvlog: *E,SVNOTY (../driver/base_driver.sv,35|37): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
+(`include file: ../driver/base_driver.sv line 35, `include file: ../packages/uvm_top.svh line 12, file: ../testbench/top.sv line 15)
+class CacheDriver extends BaseDriver;
+                                   |
+ncvlog: *E,SVNOTY (../driver/cache_driver.sv,1|35): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
+(`include file: ../driver/cache_driver.sv line 1, `include file: ../packages/uvm_top.svh line 13, file: ../testbench/top.sv line 15)
+	CpuCmd cpuCmd; // reference to basic transaction modeling the cpu command
+	     |
+ncvlog: *E,NOIPRT (../driver/cache_driver.sv,3|6): Unrecognized declaration 'CpuCmd' could be an unsupported keyword, a spelling mistake or missing instance port list '()' [SystemVerilog].
+(`include file: ../driver/cache_driver.sv line 3, `include file: ../packages/uvm_top.svh line 13, file: ../testbench/top.sv line 15)
+	`uvm_component_utils(CacheDriver)
+	                                |
+ncvlog: *E,SVNOTY (../driver/cache_driver.sv,7|33): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
+(`define macro: m_uvm_component_registry_internal [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ../driver/cache_driver.sv line 7, `include file: ../packages/uvm_top.svh line 13, file: ../testbench/top.sv line 15)
+	`uvm_component_utils(CacheDriver)
+	                                |
+ncvlog: *E,SVEXTK (../driver/cache_driver.sv,7|33): expecting a ';' (to terminate a type_declaration).
+(`define macro: m_uvm_component_registry_internal [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ../driver/cache_driver.sv line 7, `include file: ../packages/uvm_top.svh line 13, file: ../testbench/top.sv line 15)
+	`uvm_component_utils(CacheDriver)
+	                                |
+ncvlog: *E,SVEXTK (../driver/cache_driver.sv,7|33): expecting a ';' (to terminate a type_declaration).
+(`define macro: m_uvm_component_registry_internal [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ../driver/cache_driver.sv line 7, `include file: ../packages/uvm_top.svh line 13, file: ../testbench/top.sv line 15)
+	`uvm_component_utils(CacheDriver)
+	                                |
+ncvlog: *E,SVNOTY (../driver/cache_driver.sv,7|33): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
+(`define macro: m_uvm_component_registry_internal [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ../driver/cache_driver.sv line 7, `include file: ../packages/uvm_top.svh line 13, file: ../testbench/top.sv line 15)
+	`uvm_component_utils(CacheDriver)
+	                                |
+ncvlog: *E,EXPSMC (../driver/cache_driver.sv,7|33): expecting a semicolon (';') [10.3.1(IEEE)].
+(`define macro: m_uvm_component_registry_internal [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ../driver/cache_driver.sv line 7, `include file: ../packages/uvm_top.svh line 13, file: ../testbench/top.sv line 15)
+	`uvm_component_utils(CacheDriver)
+	                                |
+ncvlog: *E,SVNOTY (../driver/cache_driver.sv,7|33): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
+(`define macro: m_uvm_component_registry_internal [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ../driver/cache_driver.sv line 7, `include file: ../packages/uvm_top.svh line 13, file: ../testbench/top.sv line 15)
+	`uvm_component_utils(CacheDriver)
+	                                |
+ncvlog: *E,EXPSMC (../driver/cache_driver.sv,7|33): expecting a semicolon (';') [10.3.1(IEEE)].
+(`define macro: m_uvm_component_registry_internal [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ../driver/cache_driver.sv line 7, `include file: ../packages/uvm_top.svh line 13, file: ../testbench/top.sv line 15)
+	function new(string name = "CacheDriver", uvm_component parent);
+	                                                      |
+ncvlog: *E,EXPRPA (../driver/cache_driver.sv,10|55): expecting a right parenthesis (')') [A.2.6(IEEE)].
+(`include file: ../driver/cache_driver.sv line 10, `include file: ../packages/uvm_top.svh line 13, file: ../testbench/top.sv line 15)
+	function new(string name = "CacheDriver", uvm_component parent);
+	                                                      |
+ncvlog: *E,NOIPRT (../driver/cache_driver.sv,10|55): Unrecognized declaration 'uvm_component' could be an unsupported keyword, a spelling mistake or missing instance port list '()' [SystemVerilog].
+(`include file: ../driver/cache_driver.sv line 10, `include file: ../packages/uvm_top.svh line 13, file: ../testbench/top.sv line 15)
+	function new(string name = "CacheDriver", uvm_component parent);
+	                                                      |
+ncvlog: *E,NOTINF (../driver/cache_driver.sv,10|55): Interfaces are not allowed within tasks [SystemVerilog].
+(`include file: ../driver/cache_driver.sv line 10, `include file: ../packages/uvm_top.svh line 13, file: ../testbench/top.sv line 15)
+	function new(string name = "CacheDriver", uvm_component parent);
+	                                                             |
+ncvlog: *E,ILLPDL (../driver/cache_driver.sv,10|62): Mixing of ansi & non-ansi style port declaration is not legal.
+(`include file: ../driver/cache_driver.sv line 10, `include file: ../packages/uvm_top.svh line 13, file: ../testbench/top.sv line 15)
+	function new(string name = "CacheDriver", uvm_component parent);
+	                                                              |
+ncvlog: *E,EXPSMC (../driver/cache_driver.sv,10|63): expecting a semicolon (';') [12.3.2(IEEE)].
+(`include file: ../driver/cache_driver.sv line 10, `include file: ../packages/uvm_top.svh line 13, file: ../testbench/top.sv line 15)
+		super.new(name, parent);
+		    |
+ncvlog: *E,EXPRPA (../driver/cache_driver.sv,11|6): expecting a right parenthesis (')') [A.2.6(IEEE)].
+(`include file: ../driver/cache_driver.sv line 11, `include file: ../packages/uvm_top.svh line 13, file: ../testbench/top.sv line 15)
+	task drive_item(input BaseCmd cmd);
+	                            |
+ncvlog: *E,SVNOTY (../driver/cache_driver.sv,15|29): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
+(`include file: ../driver/cache_driver.sv line 15, `include file: ../packages/uvm_top.svh line 13, file: ../testbench/top.sv line 15)
+class MainMemDriver extends BaseDriver;
+                                     |
+ncvlog: *E,SVNOTY (../driver/main_mem_driver.sv,1|37): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
+(`include file: ../driver/main_mem_driver.sv line 1, `include file: ../packages/uvm_top.svh line 14, file: ../testbench/top.sv line 15)
+	MainMemCmd mainMemCmd; // reference to basic transaction modeling the cpu command
+	         |
+ncvlog: *E,NOIPRT (../driver/main_mem_driver.sv,3|10): Unrecognized declaration 'MainMemCmd' could be an unsupported keyword, a spelling mistake or missing instance port list '()' [SystemVerilog].
+(`include file: ../driver/main_mem_driver.sv line 3, `include file: ../packages/uvm_top.svh line 14, file: ../testbench/top.sv line 15)
+	`uvm_component_utils(MainMemDriver)
+	                                  |
+ncvlog: *E,SVNOTY (../driver/main_mem_driver.sv,7|35): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
+(`define macro: m_uvm_component_registry_internal [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ../driver/main_mem_driver.sv line 7, `include file: ../packages/uvm_top.svh line 14, file: ../testbench/top.sv line 15)
+	`uvm_component_utils(MainMemDriver)
+	                                  |
+ncvlog: *E,SVEXTK (../driver/main_mem_driver.sv,7|35): expecting a ';' (to terminate a type_declaration).
+(`define macro: m_uvm_component_registry_internal [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ../driver/main_mem_driver.sv line 7, `include file: ../packages/uvm_top.svh line 14, file: ../testbench/top.sv line 15)
+	`uvm_component_utils(MainMemDriver)
+	                                  |
+ncvlog: *E,SVEXTK (../driver/main_mem_driver.sv,7|35): expecting a ';' (to terminate a type_declaration).
+(`define macro: m_uvm_component_registry_internal [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ../driver/main_mem_driver.sv line 7, `include file: ../packages/uvm_top.svh line 14, file: ../testbench/top.sv line 15)
+	`uvm_component_utils(MainMemDriver)
+	                                  |
+ncvlog: *E,SVNOTY (../driver/main_mem_driver.sv,7|35): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
+(`define macro: m_uvm_component_registry_internal [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ../driver/main_mem_driver.sv line 7, `include file: ../packages/uvm_top.svh line 14, file: ../testbench/top.sv line 15)
+	`uvm_component_utils(MainMemDriver)
+	                                  |
+ncvlog: *E,EXPSMC (../driver/main_mem_driver.sv,7|35): expecting a semicolon (';') [10.3.1(IEEE)].
+(`define macro: m_uvm_component_registry_internal [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ../driver/main_mem_driver.sv line 7, `include file: ../packages/uvm_top.svh line 14, file: ../testbench/top.sv line 15)
+	`uvm_component_utils(MainMemDriver)
+	                                  |
+ncvlog: *E,SVNOTY (../driver/main_mem_driver.sv,7|35): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
+(`define macro: m_uvm_component_registry_internal [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ../driver/main_mem_driver.sv line 7, `include file: ../packages/uvm_top.svh line 14, file: ../testbench/top.sv line 15)
+	`uvm_component_utils(MainMemDriver)
+	                                  |
+ncvlog: *E,EXPSMC (../driver/main_mem_driver.sv,7|35): expecting a semicolon (';') [10.3.1(IEEE)].
+(`define macro: m_uvm_component_registry_internal [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ../driver/main_mem_driver.sv line 7, `include file: ../packages/uvm_top.svh line 14, file: ../testbench/top.sv line 15)
+	function new(string name = "MainMemDriver", uvm_component parent);
+	                                                        |
+ncvlog: *E,EXPRPA (../driver/main_mem_driver.sv,10|57): expecting a right parenthesis (')') [A.2.6(IEEE)].
+(`include file: ../driver/main_mem_driver.sv line 10, `include file: ../packages/uvm_top.svh line 14, file: ../testbench/top.sv line 15)
+	function new(string name = "MainMemDriver", uvm_component parent);
+	                                                        |
+ncvlog: *E,NOIPRT (../driver/main_mem_driver.sv,10|57): Unrecognized declaration 'uvm_component' could be an unsupported keyword, a spelling mistake or missing instance port list '()' [SystemVerilog].
+(`include file: ../driver/main_mem_driver.sv line 10, `include file: ../packages/uvm_top.svh line 14, file: ../testbench/top.sv line 15)
+	function new(string name = "MainMemDriver", uvm_component parent);
+	                                                        |
+ncvlog: *E,NOTINF (../driver/main_mem_driver.sv,10|57): Interfaces are not allowed within tasks [SystemVerilog].
+(`include file: ../driver/main_mem_driver.sv line 10, `include file: ../packages/uvm_top.svh line 14, file: ../testbench/top.sv line 15)
+	function new(string name = "MainMemDriver", uvm_component parent);
+	                                                               |
+ncvlog: *E,ILLPDL (../driver/main_mem_driver.sv,10|64): Mixing of ansi & non-ansi style port declaration is not legal.
+(`include file: ../driver/main_mem_driver.sv line 10, `include file: ../packages/uvm_top.svh line 14, file: ../testbench/top.sv line 15)
+	function new(string name = "MainMemDriver", uvm_component parent);
+	                                                                |
+ncvlog: *E,EXPSMC (../driver/main_mem_driver.sv,10|65): expecting a semicolon (';') [12.3.2(IEEE)].
+(`include file: ../driver/main_mem_driver.sv line 10, `include file: ../packages/uvm_top.svh line 14, file: ../testbench/top.sv line 15)
+		super.new(name, parent);
+		    |
+ncvlog: *E,EXPRPA (../driver/main_mem_driver.sv,11|6): expecting a right parenthesis (')') [A.2.6(IEEE)].
+(`include file: ../driver/main_mem_driver.sv line 11, `include file: ../packages/uvm_top.svh line 14, file: ../testbench/top.sv line 15)
+	task drive_item(input BaseCmd cmd);
+	                            |
+ncvlog: *E,SVNOTY (../driver/main_mem_driver.sv,15|29): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
+(`include file: ../driver/main_mem_driver.sv line 15, `include file: ../packages/uvm_top.svh line 14, file: ../testbench/top.sv line 15)
+class Monitor extends uvm_monitor;
+                                |
+ncvlog: *E,SVNOTY (../monitor/monitor.sv,1|32): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
+(`include file: ../monitor/monitor.sv line 1, `include file: ../packages/uvm_top.svh line 15, file: ../testbench/top.sv line 15)
+ uvm_analysis_port#(CpuCmd)     cpuCmdPort;
+                 |
+ncvlog: *E,EXPENC (../monitor/monitor.sv,8|17): Expecting the keyword 'endclass'.
+(`include file: ../monitor/monitor.sv line 8, `include file: ../packages/uvm_top.svh line 15, file: ../testbench/top.sv line 15)
+ CpuCmd cpuCmdCollected;
+      |
+ncvlog: *E,NOIPRT (../monitor/monitor.sv,22|6): Unrecognized declaration 'CpuCmd' could be an unsupported keyword, a spelling mistake or missing instance port list '()' [SystemVerilog].
+(`include file: ../monitor/monitor.sv line 22, `include file: ../packages/uvm_top.svh line 15, file: ../testbench/top.sv line 15)
+ CpuCmd cpuCmdCollected;
+      |
+ncvlog: *E,NCUITEM (../monitor/monitor.sv,22|6): Not a valid compilation unit/global item: 'interface_declaration' [SystemVerilog].
+(`include file: ../monitor/monitor.sv line 22, `include file: ../packages/uvm_top.svh line 15, file: ../testbench/top.sv line 15)
+ MainMemCmd mainMemCmdCollected;
+          |
+ncvlog: *E,NOIPRT (../monitor/monitor.sv,23|10): Unrecognized declaration 'MainMemCmd' could be an unsupported keyword, a spelling mistake or missing instance port list '()' [SystemVerilog].
+(`include file: ../monitor/monitor.sv line 23, `include file: ../packages/uvm_top.svh line 15, file: ../testbench/top.sv line 15)
+ MainMemCmd mainMemCmdCollected;
+          |
+ncvlog: *E,NCUITEM (../monitor/monitor.sv,23|10): Not a valid compilation unit/global item: 'interface_declaration' [SystemVerilog].
+(`include file: ../monitor/monitor.sv line 23, `include file: ../packages/uvm_top.svh line 15, file: ../testbench/top.sv line 15)
+ `uvm_component_utils_begin(Monitor)
+                                   |
+ncvlog: *E,SVNOTY (../monitor/monitor.sv,25|35): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
+(`define macro: m_uvm_component_registry_internal [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `define macro: uvm_component_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 338], `include file: ../monitor/monitor.sv line 25, `include file: ../packages/uvm_top.svh line 15, file: ../testbench/top.sv line 15)
+ `uvm_component_utils_begin(Monitor)
+                                   |
+ncvlog: *E,SVEXTK (../monitor/monitor.sv,25|35): expecting a ';' (to terminate a type_declaration).
+(`define macro: m_uvm_component_registry_internal [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `define macro: uvm_component_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 338], `include file: ../monitor/monitor.sv line 25, `include file: ../packages/uvm_top.svh line 15, file: ../testbench/top.sv line 15)
+ `uvm_component_utils_begin(Monitor)
+                                   |
+ncvlog: *E,SVEXTK (../monitor/monitor.sv,25|35): expecting a ';' (to terminate a type_declaration).
+(`define macro: m_uvm_component_registry_internal [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `define macro: uvm_component_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 338], `include file: ../monitor/monitor.sv line 25, `include file: ../packages/uvm_top.svh line 15, file: ../testbench/top.sv line 15)
+ `uvm_component_utils_begin(Monitor)
+                                   |
+ncvlog: *E,BADQAL (../monitor/monitor.sv,25|35): Lifetime or qualifier(s) 'static' not allowed before function declaration.
+(`define macro: m_uvm_component_registry_internal [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `define macro: uvm_component_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 338], `include file: ../monitor/monitor.sv line 25, `include file: ../packages/uvm_top.svh line 15, file: ../testbench/top.sv line 15)
+ `uvm_component_utils_begin(Monitor)
+                                   |
+ncvlog: *E,SVNOTY (../monitor/monitor.sv,25|35): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
+(`define macro: m_uvm_component_registry_internal [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `define macro: uvm_component_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 338], `include file: ../monitor/monitor.sv line 25, `include file: ../packages/uvm_top.svh line 15, file: ../testbench/top.sv line 15)
+ `uvm_component_utils_begin(Monitor)
+                                   |
+ncvlog: *E,EXPSMC (../monitor/monitor.sv,25|35): expecting a semicolon (';') [10.3.1(IEEE)].
+(`define macro: m_uvm_component_registry_internal [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `define macro: uvm_component_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 338], `include file: ../monitor/monitor.sv line 25, `include file: ../packages/uvm_top.svh line 15, file: ../testbench/top.sv line 15)
+ `uvm_component_utils_begin(Monitor)
+                                   |
+ncvlog: *E,BADQAL (../monitor/monitor.sv,25|35): Lifetime or qualifier(s) 'virtual' not allowed before function declaration.
+(`define macro: m_uvm_component_registry_internal [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `define macro: uvm_component_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 338], `include file: ../monitor/monitor.sv line 25, `include file: ../packages/uvm_top.svh line 15, file: ../testbench/top.sv line 15)
+ `uvm_component_utils_begin(Monitor)
+                                   |
+ncvlog: *E,SVNOTY (../monitor/monitor.sv,25|35): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
+(`define macro: m_uvm_component_registry_internal [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `define macro: uvm_component_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 338], `include file: ../monitor/monitor.sv line 25, `include file: ../packages/uvm_top.svh line 15, file: ../testbench/top.sv line 15)
+ `uvm_component_utils_begin(Monitor)
+                                   |
+ncvlog: *E,EXPSMC (../monitor/monitor.sv,25|35): expecting a semicolon (';') [10.3.1(IEEE)].
+(`define macro: m_uvm_component_registry_internal [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `define macro: uvm_component_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 338], `include file: ../monitor/monitor.sv line 25, `include file: ../packages/uvm_top.svh line 15, file: ../testbench/top.sv line 15)
+ `uvm_component_utils_begin(Monitor)
+                                   |
+ncvlog: *E,BADQAL (../monitor/monitor.sv,25|35): Lifetime or qualifier(s) 'virtual' not allowed before function declaration.
+(`define macro: m_uvm_get_type_name_func [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 427], `define macro: uvm_component_utils [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `define macro: uvm_component_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 338], `include file: ../monitor/monitor.sv line 25, `include file: ../packages/uvm_top.svh line 15, file: ../testbench/top.sv line 15)
+ `uvm_component_utils_begin(Monitor)
+                                   |
+ncvlog: *E,SVNOTY (../monitor/monitor.sv,25|35): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
+(`define macro: uvm_field_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 151], `define macro: uvm_component_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 338], `include file: ../monitor/monitor.sv line 25, `include file: ../packages/uvm_top.svh line 15, file: ../testbench/top.sv line 15)
+ `uvm_component_utils_begin(Monitor)
+                                   |
+ncvlog: *E,SVNOTY (../monitor/monitor.sv,25|35): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
+(`define macro: uvm_field_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 151], `define macro: uvm_component_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 338], `include file: ../monitor/monitor.sv line 25, `include file: ../packages/uvm_top.svh line 15, file: ../testbench/top.sv line 15)
+ `uvm_component_utils_begin(Monitor)
+                                   |
+ncvlog: *E,NOTSTT (../monitor/monitor.sv,25|35): expecting a statement [9(IEEE)].
+(`define macro: uvm_field_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 151], `define macro: uvm_component_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 338], `include file: ../monitor/monitor.sv line 25, `include file: ../packages/uvm_top.svh line 15, file: ../testbench/top.sv line 15)
+ `uvm_component_utils_begin(Monitor)
+                                   |
+ncvlog: *E,MISEXX (../monitor/monitor.sv,25|35): expecting an '=' or '<=' sign in an assignment [9.2(IEEE)].
+(`define macro: uvm_field_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 151], `define macro: uvm_component_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 338], `include file: ../monitor/monitor.sv line 25, `include file: ../packages/uvm_top.svh line 15, file: ../testbench/top.sv line 15)
+ `uvm_component_utils_begin(Monitor)
+                                   |
+ncvlog: *E,NOTSTT (../monitor/monitor.sv,25|35): expecting a statement [9(IEEE)].
+(`define macro: uvm_field_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 151], `define macro: uvm_component_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 338], `include file: ../monitor/monitor.sv line 25, `include file: ../packages/uvm_top.svh line 15, file: ../testbench/top.sv line 15)
+ `uvm_component_utils_begin(Monitor)
+                                   |
+ncvlog: *E,MISEXX (../monitor/monitor.sv,25|35): expecting an '=' or '<=' sign in an assignment [9.2(IEEE)].
+(`define macro: uvm_field_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 151], `define macro: uvm_component_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 338], `include file: ../monitor/monitor.sv line 25, `include file: ../packages/uvm_top.svh line 15, file: ../testbench/top.sv line 15)
+ `uvm_component_utils_begin(Monitor)
+                                   |
+ncvlog: *E,MISEXX (../monitor/monitor.sv,25|35): expecting an '=' or '<=' sign in an assignment [9.2(IEEE)].
+(`define macro: uvm_field_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 151], `define macro: uvm_component_utils_begin [/softwares/Linux/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 338], `include file: ../monitor/monitor.sv line 25, `include file: ../packages/uvm_top.svh line 15, file: ../testbench/top.sv line 15)
+  function new(string name, uvm_component parent);
+             |
+ncvlog: *E,NEWOIC (../monitor/monitor.sv,30|13): The class constructor method 'new' is only allowed within a class declaration.
+(`include file: ../monitor/monitor.sv line 30, `include file: ../packages/uvm_top.svh line 15, file: ../testbench/top.sv line 15)
+  function new(string name, uvm_component parent);
+                                        |
+ncvlog: *E,EXPRPA (../monitor/monitor.sv,30|40): expecting a right parenthesis (')') [A.2.6(IEEE)].
+(`include file: ../monitor/monitor.sv line 30, `include file: ../packages/uvm_top.svh line 15, file: ../testbench/top.sv line 15)
+  function new(string name, uvm_component parent);
+                                        |
+ncvlog: *E,NOIPRT (../monitor/monitor.sv,30|40): Unrecognized declaration 'uvm_component' could be an unsupported keyword, a spelling mistake or missing instance port list '()' [SystemVerilog].
+(`include file: ../monitor/monitor.sv line 30, `include file: ../packages/uvm_top.svh line 15, file: ../testbench/top.sv line 15)
+  function new(string name, uvm_component parent);
+                                        |
+ncvlog: *E,NOTINF (../monitor/monitor.sv,30|40): Interfaces are not allowed within tasks [SystemVerilog].
+(`include file: ../monitor/monitor.sv line 30, `include file: ../packages/uvm_top.svh line 15, file: ../testbench/top.sv line 15)
+  function new(string name, uvm_component parent);
+                                               |
+ncvlog: *E,ILLPDL (../monitor/monitor.sv,30|47): Mixing of ansi & non-ansi style port declaration is not legal.
+(`include file: ../monitor/monitor.sv line 30, `include file: ../packages/uvm_top.svh line 15, file: ../testbench/top.sv line 15)
+  function new(string name, uvm_component parent);
+                                                |
+ncvlog: *E,EXPSMC (../monitor/monitor.sv,30|48): expecting a semicolon (';') [12.3.2(IEEE)].
+(`include file: ../monitor/monitor.sv line 30, `include file: ../packages/uvm_top.svh line 15, file: ../testbench/top.sv line 15)
+	super.new(name,parent);
+	    |
+ncvlog: *E,EXPRPA (../monitor/monitor.sv,31|5): expecting a right parenthesis (')') [A.2.6(IEEE)].
+(`include file: ../monitor/monitor.sv line 31, `include file: ../packages/uvm_top.svh line 15, file: ../testbench/top.sv line 15)
+ virtual function void build_phase(uvm_phase phase);
+                |
+ncvlog: *E,BADQAL (../monitor/monitor.sv,36|16): Lifetime or qualifier(s) 'virtual' not allowed before function declaration.
+(`include file: ../monitor/monitor.sv line 36, `include file: ../packages/uvm_top.svh line 15, file: ../testbench/top.sv line 15)
+ virtual function void build_phase(uvm_phase phase);
+                                           |
+ncvlog: *E,SVNOTY (../monitor/monitor.sv,36|43): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
+(`include file: ../monitor/monitor.sv line 36, `include file: ../packages/uvm_top.svh line 15, file: ../testbench/top.sv line 15)
+ virtual task run_phase(uvm_phase phase);
+            |
+ncvlog: *E,BADQAL (../monitor/monitor.sv,44|12): Lifetime or qualifier(s) 'virtual' not allowed before task declaration.
+(`include file: ../monitor/monitor.sv line 44, `include file: ../packages/uvm_top.svh line 15, file: ../testbench/top.sv line 15)
+ virtual task run_phase(uvm_phase phase);
+                                |
+ncvlog: *E,SVNOTY (../monitor/monitor.sv,44|32): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
+(`include file: ../monitor/monitor.sv line 44, `include file: ../packages/uvm_top.svh line 15, file: ../testbench/top.sv line 15)
+endclass:Monitor
        |
-ncvlog: *E,MPANDC (../agent/agent.sv,32|7): expecting the keyword 'module', 'macromodule', 'primitive', 'connectmodule','connect', 'discipline' or 'nature' [A.1].
-(`include file: ../agent/agent.sv line 32, `include file: ../packages/uvm_top.svh line 9, file: ../testbench/top.sv line 15)
+ncvlog: *E,MPANDC (../monitor/monitor.sv,87|7): expecting the keyword 'module', 'macromodule', 'primitive', 'connectmodule','connect', 'discipline' or 'nature' [A.1].
+(`include file: ../monitor/monitor.sv line 87, `include file: ../packages/uvm_top.svh line 15, file: ../testbench/top.sv line 15)
 	module worklib.top:sv
 		errors: 0, warnings: 0
 	Total errors/warnings found outside modules and primitives:
-		errors: 85, warnings: 0
+		errors: 88, warnings: 0
 irun: *E,VLGERR: An error occurred during parsing.  Review the log file for errors with the code *E and fix those identified problems to proceed.  Exiting with code (status 1).
