@@ -1,6 +1,6 @@
 /*
 Basic Agent Skeleton. 
-Agent has a sequencer, driver, monitor.
+Agent has  sequencers, drivers, monitor.
 Define single agent (Do not derive from it) but define sequencers and drivers as needed. 
 Override the sequencer and driver with user defined class types.
 */
@@ -10,9 +10,11 @@ class Agent extends uvm_agent;
 	
 	Sequencer  cpuSequencer; // sequencer to create sequences with CpuCmd type item
 	Sequencer  mainMemSequencer; // sequencer to create sequences with mainMemCmd type item
+	Sequencer  cacheDirectMemAccessSequencer; // sequencer to create sequences with mainMemCmd type item
 	
 	BaseDriver cacheDriver;
 	BaseDriver mainMemDriver;
+	BaseDriver cacheDirectMemAccessDriver;
 
 	Monitor monitor;	
 	
@@ -32,9 +34,13 @@ class Agent extends uvm_agent;
 			
 			mainMemSequencer = Sequencer ::type_id::create("mainMemSequencer",this);
 			mainMemSequencer.pAgent = this;
+
+			cacheDirectMemAccessSequencer = Sequencer::type_id::create("CacheDirectMemAccessSequencer",this);
+			cacheDirectMemAccessSequencer.pAgent = this;
 			
 			cacheDriver      = BaseDriver::type_id::create("cacheDriver",this);
 			mainMemDriver    = BaseDriver::type_id::create("mainMemDriver",this);
+			cacheDirectMemAccessDriver = BaseDriver::type_id::create("cacheDirectMemAccessDriver",this);
 			monitor		 = Monitor::type_id::create("monitor",this);
 
 		end
@@ -46,6 +52,7 @@ class Agent extends uvm_agent;
 			// connect driver's item port to sequencer's item export
 			cacheDriver.seq_item_port.connect(cpuSequencer.seq_item_export);
 			mainMemDriver.seq_item_port.connect(mainMemSequencer.seq_item_export);
+			cacheDirectMemAccessDriver.seq_item_port.connect(cacheDirectMemAccessSequencer.seq_item_export);
 		end
 	endfunction:connect_phase
 

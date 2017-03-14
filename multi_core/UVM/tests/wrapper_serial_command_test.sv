@@ -10,11 +10,13 @@ class WrapperSerialCommandTest extends BaseTest;
 	task run_phase(uvm_phase phase);
 		//declare the sequence
 		WrapperUnitSequence wrapperUnitSequence = WrapperUnitSequence::type_id::create("wrapperUnitSequence",this);
-		`uvm_info("BaseTest","Running BaseTest",UVM_MEDIUM);
 		phase.raise_objection(this);
-		wrapperUnitSequence.start(env.cpuAgent.cpuSequencer);
+		fork
+			wrapperUnitSequence.start(env.cpuAgent.cpuSequencer);
 		
-		super.start_main_mem_sequence();
+			super.start_main_mem_sequence();
+		join_none
+		
 		super.wait_cycles(20);
 
 		phase.drop_objection(this);	

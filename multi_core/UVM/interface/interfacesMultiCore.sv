@@ -102,6 +102,36 @@ interface globalInterface (input logic clk);
   
   endtask : check_UndefinedBehavior 
 
- 
+task clear_cache_inputs();
+		 for(int i=0;  i < `CORES; i++)begin
+		 	PrRd[i] = 0;
+		 	PrWr[i] = 0;
+		 	Address[i] = 0;
+		 end
+endtask:clear_cache_inputs
+
+ // Assertions to do proper protocol checking
+
+
+// Com_Bus_Req_proc should be de-asserted after Com_Bus_Gnt_proc is asserted
+sequence comBusReqGnt( core);
+    ($rose(Com_Bus_Gnt_proc[core]) ) ##[0:5] (Com_Bus_Req_proc[core] == 0) ##[0:5] (Com_Bus_Gnt_proc[core] == 0) ;	
+endsequence
+
+// comBusReqGnt sequence should happen on every command on every core
+property cmd_comBusReqGnt(core);
+	@(posedge clk) ($rose(PrRd[core]) || $rose(PrWr[core])) |-> ##[0:5] (Com_Bus_Req_proc[core] == 1) ##[0:5] comBusReqGnt(core) ; 
+endproperty:cmd_comBusReqGnt
+
+// declare assertion for all cores
+genvar c;
+generate
+	for(c = 0; c < `CORES; c++)begin
+		assert property(cmd_comBusReqGnt(c)) $display("Common Bus Request Grant Sequence Passed");
+		else $fatal(1,{"Common Bus Request Grant Sequence Failed for core ",$sformatf("%d",c)});
+	end
+endgenerate
+
+
 endinterface 
 
